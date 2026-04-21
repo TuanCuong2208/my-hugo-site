@@ -1,57 +1,51 @@
 ---
 title: "Week 1 Worklog"
-date: 2024-01-01
+date: 2026-04-21
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# Week 1: Getting Started with AWS & Cloud Credits
 
 ### Week 1 Objectives:
-
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Successfully register and secure an AWS account.
+* Understand core AWS services: Compute, Storage, Database, and Serverless.
+* Master AWS Management Console and AWS CLI.
+* Complete hands-on challenges to earn AWS Credits for the internship.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date |
+| :--- | :--- | :--- | :--- |
+| **Day 2** | - Join FCJ group and understand the internship roadmap.<br>- Register a new AWS account and set up MFA for security. | 17/04/2026 | 17/04/2026 |
+| **Day 3** | - Learn about Global Infrastructure: Regions & Availability Zones.<br>- Deep dive into basic services: EC2, S3, RDS, and IAM. | 18/04/2026 | 18/04/2026 |
+| **Day 4** | - Install and configure **AWS CLI** on local machine.<br>- **Hands-on:** Use CLI to manage S3 buckets and EC2 instances. | 19/04/2026 | 19/04/2026 |
+| **Day 5** | - Participate in the "Explore AWS" workshop series.<br>- Complete 5 specific tasks to receive AWS Promotional Credits. | 20/04/2026 | 21/04/2026 |
+| **Day 6** | - Set up AWS Budgets to monitor credit usage.<br>- Summarize Week 1 achievements and update the Worklog. | 21/04/2026 | 21/04/2026 |
+
+---
 
 ### Week 1 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 1. Account & Security Mastery:
+* Successfully registered an AWS Free Tier account.
+* Enabled **Multi-Factor Authentication (MFA)** and set up **IAM Users** for secure access, following the "Least Privilege" principle.
 
-* Successfully created and configured an AWS Free Tier account.
+#### 2. Cloud Credits Achievement (Total $100 Earned):
+Completed 5 hands-on challenges in the AWS Playground to receive **$100 in Credits** ($20 each) for:
+* **AWS Budgets:** Set up a cost budget to avoid overspending.
+* **Amazon EC2:** Successfully launched and connected to a Linux instance.
+* **Amazon Bedrock:** Explored Foundation Models in the AI playground.
+* **AWS Lambda:** Created a serverless web application.
+* **Amazon RDS/Aurora:** Deployed and managed a cloud database.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### 3. Technical Skills:
+* **AWS CLI:** Mastered `aws configure` and used commands to check region lists and resource status.
+* **EC2 Networking:** Understood Security Groups, Key Pairs, and Elastic IPs.
+* **Infrastructure Knowledge:** Clearly distinguished between Compute, Storage, Networking, and Database service groups.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### Reflection:
+Week 1 was a great success. I not only mastered the theory but also practiced directly on the AWS Console. Earning **$100 in credits** gives me a solid foundation to experiment with more advanced services in the coming weeks without worrying about costs.

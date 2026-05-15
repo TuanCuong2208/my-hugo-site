@@ -45,4 +45,56 @@ Sử dụng địa chỉ IP Public của máy chủ để truy cập trực ti�
 ![Bước 6](/my-hugo-site/images/week3/anh6.png)
 
 ---
-*Các nội dung tiếp theo về Lab 5 (S3) và Lab 6 (RDS) sẽ được cập nhật trong các buổi thực hành tới.*
+
+## 5. Lab 5: Amazon S3 - Static Website Hosting
+
+**Amazon S3 (Simple Storage Service)** là dịch vụ lưu trữ đối tượng dẫn đầu về khả năng mở rộng và độ sẵn sàng của dữ liệu. Bài lab này tập trung vào việc biến một S3 Bucket thành một trang web tĩnh (Static Website).
+
+### Khái niệm cốt lõi:
+* **S3 Bucket:** Thùng chứa đối tượng độc nhất trên toàn cầu.
+* **Static Website Hosting:** Tính năng cho phép phục vụ các tệp HTML, CSS, JS trực tiếp từ S3.
+* **Bucket Policy:** Cấu hình JSON để phân quyền truy cập (cho phép đọc công khai).
+
+### Quá trình thực hiện:
+
+#### Bước 1: Khởi tạo và Mở quyền Public
+Tôi tạo bucket `cuong-static-website-2026` và bỏ tích chọn "Block all public access" để chuẩn bị cho việc public website.
+![Step 7](/my-hugo-site/images/week3/anh7.png)
+
+#### Bước 2: Kích hoạt Website Hosting
+Trong tab Properties, tôi bật tính năng Static website hosting và thiết lập tệp mặc định là `index.html`.
+![Step 8](/my-hugo-site/images/week3/anh8.png)
+
+#### Bước 3: Cấu hình chính sách bảo mật (Bucket Policy)
+Dán đoạn mã JSON để cấp quyền `s3:GetObject` cho mọi người dùng internet.
+![Step 9](/my-hugo-site/images/week3/anh9.png)
+
+#### Bước 4: Kiểm tra kết quả
+Tải tệp `index.html` lên và truy cập thông qua Endpoint được AWS cấp.
+![Step 10](/my-hugo-site/images/week3/anh10.png)
+![Step 11](/my-hugo-site/images/week3/anh11.png)
+
+---
+
+## 6. Lab 6: Amazon RDS - Relational Database Service
+
+**Amazon RDS** giúp đơn giản hóa việc thiết lập và vận hành các cơ sở dữ liệu quan hệ trên đám mây. Tôi đã triển khai một thực thể MySQL để phục vụ lưu trữ dữ liệu cho ứng dụng.
+
+### Khái niệm cốt lõi:
+* **DB Engine:** Hệ quản trị CSDL được chọn (MySQL).
+* **Sandbox (Free Tier):** Gói cấu hình miễn phí dành cho việc học tập và thử nghiệm.
+* **Endpoint:** Địa chỉ máy chủ CSDL dùng để kết nối từ các ứng dụng Backend.
+
+### Quá trình thực hiện:
+
+#### Bước 1: Lựa chọn Engine và Gói Sandbox
+Tôi chọn MySQL và Template **Sandbox** để đảm bảo hệ thống nằm trong gói Free Tier của AWS.
+![Step 12](/my-hugo-site/images/week3/anh12.png)
+
+#### Bước 2: Khởi tạo thực thể DB
+Thiết lập VPC và quyền truy cập công khai (Public Access), sau đó tiến hành khởi tạo máy chủ CSDL.
+![Step 13](/my-hugo-site/images/week3/anh13.png)
+
+#### Bước 3: Xác nhận trạng thái và Endpoint
+Sau khi DB ở trạng thái **Available**, tôi lấy thông tin Endpoint để sử dụng cho việc kết nối sau này.
+![Step 14](/my-hugo-site/images/week3/anh14.png)

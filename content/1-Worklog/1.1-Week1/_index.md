@@ -1,51 +1,52 @@
 ---
-title: "Week 1 Worklog"
+title: "Week 1: AWS Foundation & Strategic Onboarding"
 date: 2026-04-21
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-# Week 1: Getting Started with AWS & Cloud Credits
+# Week 1: Comprehensive Cloud Onboarding & Mastering AWS Fundamentals
 
-### Week 1 Objectives:
-* Successfully register and secure an AWS account.
-* Understand core AWS services: Compute, Storage, Database, and Serverless.
-* Master AWS Management Console and AWS CLI.
-* Complete hands-on challenges to earn AWS Credits for the internship.
+### I. Executive Summary
+The inaugural week of the First Cloud AI Journey (FCJ) Internship served as a critical transition phase. My primary focus was to move beyond basic cloud awareness and establish a professional-grade development environment. This involved not only technical configurations but also aligning with the AWS "Well-Architected Framework" right from day one. By the end of this week, I successfully secured my cloud perimeter and demonstrated technical proficiency by claiming $100 in promotional credits.
 
-### Tasks to be carried out this week:
+### II. Detailed Project Activities & Timeline
 
-| Day | Task | Start Date | Completion Date |
+| Timeline | Activity Category | Description of Tasks Executed | Deliverables/Artifacts |
 | :--- | :--- | :--- | :--- |
-| **Day 2** | - Join FCJ group and understand the internship roadmap.<br>- Register a new AWS account and set up MFA for security. | 17/04/2026 | 17/04/2026 |
-| **Day 3** | - Learn about Global Infrastructure: Regions & Availability Zones.<br>- Deep dive into basic services: EC2, S3, RDS, and IAM. | 18/04/2026 | 18/04/2026 |
-| **Day 4** | - Install and configure **AWS CLI** on local machine.<br>- **Hands-on:** Use CLI to manage S3 buckets and EC2 instances. | 19/04/2026 | 19/04/2026 |
-| **Day 5** | - Participate in the "Explore AWS" workshop series.<br>- Complete 5 specific tasks to receive AWS Promotional Credits. | 20/04/2026 | 21/04/2026 |
-| **Day 6** | - Set up AWS Budgets to monitor credit usage.<br>- Summarize Week 1 achievements and update the Worklog. | 21/04/2026 | 21/04/2026 |
+| **Day 1-2** | **Onboarding & Security** | Formally joined the FCJ workspace. Implemented high-level security protocols for the root account, including Hardware/Virtual MFA. | Secured AWS Root Account |
+| **Day 3** | **Global Infra Research** | Deep-dive into AWS Global Infrastructure. Analyzed the relationship between Regions, Availability Zones (AZs), and Local Zones. | Infrastructure Topology Map |
+| **Day 4** | **Environment Setup** | Installed AWS CLI v2, Session Manager Plugin, and configured local profiles. Tested connectivity using STS (Security Token Service). | Functional CLI Environment |
+| **Day 5-6** | **Skill Validation** | Participated in intensive "Explore AWS" workshops and executed 5 hands-on labs covering AI, Serverless, and Databases. | **$100 Claimed Credits** |
+| **Day 7** | **Documentation** | Structured the Hugo-based internship portfolio and audited initial cost configurations. | Live Worklog Portal |
 
----
+### III. Technical Deep Dive: The Core Pillars
 
-### Week 1 Achievements:
+#### 1. Security & Identity (IAM) - The Perimeter
+I implemented a robust IAM strategy to avoid the common mistake of over-privileged accounts:
+* **IAM Admin User:** Created a dedicated administrator user, shifting all daily operations away from the Root account.
+* **MFA Implementation:** Enforced Multi-Factor Authentication for every sign-in attempt to mitigate credential theft risks.
+* **JSON Policies:** Analyzed the structure of IAM policies to understand how `Allow/Deny` statements interact.
 
-#### 1. Account & Security Mastery:
-* Successfully registered an AWS Free Tier account.
-* Enabled **Multi-Factor Authentication (MFA)** and set up **IAM Users** for secure access, following the "Least Privilege" principle.
+#### 2. Service Exploration & The $100 Credit Milestone
+To earn the $100 credits, I had to successfully deploy and manage resources across 5 distinct domains:
+* **Amazon Bedrock (AI/ML):** Evaluated different Foundation Models (FMs). Practiced invoking models via the playground to understand tokens and response latencies.
+* **AWS Lambda (Compute):** Developed a basic serverless function. This shifted my perspective from "managing servers" to "writing logic."
+* **Amazon RDS (Database):** Provisioned a relational database. I focused on the "Automated Backup" and "Multi-AZ" features to ensure data durability.
+* **Amazon EC2 (Compute):** Launched a T3.micro instance, configured Security Groups (Port 22/80), and accessed it via SSH.
+* **AWS Budgets (Governance):** Created a zero-spend budget alert to ensure I stay within the Free Tier limits.
 
-#### 2. Cloud Credits Achievement (Total $100 Earned):
-Completed 5 hands-on challenges in the AWS Playground to receive **$100 in Credits** ($20 each) for:
-* **AWS Budgets:** Set up a cost budget to avoid overspending.
-* **Amazon EC2:** Successfully launched and connected to a Linux instance.
-* **Amazon Bedrock:** Explored Foundation Models in the AI playground.
-* **AWS Lambda:** Created a serverless web application.
-* **Amazon RDS/Aurora:** Deployed and managed a cloud database.
+### IV. Challenges, Troubleshooting & Lessons Learned
+* **Technical Hurdle:** Encountered an `AccessDenied` error when trying to list S3 buckets via CLI.
+* **Root Cause Analysis:** The IAM user lacked the `s3:ListAllMyBuckets` permission.
+* **Resolution:** Manually edited the Inline Policy to grant specific S3 permissions, adhering to the "Least Privilege" principle. This was a vital lesson in cloud security.
 
-#### 3. Technical Skills:
-* **AWS CLI:** Mastered `aws configure` and used commands to check region lists and resource status.
-* **EC2 Networking:** Understood Security Groups, Key Pairs, and Elastic IPs.
-* **Infrastructure Knowledge:** Clearly distinguished between Compute, Storage, Networking, and Database service groups.
+### V. Professional Reflection
+The first week was an eye-opener regarding the scale of AWS. It’s not just about "hosting a website"; it's about building a scalable, secure, and cost-effective ecosystem. Earning the $100 credits was a great practical test of my ability to follow complex technical documentation under time pressure.
 
----
-
-### Reflection:
-Week 1 was a great success. I not only mastered the theory but also practiced directly on the AWS Console. Earning **$100 in credits** gives me a solid foundation to experiment with more advanced services in the coming weeks without worrying about costs.
+### VI. Roadmap for Week 2: The "Deep Dive" Phase
+Moving forward, I will focus on the following core labs:
+1. **Lab 1:** Advanced IAM and Organizational Units (OU).
+2. **Lab 2:** Virtual Private Cloud (VPC) - Designing a custom network topology.
+3. **Lab 3:** Elastic Compute Cloud (EC2) - Auto Scaling and Load Balancing.

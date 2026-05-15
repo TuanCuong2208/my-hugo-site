@@ -1,59 +1,53 @@
 ---
-title: "Worklog Tuần 2"
-date: 2024-01-01
+title: "Tuần 2: Nền tảng Kiến trúc & Các dịch vụ lõi"
+date: 2026-05-15
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+# Tuần 2: Làm chủ Hạ tầng AWS - Từ Định danh đến Mạng ảo
 
-### Mục tiêu tuần 2:
+### I. Tóm tắt tổng quan
+Tuần 2 đánh dấu bước chuyển mình quan trọng từ thiết lập tài khoản cơ bản sang kỹ thuật hạ tầng cốt lõi. Trọng tâm của tuần này gồm hai phần: thiết lập mô hình bảo mật "Zero Trust" bằng AWS IAM và thiết kế mạng ảo cách lập logic thông qua Amazon VPC. Đây là những thành phần tạo nên "nền móng" cho bất kỳ kiến trúc đám mây nào.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### II. Mục tiêu chiến lược trong tuần
+* **Thắt chặt IAM:** Chuyển từ việc phụ thuộc vào Root-user sang một môi trường quản trị có cấu trúc, dựa trên các chính sách (Policies).
+* **Ảo hóa mạng:** Xây dựng một Virtual Private Cloud (VPC) với các cân nhắc về tính sẵn sàng cao.
+* **Vận hành tối ưu:** Duy trì môi trường sạch bằng cách triển khai vòng đời tài nguyên nghiêm ngặt (Tạo - Xác minh - Xóa) để tối ưu hóa chi phí.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### III. Thực thi kỹ thuật chuyên sâu
 
+#### 1. Lab 1: Giới thiệu Hạ tầng Toàn cầu AWS
+Trước khi thực hiện các bài lab kỹ thuật, tôi đã nghiên cứu sâu về cách AWS quản lý sự hiện diện vật lý của mình.
+* **Regions (Vùng):** Các khu vực địa lý chứa nhiều Miền khả dụng. Tôi đã chọn `us-east-1` (N. Virginia) vì tính ổn định và sự đa dạng của các dịch vụ.
+* **Availability Zones (AZs):** Các trung tâm dữ liệu riêng biệt với nguồn điện và mạng dự phòng. Tôi hiểu rằng thiết kế cho tính sẵn sàng cao đòi hỏi phải phân bổ tài nguyên trên nhiều AZ để tránh "điểm chết" duy nhất (SPOF).
 
-### Kết quả đạt được tuần 2:
+#### 2. Lab 2: IAM Access Control - Phân tích sâu về Bảo mật
+Mục tiêu là triển khai **Nguyên tắc quyền hạn tối thiểu (PoLP)**.
+* **Mổ xẻ JSON Policy:** Tôi đã phân tích cấu trúc của các Chính sách IAM. Mỗi chính sách bao gồm các câu lệnh có: `Effect` (Cho phép/Từ chối), `Action` (Các lệnh gọi API như `s3:ListBucket`), và `Resource` (Định danh ARN cụ thể của tài sản).
+* **Cấu hình Người dùng:** Khởi tạo User Admin chuyên dụng để đóng vai trò là người vận hành chính hàng ngày.
+![Cấu hình User](/images/week2/iam-create-user-step1.png)
+* **Dashboard Bảo mật:** Kích hoạt thành công MFA cho cả tài khoản Root và IAM. Dashboard hiện hiển thị sự tuân thủ 100% với các khuyến nghị bảo mật của AWS.
+![IAM Dashboard](/images/week2/iam-dashboard.png)
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 3. Lab 3: Virtual Private Cloud (VPC) - Khung xương mạng lưới
+Xây dựng VPC giống như xây dựng một trung tâm dữ liệu riêng trên đám mây.
+* **Chiến lược CIDR Block:** Tôi sử dụng dải mạng `10.0.0.0/16`, cung cấp 65,536 địa chỉ IP nội bộ. Điều này đảm bảo không gian đủ lớn cho việc mở rộng và phân chia subnet sau này.
+* **Kiến trúc Public Subnet:** Tôi cấu hình 1 Public Subnet liên kết với một **Internet Gateway (IGW)**. IGW đóng vai trò là cầu nối giữa VPC và internet công cộng.
+![Sơ đồ VPC](/images/week2/vpc-architecture.png)
+* **Logic định tuyến:** Tôi đã cập nhật **Bảng định tuyến (Route Table)** để bao gồm một tuyến mặc định (`0.0.0.0/0`) trỏ đến IGW, cho phép các tài nguyên trong subnet có thể truy cập internet.
+![VPC Thành công](/images/week2/vpc-create-success.png)
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### IV. Thách thức, Xử lý lỗi & Góc nhìn chuyên gia
+* **"Chi phí ẩn" của NAT Gateway:** Trong quá trình thiết lập, tôi nhận thấy AWS mặc định đề xuất tạo NAT Gateway. Tôi đã chủ động chọn "None" để tránh chi phí không cần thiết trong khi vẫn đạt được mục tiêu bài lab thông qua định tuyến IGW trực tiếp.
+* **Stateless vs Stateful:** Tôi đã nghiên cứu sự khác biệt giữa Security Groups (Stateful - Có nhớ trạng thái) và NACLs (Stateless - Không nhớ trạng thái), quyết định tập trung vào Security Groups để bảo vệ cấp độ máy chủ trong giai đoạn tiếp theo.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### V. Suy ngẫm nghề nghiệp
+Hiểu được cách một gói tin di chuyển từ Internet Gateway, qua Bảng định tuyến và vào một Subnet cụ thể là kỹ năng giá trị nhất tôi học được tuần này. Kỹ thuật đám mây không phải là "phép thuật" — đó là sự cấu hình chính xác và thiết kế có chủ đích.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### VI. Lộ trình cho Tuần 3: Dịch vụ cốt lõi & Tích hợp Cơ sở dữ liệu
+Trong tuần tới, tôi sẽ tập trung vào việc triển khai các khối lượng công việc thực tế thông qua việc tích hợp các dịch vụ tính toán, lưu trữ và cơ sở dữ liệu:
+* **Lab 4: Amazon EC2 (Elastic Compute Cloud):** Khởi chạy máy chủ Linux, quản lý Key Pairs và cấu hình Security Groups để cho phép truy cập web.
+* **Lab 5: Amazon S3 (Simple Storage Service):** Khám phá lưu trữ đối tượng, lưu trữ trang web tĩnh và quản lý chính sách bucket.
+* **Lab 6: Amazon RDS (Relational Database Service):** Triển khai cơ sở dữ liệu MySQL/PostgreSQL và thiết lập kết nối từ máy chủ EC2.

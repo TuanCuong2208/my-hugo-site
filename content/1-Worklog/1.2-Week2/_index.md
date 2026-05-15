@@ -27,17 +27,17 @@ Before executing technical labs, I conducted a deep dive into how AWS manages it
 The objective was to implement the **Principle of Least Privilege (PoLP)**.
 * **JSON Policy Dissection:** I analyzed the structure of IAM Policies. I learned that every policy consists of statements including `Effect` (Allow/Deny), `Action` (API calls like `s3:ListBucket`), and `Resource` (The specific ARN of the asset).
 * **IAM User Configuration:** Created a dedicated Admin user to act as my daily operator.
-![User Configuration](images/week2/iam-create-user-step1.png)
+![User Configuration](/my-hugo-site/images/week2/iam-create-user-step1.png)
 * **Security Dashboard:** Successfully activated MFA for both Root and IAM accounts. The dashboard now shows 100% compliance with AWS security recommendations.
-![IAM Dashboard](images/week2/iam-dashboard.png)
+![IAM Dashboard](/my-hugo-site/images/week2/iam-dashboard.png)
 
 #### 3. Lab 3: Virtual Private Cloud (VPC) - The Network Skeleton
 Building a VPC is like building a private data center on the cloud.
 * **CIDR Block Strategy:** I utilized the `10.0.0.0/16` range, providing 65,536 private IP addresses. This provides enough headroom for future scaling and subnetting.
 * **Public Subnet Architecture:** I configured 1 Public Subnet associated with an **Internet Gateway (IGW)**. This IGW acts as a bridge between the VPC and the public internet.
-![VPC Architecture](images/week2/vpc-architecture.png)
+![VPC Architecture](/my-hugo-site/images/week2/vpc-architecture.png)
 * **Routing Logic:** I updated the **Route Table** to include a default route (`0.0.0.0/0`) pointing to the IGW, enabling internet connectivity for resources within the subnet.
-![VPC Success](images/week2/vpc-create-success.png)
+![VPC Success](/my-hugo-site/images/week2/vpc-create-success.png)
 
 ### IV. Challenges, Troubleshooting & Professional Insights
 * **The "Hidden Cost" of NAT Gateways:** During the setup, I noted that AWS defaults to creating NAT Gateways. I manually selected "None" to avoid unnecessary costs while still achieving my lab goals using direct IGW routing.

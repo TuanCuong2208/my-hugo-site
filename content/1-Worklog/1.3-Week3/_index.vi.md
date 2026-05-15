@@ -1,59 +1,48 @@
 ---
-title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+title: "Tuần 3: Triển khai Máy chủ và Lưu trữ đám mây"
+date: 2026-05-05
+weight: 3
 chapter: false
-pre: " <b> 1.3. </b> "
+pre: "<b>3. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+Trong tuần này, tôi bắt đầu triển khai các thành phần chính của một hệ thống thực tế trên AWS, bao gồm máy chủ ảo (EC2), kho lưu trữ (S3) và cơ sở dữ liệu (RDS).
 
-### Mục tiêu tuần 3:
+## 4. Lab 4: Amazon EC2 - Virtual Web Server
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+Dịch vụ **Amazon EC2 (Elastic Compute Cloud)** cho phép thuê các máy chủ ảo trên đám mây. Thay vì phải mua máy tính vật lý, tôi có thể khởi tạo một máy chủ Linux chỉ trong vài phút.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kiến thức cốt lõi:
+* **AMI (Amazon Linux 2023):** Hệ điều hành tối ưu cho AWS.
+* **Instance Type (t2.micro):** Cấu hình phần cứng thuộc gói miễn phí.
+* **Security Group:** Tường lửa kiểm soát cổng 22 (quản lý) và cổng 80 (truy cập web).
+* **User Data:** Đoạn script tự động cài đặt Apache Web Server khi máy vừa bật.
 
+### Quá trình thực hiện:
 
-### Kết quả đạt được tuần 3:
+#### Bước 1: Thiết lập tên và hệ điều hành
+Tôi đặt tên cho máy chủ là `MyWebServer` và chọn Amazon Linux 2023.
+![Bước 1](/my-hugo-site/images/week3/anh1.png)
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### Bước 2: Chọn cấu hình miễn phí và tạo khóa bảo mật
+Sử dụng `t2.micro` để tối ưu chi phí và tạo file `my-key.pem` để đăng nhập an toàn.
+![Bước 2](/my-hugo-site/images/week3/anh2.png)
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+#### Bước 3: Cấu hình mạng (VPC & Subnet)
+Máy chủ được đặt vào `MyLabVPC` đã tạo từ trước, chọn Public Subnet và bật Public IP. Đồng thời cấu hình Security Group mở cổng 80.
+![Bước 3](/my-hugo-site/images/week3/anh3.png)
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Bước 4: Nhập Script tự động (User Data)
+Dán đoạn mã script để máy chủ tự động cài đặt môi trường web khi khởi chạy.
+![Bước 4](/my-hugo-site/images/week3/anh4.png)
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### Bước 5: Kiểm tra trạng thái máy chủ
+Hệ thống xác nhận máy chủ đã sẵn sàng (Running) và vượt qua bài kiểm tra sức khỏe.
+![Bước 5](/my-hugo-site/images/week3/anh5.png)
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+#### Bước 6: Truy cập thực tế qua IP Public
+Sử dụng địa chỉ IP Public của máy chủ để truy cập trực tiếp từ trình duyệt cá nhân.
+![Bước 6](/my-hugo-site/images/week3/anh6.png)
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+---
+*Các nội dung tiếp theo về Lab 5 (S3) và Lab 6 (RDS) sẽ được cập nhật trong các buổi thực hành tới.*

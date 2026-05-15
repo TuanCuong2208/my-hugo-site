@@ -1,57 +1,48 @@
 ---
-title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Week 3: Server Deployment and Cloud Storage"
+date: 2026-05-05
+weight: 3
 chapter: false
-pre: " <b> 1.3. </b> "
+pre: "<b>3. </b>"
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+This week, I began deploying the core components of a real-world architecture on AWS, including virtual servers (EC2), cloud storage (S3), and relational databases (RDS).
 
-### Week 3 Objectives:
+## 4. Lab 4: Amazon EC2 - Virtual Web Server
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+**Amazon EC2 (Elastic Compute Cloud)** provides scalable computing capacity in the AWS Cloud. Instead of purchasing physical hardware, I can launch a Linux server in minutes.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Core Concepts:
+* **AMI (Amazon Linux 2023):** An AWS-optimized Linux operating system.
+* **Instance Type (t2.micro):** Hardware configuration within the Free Tier.
+* **Security Group:** A virtual firewall controlling Port 22 (Management) and Port 80 (Web access).
+* **User Data:** A script to automatically install Apache Web Server upon instance launch.
 
+### Implementation Process:
 
-### Week 3 Achievements:
+#### Step 1: Name and OS Configuration
+I named the instance `MyWebServer` and selected Amazon Linux 2023.
+![Step 1](/my-hugo-site/images/week3/anh1.png)
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### Step 2: Select Free Tier and Create Key Pair
+Used `t2.micro` for cost optimization and created `my-key.pem` for secure login.
+![Step 2](/my-hugo-site/images/week3/anh2.png)
 
-* Successfully created and configured an AWS Free Tier account.
+#### Step 3: Network Settings (VPC & Subnet)
+The instance was placed in the pre-configured `MyLabVPC`, using a Public Subnet with Public IP enabled. Security Group was configured to allow HTTP traffic.
+![Step 3](/my-hugo-site/images/week3/anh3.png)
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Step 4: Automation Script (User Data)
+Injected a shell script to automate the environment setup and web server installation.
+![Step 4](/my-hugo-site/images/week3/anh4.png)
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+#### Step 5: Instance Status Check
+The system confirmed the instance is **Running** and passed all status checks (2/2 checks passed).
+![Step 5](/my-hugo-site/images/week3/anh5.png)
 
-* Used AWS CLI to perform basic operations such as:
+#### Step 6: Live Access via Public IP
+Accessed the web server's Public IP through a browser to verify the deployment.
+![Step 6](/my-hugo-site/images/week3/anh6.png)
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+---
+*Future labs regarding Lab 5 (S3) and Lab 6 (RDS) will be updated in upcoming sessions.*

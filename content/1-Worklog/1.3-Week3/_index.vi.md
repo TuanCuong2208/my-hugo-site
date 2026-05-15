@@ -3,7 +3,7 @@ title: "Tuần 3: Triển khai Máy chủ và Lưu trữ đám mây"
 date: 2026-05-05
 weight: 3
 chapter: false
-pre: "<b>3. </b>"
+pre: "<b>1.3. </b>"
 ---
 
 Trong tuần này, tôi bắt đầu triển khai các thành phần chính của một hệ thống thực tế trên AWS, bao gồm máy chủ ảo (EC2), kho lưu trữ (S3) và cơ sở dữ liệu (RDS).

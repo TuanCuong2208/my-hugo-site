@@ -3,7 +3,7 @@ title: "Week 3: Deploying Cloud Servers and Storage"
 date: 2026-05-05
 weight: 3
 chapter: false
-pre: "<b>3. </b>"
+pre: "<b>1.3. </b>"
 ---
 
 During this week, I began deploying the main components of a real-world system on AWS, including virtual servers (EC2), cloud storage (S3), and relational databases (RDS).

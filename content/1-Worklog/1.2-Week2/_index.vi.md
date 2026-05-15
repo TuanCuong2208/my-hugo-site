@@ -27,17 +27,17 @@ Trước khi thực hiện các bài lab kỹ thuật, tôi đã nghiên cứu s
 Mục tiêu là triển khai **Nguyên tắc quyền hạn tối thiểu (PoLP)**.
 * **Mổ xẻ JSON Policy:** Tôi đã phân tích cấu trúc của các Chính sách IAM. Mỗi chính sách bao gồm các câu lệnh có: `Effect` (Cho phép/Từ chối), `Action` (Các lệnh gọi API như `s3:ListBucket`), và `Resource` (Định danh ARN cụ thể của tài sản).
 * **Cấu hình Người dùng:** Khởi tạo User Admin chuyên dụng để đóng vai trò là người vận hành chính hàng ngày.
-![Cấu hình User](/images/week2/iam-create-user-step1.png)
+![Cấu hình User](images/week2/iam-create-user-step1.png)
 * **Dashboard Bảo mật:** Kích hoạt thành công MFA cho cả tài khoản Root và IAM. Dashboard hiện hiển thị sự tuân thủ 100% với các khuyến nghị bảo mật của AWS.
-![IAM Dashboard](/images/week2/iam-dashboard.png)
+![IAM Dashboard](images/week2/iam-dashboard.png)
 
 #### 3. Lab 3: Virtual Private Cloud (VPC) - Khung xương mạng lưới
 Xây dựng VPC giống như xây dựng một trung tâm dữ liệu riêng trên đám mây.
 * **Chiến lược CIDR Block:** Tôi sử dụng dải mạng `10.0.0.0/16`, cung cấp 65,536 địa chỉ IP nội bộ. Điều này đảm bảo không gian đủ lớn cho việc mở rộng và phân chia subnet sau này.
 * **Kiến trúc Public Subnet:** Tôi cấu hình 1 Public Subnet liên kết với một **Internet Gateway (IGW)**. IGW đóng vai trò là cầu nối giữa VPC và internet công cộng.
-![Sơ đồ VPC](/images/week2/vpc-architecture.png)
+![Sơ đồ VPC](images/week2/vpc-architecture.png)
 * **Logic định tuyến:** Tôi đã cập nhật **Bảng định tuyến (Route Table)** để bao gồm một tuyến mặc định (`0.0.0.0/0`) trỏ đến IGW, cho phép các tài nguyên trong subnet có thể truy cập internet.
-![VPC Thành công](/images/week2/vpc-create-success.png)
+![VPC Thành công](images/week2/vpc-create-success.png)
 
 ### IV. Thách thức, Xử lý lỗi & Góc nhìn chuyên gia
 * **"Chi phí ẩn" của NAT Gateway:** Trong quá trình thiết lập, tôi nhận thấy AWS mặc định đề xuất tạo NAT Gateway. Tôi đã chủ động chọn "None" để tránh chi phí không cần thiết trong khi vẫn đạt được mục tiêu bài lab thông qua định tuyến IGW trực tiếp.

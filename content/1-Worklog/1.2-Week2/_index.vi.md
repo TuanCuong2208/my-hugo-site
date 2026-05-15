@@ -1,7 +1,7 @@
 ---
 title: "Tuần 2: Nền tảng Kiến trúc & Các dịch vụ lõi"
-date: 2026-05-15
-weight: 1
+date: 2026-04-28
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---

@@ -8,7 +8,7 @@ pre: " <b> 4. </b> "
 
 During my internship, I have had the opportunity to attend various professional events. Each session provided valuable technological insights, helping me broaden my perspective and connect with industry experts.
 
-### [Event 1: FCAJ Community Day](./4.1-Event1/)  
+### [Event 1: FCAJ Community Day](/4-eventparticipated/4.1-event1/) 
 &emsp;**Date & Time:** 09:00 AM – 12:00 PM, Saturday, May 23, 2026  
 &emsp;**Location:** Floor 26, Bitexco Financial Tower, 02 Hai Trieu Street, Ben Nghe, District 1, Ho Chi Minh City  
 &emsp;**Role:** Attendee  

@@ -88,9 +88,10 @@ An architectural deep dive into a production-grade Multi-Agent AI system deploye
 
 ### Conclusion & Future Learning Roadmap
 Attending this AWS Community Day served as a powerful wake-up call for me as an IT student. In university, projects often conclude once the code simply runs as a Proof of Concept. However, real-world production—particularly regarding Cloud and AI systems—demands an entirely different enterprise-grade engineering approach.
+
 I realized that:
-1. Core foundational knowledge is critical: AI will not replace software developers. Mastering the underlying floating-point architecture of GPUs or networking protocols like HTTP/3 and continuous TCP handshakes is the ultimate key to controlling the technology rather than just consuming APIs.
-2. System design skills are paramount: VPBank’s Multi-Agent architecture illustrates how future software design will resemble decentralized microservices, where specialized AI agents collaborate, balance, and cross-examine one another.
-3. Security and Context are King: For AI to become truly viable within enterprise spaces, mastering Context Engineering and deploying rigorous security isolation layers (VPCs, OACs, and Multi-layered Guardrails) is mandatory to guarantee sensitive production data remains safe from leaks.
+* &emsp;**Core foundational knowledge is critical:** AI will not replace software developers. Mastering the underlying floating-point architecture of GPUs or networking protocols like HTTP/3 and continuous TCP handshakes is the ultimate key to controlling the technology rather than just consuming APIs.
+* &emsp;**System design skills are paramount:** VPBank’s Multi-Agent architecture illustrates how future software design will resemble decentralized microservices, where specialized AI agents collaborate, balance, and cross-examine one another.
+* &emsp;**Security and Context are King:** For AI to become truly viable within enterprise spaces, mastering Context Engineering and deploying rigorous security isolation layers (VPCs, OACs, and Multi-layered Guardrails) is mandatory to guarantee sensitive production data remains safe from leaks.
 
 This worklog goes beyond a standard event recap; it provides a direct technical framework for my upcoming graduation thesis: building an AI application that is not only intelligent but structurally secure, cost-optimized, and resilient under an enterprise-level model. Thank you to the speakers and AWS for providing such an outstanding technical event! I will immediately begin exploring the Model Context Protocol (MCP) and Terraform infrastructure tooling as recommended by the panels.

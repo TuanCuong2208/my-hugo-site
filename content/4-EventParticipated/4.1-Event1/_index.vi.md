@@ -88,9 +88,11 @@ Mô hình kiến trúc phần mềm AI cao cấp được ứng dụng thực t�
 
 ### Kết Luận & Định Hướng Học Tập Cá Nhân
 Tham dự buổi AWS Community Day này thực sự là một "cú tát" tỉnh táo cho một sinh viên CNTT như tôi. Ở trường lớp, chúng tôi thường dừng lại ở mức "làm cho code chạy được" (Proof of Concept). Nhưng thực tế sản xuất (Production), đặc biệt là với hệ thống Cloud và AI, là một thế giới hoàn toàn khác.
+
 Tôi nhận ra rằng:
-1. Kiến thức căn bản cực kỳ quan trọng: Đừng nghĩ AI sẽ thay thế lập trình viên. Việc hiểu rõ cơ chế float-point của GPU (như anh Đức trình bày) hay giao thức HTTP/3, TCP Handshake (như anh Thịnh phân tích) là chìa khóa để làm chủ công nghệ chứ không phải là thợ gõ API.
-2. Kỹ năng thiết kế hệ thống: Kiến trúc Multi-Agent của VPBank cho thấy xu hướng phần mềm tương lai sẽ giống như microservices, nhưng thay vì các service gọi nhau, các AI agents chuyên biệt sẽ cộng tác và kiểm soát lẫn nhau.
-3. Bảo mật và Ngữ cảnh là Vua: Để AI thực sự ứng dụng được trong doanh nghiệp, kỹ năng Context Engineering và thiết lập các lớp Guardrails, VPC, OAC là bắt buộc để đảm bảo dữ liệu không bị rò rỉ.
-Worklog hôm nay không chỉ là bản ghi chép, mà sẽ là định hướng cho đồ án tốt nghiệp sắp tới của tôi: Xây dựng một ứng dụng AI không chỉ "thông minh" mà còn phải "an toàn" và "tối ưu chi phí" theo tư duy Enterprise. Cảm ơn các speaker và AWS đã tổ chức một sự kiện quá chất lượng! Chắc chắn tôi sẽ tìm hiểu ngay về Model Context Protocol (MCP) và Terraform như bài tập thực hành chị Vy đã gợi ý
+* &emsp;**Kiến thức căn bản cực kỳ quan trọng:** Đừng nghĩ AI sẽ thay thế lập trình viên. Việc hiểu rõ cơ chế float-point của GPU (như anh Đức trình bày) hay giao thức HTTP/3, TCP Handshake (như anh Thịnh phân tích) là chìa khóa để làm chủ công nghệ chứ không phải là thợ gõ API.
+* &emsp;**Kỹ năng thiết kế hệ thống:** Kiến trúc Multi-Agent của VPBank cho thấy xu hướng phần mềm tương lai sẽ giống như microservices, nhưng thay vì các service gọi nhau, các AI agents chuyên biệt sẽ cộng tác và kiểm soát lẫn nhau.
+* &emsp;**Bảo mật và Ngữ cảnh là Vua:** Để AI thực sự ứng dụng được trong doanh nghiệp, kỹ năng Context Engineering và thiết lập các lớp Guardrails, VPC, OAC là bắt buộc để đảm bảo dữ liệu không bị rò rỉ.
+
+Worklog hôm nay không chỉ là bản ghi chép, mà sẽ là định hướng cho đồ án tốt nghiệp sắp tới của tôi: Xây dựng một ứng dụng AI không chỉ "thông minh" mà còn phải "an toàn" và "tối ưu chi phí" theo tư duy Enterprise. Cảm ơn các speaker và AWS đã tổ chức một sự kiện quá chất lượng! Chắc chắn tôi sẽ tìm hiểu ngay về Model Context Protocol (MCP) và Terraform như bài tập thực hành chị Vy đã gợi ý.
 .

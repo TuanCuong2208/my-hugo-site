@@ -1,12 +1,12 @@
 ---
-title: "Event Report: FCAJ Community Day 2026"
+title: "Event 1"
 date: 2026-05-24
 weight: 1
 chapter: false
 pre: "<b>4.1. </b>"
 ---
 
-## EVENT REPORT: "FCAJ COMMUNITY DAY WORKSHOP"
+# EVENT REPORT: "FCAJ COMMUNITY DAY WORKSHOP"
 
 * **Time:** 09:00 AM – 12:00 PM, Saturday, May 23, 2026
 * **Location:** Floor 26, Bitexco Financial Tower, 02 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City

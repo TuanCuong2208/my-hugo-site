@@ -8,7 +8,7 @@ pre: " <b> 4. </b> "
 
 During my internship, I have had the opportunity to attend various professional events. Each session provided valuable technological insights, helping me broaden my perspective and connect with industry experts.
 
-### [Event 1: FCAJ Community Day](/4-eventparticipated/4.1-event1/) 
+### [Event 1: FCAJ Community Day]({{% relref "4.1-Event1" %}})  
 &emsp;**Date & Time:** 09:00 AM – 12:00 PM, Saturday, May 23, 2026  
 &emsp;**Location:** Floor 26, Bitexco Financial Tower, 02 Hai Trieu Street, Ben Nghe, District 1, Ho Chi Minh City  
 &emsp;**Role:** Attendee  
@@ -16,5 +16,8 @@ During my internship, I have had the opportunity to attend various professional 
 
 ---
 
-### [Event 2](./4.2-Event2/)  
-&emsp;*To be updated...*
+### [Event 2: GenAI-powered App-DB Modernization]({{% relref "4.2-Event2" %}})  
+&emsp;**Date & Time:** 09:00 AM, August 13, 2025  
+&emsp;**Location:** Floor 26, Bitexco Financial Tower, 02 Hai Trieu Street, Ben Nghe, District 1, Ho Chi Minh City  
+&emsp;**Role:** Attendee  
+&emsp;**Description:** Deep-dive workshop on modernizing applications and databases utilizing GenAI capabilities, Domain-Driven Design (DDD), and Event-Driven Architectures.

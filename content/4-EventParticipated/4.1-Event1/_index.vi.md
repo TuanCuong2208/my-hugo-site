@@ -1,12 +1,12 @@
 ---
-title: "Báo Cáo Thu Hoạch: FCAJ Community Day 2026"
+title: "Sự kiện 1"
 date: 2026-05-24
 weight: 1
 chapter: false
 pre: "<b>4.1. </b>"
 ---
 
-## BÀI THU HOẠCH "FCAJ COMMUNITY DAY WORKSHOP"
+# BÀI THU HOẠCH "FCAJ COMMUNITY DAY WORKSHOP"
 
 * **Thời gian:** 09:00 - 12:00, Thứ Bảy, ngày 23 tháng 05 năm 2026
 * **Địa điểm:** Tầng 26, Tháp tài chính Bitexco, 02 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh

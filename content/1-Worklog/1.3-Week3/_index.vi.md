@@ -8,7 +8,7 @@ pre: "<b>1.3. </b>"
 
 Trong tuần này, tôi bắt đầu triển khai các thành phần chính của một hệ thống thực tế trên AWS, bao gồm máy chủ ảo (EC2), kho lưu trữ (S3) và cơ sở dữ liệu (RDS).
 
-## 4. Lab 4: Amazon EC2 - Virtual Web Server
+## 1. Lab 4: Amazon EC2 - Virtual Web Server
 
 Dịch vụ **Amazon EC2 (Elastic Compute Cloud)** cho phép thuê các máy chủ ảo trên đám mây. Thay vì phải mua máy tính vật lý, tôi có thể khởi tạo một máy chủ Linux chỉ trong vài phút.
 
@@ -46,7 +46,7 @@ Sử dụng địa chỉ IP Public của máy chủ để truy cập trực ti�
 
 ---
 
-## 5. Lab 5: Amazon S3 - Static Website Hosting
+## 2. Lab 5: Amazon S3 - Static Website Hosting
 
 **Amazon S3 (Simple Storage Service)** là dịch vụ lưu trữ đối tượng dẫn đầu về khả năng mở rộng và độ sẵn sàng của dữ liệu. Bài lab này tập trung vào việc biến một S3 Bucket thành một trang web tĩnh (Static Website).
 
@@ -76,7 +76,7 @@ Tải tệp `index.html` lên và truy cập thông qua Endpoint được AWS c�
 
 ---
 
-## 6. Lab 6: Amazon RDS - Relational Database Service
+## 3. Lab 6: Amazon RDS - Relational Database Service
 
 **Amazon RDS** giúp đơn giản hóa việc thiết lập và vận hành các cơ sở dữ liệu quan hệ trên đám mây. Tôi đã triển khai một thực thể MySQL để phục vụ lưu trữ dữ liệu cho ứng dụng.
 

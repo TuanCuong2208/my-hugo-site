@@ -8,7 +8,7 @@ pre: "<b>1.3. </b>"
 
 During this week, I began deploying the main components of a real-world system on AWS, including virtual servers (EC2), cloud storage (S3), and relational databases (RDS).
 
-## 4. Lab 4: Amazon EC2 - Virtual Web Server
+## 1. Lab 4: Amazon EC2 - Virtual Web Server
 
 The **Amazon EC2 (Elastic Compute Cloud)** service allows users to rent virtual servers in the cloud. Instead of purchasing physical hardware, I was able to launch a Linux server within minutes.
 
@@ -46,7 +46,7 @@ I used the server’s Public IP address to access the website directly from a we
 
 ---
 
-## 5. Lab 5: Amazon S3 - Static Website Hosting
+## 2. Lab 5: Amazon S3 - Static Website Hosting
 
 **Amazon S3 (Simple Storage Service)** is a highly scalable and durable object storage service. In this lab, I configured an S3 Bucket to host a static website.
 
@@ -76,7 +76,7 @@ I uploaded the `index.html` file and accessed the website through the endpoint p
 
 ---
 
-## 6. Lab 6: Amazon RDS - Relational Database Service
+## 3. Lab 6: Amazon RDS - Relational Database Service
 
 **Amazon RDS** simplifies the setup and management of relational databases in the cloud. In this lab, I deployed a MySQL database instance to support application data storage.
 

@@ -113,12 +113,12 @@ The API gateway processed the authenticated request and returned a structured te
 🧠 Key Insights & Engineering Takeaways
 Hybrid Architecture Realities: Designing hybrid networks demands a deep understanding of split-horizon routing. Inbound and Outbound Endpoints are not merely configuration options; they represent dedicated network bridges that require deliberate subnet layout and multi-AZ positioning to avoid enterprise-wide DNS blackouts.
 
-Operational Problem Solving: Operational workflows in the cloud are rarely perfectly linear. When managed cloud services like AWS CloudShell face regional restrictions or verification locks, a systems engineer must pivot quickly—either by switching execution environments, configuring local terminal proxies, or leveraging alternative shell contexts to keep deployments on track.
+Operational Problem Solving: Operational workflows in the cloud are rarely perfectly linear. When managed cloud services like AWS CloudShell face regional restrictions or verification locks, a systems engineer must pivot quickly-either by switching execution environments, configuring local terminal proxies, or leveraging alternative shell contexts to keep deployments on track.
 
-Lifecycle Discipline & Cost Control: Automated cloud environments demand strict compliance with resource lifecycle management. Leaving unused infrastructure active—especially network-intensive components like Route 53 Resolver Endpoints or unattached Elastic IPs—leads to unnecessary operational costs. Establishing a systematic creation, validation, and deletion routine is a fundamental habit of an efficient cloud professional.
+Lifecycle Discipline & Cost Control: Automated cloud environments demand strict compliance with resource lifecycle management. Leaving unused infrastructure active-especially network-intensive components like Route 53 Resolver Endpoints or unattached Elastic IPs-leads to unnecessary operational costs. Establishing a systematic creation, validation, and deletion routine is a fundamental habit of an efficient cloud professional.
 
 🚀 Looking Ahead: Week 5 Goals & Milestones
-To maintain momentum within the First Cloud AI Journey – Workforce Bootcamp 2026 program, my objectives for Week 5 will pivot toward infrastructure security, multi-tier network boundaries, high-performance load balancing, and global content delivery.
+To maintain momentum within the First Cloud AI Journey - Workforce Bootcamp 2026 program, my objectives for Week 5 will pivot toward infrastructure security, multi-tier network boundaries, high-performance load balancing, and global content delivery.
 
 📋 Planned Lab Modules:
 Lab 13: Advanced VPC Topology - Building an Advanced VPC Topology with Multi-Tier Subnet Distribution to isolate database layers from web instances.
@@ -129,5 +129,5 @@ Lab 15: Auto Scaling Groups - Implementing Auto Scaling Groups (ASG) to ensure d
 
 Lab 16: Amazon CloudFront - Configuring Amazon CloudFront for low-latency global content delivery via regional edge caches.
 
-📅 Event Attendance:
+🗓️ Event Attendance:
 In addition to completing the advanced lab technical modules, I plan to attend the 2nd Official Bootcamp Event hosted at the AWS Vietnam Office (Bitexco Financial Tower). This corporate session will provide essential opportunities to sync with cloud solutions architects, evaluate production-grade enterprise deployment frameworks, and strengthen community networking ties with industry professionals.

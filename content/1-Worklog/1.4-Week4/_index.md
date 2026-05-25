@@ -22,15 +22,15 @@ The core requirement of any enterprise-grade deployment is establishing an isola
 
 #### Step 1: Initialize Virtual Private Cloud (VPC)
 I deployed a custom VPC named `MyLabVPC` with a wide `10.0.0.0/16` IP range, creating a completely isolated sandbox environment dedicated to corporate applications.
-![Step 1](/images/week4/1.png)
+![Step 1](/my-hugo-site/images/week4/1.png)
 
 #### Step 2: Provision Public Subnets for Edge Components
 I carved out the first subnet segment as a Public Subnet inside the `us-east-1a` Availability Zone. This network interface layer handles connectivity to exterior endpoints and public interfaces.
-![Step 2](/images/week4/2.png)
+![Step 2](/my-hugo-site/images/week4/2.png)
 
 #### Step 3: Map Out Multi-AZ Redundancy Zones
 To prevent single-point-of-failure vulnerabilities, I extended the infrastructure by mapping out additional subnets. This strict separation satisfies high-availability criteria for subsequent deployments.
-![Step 3](/images/week4/3.png)
+![Step 3](/my-hugo-site/images/week4/3.png)
 
 ---
 
@@ -46,11 +46,11 @@ An isolated VPC cannot communicate with external services without explicit routi
 
 #### Step 1: Attach the Internet Gateway (IGW)
 I initialized a virtual gateway and bound it directly to `MyLabVPC`, providing a logical bridge for inbound and outbound communication paths.
-![Step 4](/images/week4/4.png)
+![Step 4](/my-hugo-site/images/week4/4.png)
 
 #### Step 2: Update Ingress and Egress Route Mappings
 I modified the active public Route Table by appending a default route (`0.0.0.0/0`) targeting the newly deployed Internet Gateway, allowing nodes to process internet-facing requests.
-![Step 5](/images/week4/5.png)
+![Step 5](/my-hugo-site/images/week4/5.png)
 
 ---
 
@@ -68,17 +68,17 @@ I modified the active public Route Table by appending a default route (`0.0.0.0/
 
 #### Step 1: Create the Private Hosted Zone
 I initialized a Private Hosted Zone under the internal domain name `hutech.local`. This zone was explicitly associated with the working VPC. Upon creation, Route 53 instantly provisioned the mandatory SOA metadata and a set of local Name Servers to handle authoritative answers internally.
-![Step 6](/images/week4/6.png)
+![Step 6](/my-hugo-site/images/week4/6.png)
 
 #### Step 2: Configure Route 53 Resolver Inbound Endpoint
 To accept incoming recursive requests from external systems, I initialized the setup of an Inbound Endpoint named `Hutech-Inbound-Endpoint`. During the allocation phase, AWS enforces a mandatory architectural constraint: endpoints must span a minimum of two separate Availability Zones (`us-east-1a` and `us-east-1b`) to guarantee fault tolerance and mitigate single-point-of-failure risks.
 
 Due to strict IP availability constraints inside the initial custom lab VPC, the configuration was dynamically migrated to the pre-configured Default VPC. This tactical adjustment provided a clean subnet map across multiple zones, unlocking the interface gray-out state and allowing the assignment of automatically selected internal IPv4 addresses.
-![Step 7](/images/week4/7.png)
+![Step 7](/my-hugo-site/images/week4/7.png)
 
 #### Step 3: Initialize Outbound Endpoints and Monitor Operational Status
 To establish complete bidirectional resolution, I configured the complementary Outbound Endpoint named `Hutech-Outbound-Endpoint` utilizing the same high-availability multi-AZ distribution pattern. Both endpoints were tracked until their statuses transitioned to `Operational`, meaning the network interfaces were successfully bound and ready to process real-time packet forwarding.
-![Step 8](/images/week4/8.png)
+![Step 8](/my-hugo-site/images/week4/8.png)
 
 #### Step 4: Execute Resource Deallocation and Cloud Clean-Up
 Adhering strictly to the AWS Well-Architected Framework's Cost Optimization pillar, a precise decommissioning sequence was executed once operational testing concluded. Because active Resolver Endpoints incur ongoing hourly charges for underlying ENIs, the resource hierarchy was cleaned up in reverse order: the Outbound and Inbound Endpoints were systematically unlinked and deleted to release reserved IPs, followed by the safe deletion of the `hutech.local` Private Hosted Zone.

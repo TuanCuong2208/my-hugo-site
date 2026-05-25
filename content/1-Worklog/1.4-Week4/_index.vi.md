@@ -23,17 +23,17 @@ Yêu cầu cốt lõi của bất kỳ triển khai cấp doanh nghiệp nào l�
 #### Bước 1: Khởi tạo Virtual Private Cloud (VPC)
 Tôi đã triển khai một VPC tùy chỉnh có tên `MyLabVPC` với dải IP rộng `10.0.0.0/16`, tạo ra một môi trường sandbox hoàn toàn cô lập dành riêng cho các ứng dụng doanh nghiệp.
 
-![Step 1](/images/week4/1.png)
+![Step 1](/my-hugo-site/images/week4/1.png)
 
 #### Bước 2: Cấp phát Public Subnets cho các thành phần Edge
 Tôi đã tạo phân đoạn subnet đầu tiên thành một Public Subnet bên trong Availability Zone `us-east-1a`. Lớp giao diện mạng này xử lý kết nối tới các endpoint bên ngoài và các giao diện công khai.
 
-![Step 2](/images/week4/2.png)
+![Step 2](/my-hugo-site/images/week4/2.png)
 
 #### Bước 3: Thiết lập các vùng dự phòng Multi-AZ
 Để ngăn ngừa các lỗ hổng single-point-of-failure, tôi mở rộng hạ tầng bằng cách thiết lập thêm các subnet bổ sung. Việc tách biệt nghiêm ngặt này đáp ứng các tiêu chí về tính sẵn sàng cao cho những triển khai tiếp theo.
 
-![Step 3](/images/week4/3.png)
+![Step 3](/my-hugo-site/images/week4/3.png)
 
 ---
 
@@ -50,12 +50,12 @@ Một VPC được cô lập không thể giao tiếp với các dịch vụ bê
 #### Bước 1: Gắn Internet Gateway (IGW)
 Tôi khởi tạo một gateway ảo và liên kết trực tiếp nó với `MyLabVPC`, cung cấp một cầu nối logic cho các luồng giao tiếp vào và ra.
 
-![Step 4](/images/week4/4.png)
+![Step 4](/my-hugo-site/images/week4/4.png)
 
 #### Bước 2: Cập nhật ánh xạ Route Ingress và Egress
 Tôi chỉnh sửa Route Table công khai đang hoạt động bằng cách thêm route mặc định (`0.0.0.0/0`) hướng tới Internet Gateway vừa triển khai, cho phép các node xử lý các yêu cầu hướng internet.
 
-![Step 5](/images/week4/5.png)
+![Step 5](/my-hugo-site/images/week4/5.png)
 
 ---
 
@@ -71,19 +71,19 @@ Tôi chỉnh sửa Route Table công khai đang hoạt động bằng cách thê
 #### Bước 1: Tạo Private Hosted Zone
 Tôi khởi tạo một Private Hosted Zone dưới tên miền nội bộ `hutech.local`. Zone này được liên kết rõ ràng với VPC đang hoạt động. Sau khi tạo, Route 53 lập tức cung cấp metadata SOA bắt buộc cùng với một tập hợp Name Server cục bộ để xử lý phản hồi có thẩm quyền nội bộ.
 
-![Step 6](/images/week4/anh6.png)
+![Step 6](/my-hugo-site/images/week4/anh6.png)
 
 #### Bước 2: Cấu hình Route 53 Resolver Inbound Endpoint
 Để chấp nhận các yêu cầu đệ quy đến từ các hệ thống bên ngoài, tôi khởi tạo cấu hình cho Inbound Endpoint có tên `Hutech-Inbound-Endpoint`. Trong quá trình cấp phát, AWS áp đặt một ràng buộc kiến trúc bắt buộc: endpoint phải trải rộng trên tối thiểu hai Availability Zone riêng biệt (`us-east-1a` và `us-east-1b`) nhằm đảm bảo khả năng chịu lỗi và giảm thiểu rủi ro single-point-of-failure.
 
 Do các giới hạn nghiêm ngặt về khả năng cấp phát IP bên trong VPC tùy chỉnh ban đầu của lab, cấu hình đã được chuyển động sang Default VPC được cấu hình sẵn. Sự điều chỉnh mang tính chiến lược này cung cấp sơ đồ subnet rõ ràng trên nhiều vùng, mở khóa trạng thái giao diện bị vô hiệu hóa và cho phép gán các địa chỉ IPv4 nội bộ được chọn tự động.
 
-![Step 7](/images/week4/7.png)
+![Step 7](/my-hugo-site/images/week4/7.png)
 
 #### Bước 3: Khởi tạo Outbound Endpoints và theo dõi trạng thái vận hành
 Để thiết lập khả năng phân giải hai chiều hoàn chỉnh, tôi cấu hình Outbound Endpoint bổ sung có tên `Hutech-Outbound-Endpoint` sử dụng cùng mô hình phân phối Multi-AZ có tính sẵn sàng cao. Cả hai endpoint đều được theo dõi cho đến khi trạng thái chuyển sang `Operational`, nghĩa là các giao diện mạng đã được liên kết thành công và sẵn sàng xử lý việc chuyển tiếp gói tin theo thời gian thực.
 
-![Step 8](/images/week4/8.png)
+![Step 8](/my-hugo-site/images/week4/8.png)
 
 #### Bước 4: Thực hiện giải phóng tài nguyên và dọn dẹp môi trường đám mây
 Tuân thủ nghiêm ngặt trụ cột Tối ưu Chi phí của AWS Well-Architected Framework, một chuỗi quy trình ngừng hoạt động chính xác đã được thực hiện sau khi thử nghiệm vận hành hoàn tất. Vì các Resolver Endpoints đang hoạt động sẽ phát sinh chi phí theo giờ cho các ENI nền tảng, hệ thống phân cấp tài nguyên đã được dọn dẹp theo thứ tự ngược lại: Outbound và Inbound Endpoints được hủy liên kết và xóa có hệ thống để giải phóng IP đã đặt trước, sau đó xóa an toàn `hutech.local` Private Hosted Zone.

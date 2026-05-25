@@ -105,9 +105,11 @@ To bypass this roadblock without halting operations, the execution vector was of
 Using the terminal, I formulated an advanced structural query targeting the Amazon EC2 endpoint. Instead of calling a generic description command that pulls verbose, multi-page data logs, I constructed a precise JMESPath filter to extract only three essential operational attributes: the unique machine identifier, the real-time lifecycle state, and the hardware class family.
 
 The optimized command string was executed as follows:
+
 ```bash
 aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,State.Name,InstanceType]" --output table
-Step 3: Analyze and Validate the Tabular Infrastructure State Output
+```
+#### Step 3: Analyze and Validate the Tabular Infrastructure State Output
 The API gateway processed the authenticated request and returned a structured text matrix, completely bypassing raw JSON bloat. The terminal output displayed the active lab machine with its Instance ID (i-058d40dc31f87c225), an active operational lifecycle state (running), and the instance type classification (t2.micro), validating that the cloud infrastructure was running properly under direct command-line control.
 
 🧠 Key Insights & Engineering Takeaways

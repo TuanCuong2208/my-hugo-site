@@ -71,7 +71,7 @@ Security is always the highest priority in the cloud environment under the Share
 
 ##### **4. Screenshots Verification**
 * 📸 **`/images/week2/iam-create-user-step1.png`**: Detailed screenshot of the IAM User `Admin-Cuong` initialization step, configuring login parameters through the AWS Management Console.
-* 📸 **`/my-hugo-site/images/week2/iam-dashboard.png`**: Screenshot of the overall IAM Dashboard interface. The screen displays an absolute security compliance status with green checkmarks indicating that the Root account has MFA enabled and the IAM account is protected by a multi-layered structure.
+* 📸 **`/images/week2/iam-dashboard.png`**: Screenshot of the overall IAM Dashboard interface. The screen displays an absolute security compliance status with green checkmarks indicating that the Root account has MFA enabled and the IAM account is protected by a multi-layered structure.
 
 ---
 

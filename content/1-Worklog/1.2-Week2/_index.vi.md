@@ -70,8 +70,8 @@ Bảo mật luôn là ưu tiên tối cao trên môi trường đám mây theo m
 4. Sau khi khởi tạo xong, đăng xuất tài khoản Root. Tiến hành thiết lập cơ chế bảo mật đa lớp **Virtual MFA (Multi-Factor Authentication)** thông qua ứng dụng Google Authenticator trên điện thoại cá nhân cho cả tài khoản Root và tài khoản IAM `Admin-Cuong`. từ đây về sau, mọi thao tác cấu hình hệ thống đều được thực hiện an toàn trên User IAM mới này.
 
 ##### **4. Hệ thống ảnh minh chứng (Screenshots Verification)**
-* 📸 <img src="/images/week2/iam-create-user-step1.png" alt="Khởi tạo người dùng IAM" style="max-width:100%; height:auto;" /> : Ảnh chụp màn hình chi tiết bước khởi tạo người dùng IAM mang tên định danh `Admin-Cuong`, thực hiện cấu hình các tham số đăng nhập thông qua giao diện quản trị AWS Management Console.
-* 📸 <img src="/images/week2/iam-dashboard.png" alt="Bảng điều khiển danh tính IAM" style="max-width:100%; height:auto;" /> : Ảnh chụp giao diện tổng quan của bảng điều khiển IAM Dashboard. Màn hình ghi nhận trạng thái tuân thủ an ninh tuyệt đối với các dấu tích xanh, biểu thị tài khoản Gốc (Root) đã được kích hoạt bảo mật đa lớp MFA và tài khoản IAM được phân quyền theo cấu trúc nhiều tầng bảo mật.
+<img src="/images/week2/iam-create-user-step1.png" alt="Khởi tạo người dùng IAM" style="max-width:100%; height:auto;" /> : Ảnh chụp màn hình chi tiết bước khởi tạo người dùng IAM mang tên định danh `Admin-Cuong`, thực hiện cấu hình các tham số đăng nhập thông qua giao diện quản trị AWS Management Console.
+<img src="/images/week2/iam-dashboard.png" alt="Bảng điều khiển danh tính IAM" style="max-width:100%; height:auto;" /> : Ảnh chụp giao diện tổng quan của bảng điều khiển IAM Dashboard. Màn hình ghi nhận trạng thái tuân thủ an ninh tuyệt đối với các dấu tích xanh, biểu thị tài khoản Gốc (Root) đã được kích hoạt bảo mật đa lớp MFA và tài khoản IAM được phân quyền theo cấu trúc nhiều tầng bảo mật.
 
 ---
 
@@ -91,8 +91,8 @@ Mạng máy tính là nền móng của mọi hệ thống hạ tầng. Bài Lab
 4. Di chuyển đến mục **Route Tables** (Bảng định tuyến). Hệ thống tự tạo một bảng định tuyến mặc định (Main Route Table) cho VPC. Tôi tiến hành chọn bảng định tuyến này, chuyển sang tab **Routes** > Chọn **Edit routes**. Tiến hành thêm một dòng định tuyến mới: tại cột *Destination* nhập dải IP đại diện cho toàn bộ internet công cộng là `0.0.0.0/0`, tại cột *Target* chọn đầu ra là `Internet Gateway` và trỏ vào cái `MyLab-IGW` vừa tạo. Bấm lưu lại để chính thức thông mạng ra ngoài cho Public Subnet.
 
 ##### **4. Hệ thống ảnh minh chứng (Screenshots Verification)**
-* 📸 <img src="/images/week2/vpc-architecture.png" alt="Sơ đồ kiến trúc mạng VPC" style="max-width:100%; height:auto;" /> : Sơ đồ tư duy quy hoạch phân vùng mạng, cấu trúc chia nhỏ các dải IP CIDR và luồng di chuyển của gói tin đi qua cổng Internet Gateway biên.
-* 📸 <img src="/images/week2/vpc-create-success.png" alt="Khởi tạo VPC thành công" style="max-width:100%; height:auto;" /> : Bảng tổng hợp trạng thái trên AWS Console xác nhận hệ thống mạng `MyLabVPC` đã chuyển sang trạng thái hoạt động (Active), đính kèm chính xác bảng định tuyến Route Table chứa dòng luật `0.0.0.0/0 -> igw`.
+<img src="/images/week2/vpc-architecture.png" alt="Sơ đồ kiến trúc mạng VPC" style="max-width:100%; height:auto;" /> : Sơ đồ tư duy quy hoạch phân vùng mạng, cấu trúc chia nhỏ các dải IP CIDR và luồng di chuyển của gói tin đi qua cổng Internet Gateway biên.
+<img src="/images/week2/vpc-create-success.png" alt="Khởi tạo VPC thành công" style="max-width:100%; height:auto;" /> : Bảng tổng hợp trạng thái trên AWS Console xác nhận hệ thống mạng `MyLabVPC` đã chuyển sang trạng thái hoạt động (Active), đính kèm chính xác bảng định tuyến Route Table chứa dòng luật `0.0.0.0/0 -> igw`.
 
 ---
 
@@ -131,12 +131,12 @@ Sau khi đã dựng xong bộ khung bảo mật và mạng lưới, bài Lab nà
 8. Nhấn nút màu cam **Launch instance** ở góc phải màn hình để ra lệnh cho hạ tầng AWS khởi tạo máy chủ thực tế.
 
 ##### **4. Hệ thống ảnh minh chứng (Screenshots Verification)**
-* 📸 <img src="/images/week2/anh1.png" alt="Đặt tên máy chủ EC2" style="max-width:100%; height:auto;" /> : Ảnh chụp màn hình bước đặt tên máy chủ `MyWebServer` và lựa chọn hệ điều hành Amazon Linux 2023 AMI từ kho lưu trữ.
-* 📸 <img src="/images/week2/anh2.png" alt="Cấu hình phần cứng và Key Pair" style="max-width:100%; height:auto;" /> : Minh chứng cấu hình phần cứng giới hạn `t2.micro` và bước khởi tạo thành công cặp khóa private key bảo mật `my-key.pem`.
-* 📸 <img src="/images/week2/anh3.png" alt="Cấu hình Security Group mạng lưới" style="max-width:100%; height:auto;" /> : Ảnh chụp toàn bộ bảng Network Settings, ghi nhận việc đưa máy chủ vào dải mạng tùy chỉnh `MyLabVPC`, gán IP Public và cấu hình mở tường lửa cổng 80 công cộng.
-* 📸 <img src="/images/week2/anh4.png" alt="Cấu hình tự động hóa User Data" style="max-width:100%; height:auto;" /> : Ảnh chụp chi tiết ô cấu hình nâng cao User Data, hiển thị nguyên vẹn đoạn script shell cài cắm tự động dịch vụ web Apache.
-* 📸 <img src="/images/week2/anh5.png" alt="Máy chủ hoạt động Running" style="max-width:100%; height:auto;" /> : Giao diện danh sách máy chủ hoạt động, hiển thị dòng máy chủ `MyWebServer` chuyển màu xanh `Running` rực rỡ và vượt qua bài kiểm tra sức khỏe 2/2 checks passed của AWS hạ tầng.
-* 📸 <img src="/images/week2/anh6.png" alt="Kiểm tra trình duyệt truy cập Web Server" style="max-width:100%; height:auto;" /> : Ảnh chụp thực tế trình duyệt Chrome của máy cá nhân. Khi gõ địa chỉ IP Public của máy chủ vào thanh URL, trang web lập tức hiển thị dòng chữ tiêu đề lớn *"Welcome to My AWS Web Server..."*, chứng minh toàn bộ script tự động hóa hoạt động hoàn hảo 100%.
+<img src="/images/week2/anh1.png" alt="Đặt tên máy chủ EC2" style="max-width:100%; height:auto;" /> : Ảnh chụp màn hình bước đặt tên máy chủ `MyWebServer` và lựa chọn hệ điều hành Amazon Linux 2023 AMI từ kho lưu trữ.
+<img src="/images/week2/anh2.png" alt="Cấu hình phần cứng và Key Pair" style="max-width:100%; height:auto;" /> : Minh chứng cấu hình phần cứng giới hạn `t2.micro` và bước khởi tạo thành công cặp khóa private key bảo mật `my-key.pem`.
+<img src="/images/week2/anh3.png" alt="Cấu hình Security Group mạng lưới" style="max-width:100%; height:auto;" /> : Ảnh chụp toàn bộ bảng Network Settings, ghi nhận việc đưa máy chủ vào dải mạng tùy chỉnh `MyLabVPC`, gán IP Public và cấu hình mở tường lửa cổng 80 công cộng.
+<img src="/images/week2/anh4.png" alt="Cấu hình tự động hóa User Data" style="max-width:100%; height:auto;" /> : Ảnh chụp chi tiết ô cấu hình nâng cao User Data, hiển thị nguyên vẹn đoạn script shell cài cắm tự động dịch vụ web Apache.
+<img src="/images/week2/anh5.png" alt="Máy chủ hoạt động Running" style="max-width:100%; height:auto;" /> : Giao diện danh sách máy chủ hoạt động, hiển thị dòng máy chủ `MyWebServer` chuyển màu xanh `Running` rực rỡ và vượt qua bài kiểm tra sức khỏe 2/2 checks passed của AWS hạ tầng.
+<img src="/images/week2/anh6.png" alt="Kiểm tra trình duyệt truy cập Web Server" style="max-width:100%; height:auto;" /> : Ảnh chụp thực tế trình duyệt Chrome của máy cá nhân. Khi gõ địa chỉ IP Public của máy chủ vào thanh URL, trang web lập tức hiển thị dòng chữ tiêu đề lớn *"Welcome to My AWS Web Server..."*, chứng minh toàn bộ script tự động hóa hoạt động hoàn hảo 100%.
 
 ---
 
@@ -175,11 +175,11 @@ Khi khối lượng tệp tin (hình ảnh, mã nguồn giao diện frontend HTM
 7. Quay trở lại tab đầu tiên **Objects**. Bấm nút **Upload** > Chọn **Add files** và chọn một file code giao diện `index.html` sẵn có từ máy tính cá nhân để tải lên hệ thống.
 
 ##### **4. Hệ thống ảnh minh chứng (Screenshots Verification)**
-* 📸 <img src="/images/week2/anh7.png" alt="Khởi tạo S3 Bucket thành công" style="max-width:100%; height:auto;" /> : Giao diện trang khởi tạo S3 Bucket thành công, ghi nhận việc cấu hình tên định danh độc nhất và bước gỡ bỏ thành công tấm khiên chắn truy cập công khai mặc định.
-* 📸 <img src="/images/week2/anh8.png" alt="Kích hoạt Static Website Hosting" style="max-width:100%; height:auto;" /> : Ảnh chụp màn hình mục Properties xác nhận tính năng Static website hosting đã bật sang chế độ xanh hoạt động kèm việc khai báo tệp chỉ mục mặc định `index.html`.
-* 📸 <img src="/images/week2/anh9.png" alt="Soạn thảo cấu trúc Bucket Policy" style="max-width:100%; height:auto;" /> : Ảnh chụp giao diện soạn thảo Bucket Policy, hiển thị trọn vẹn đoạn mã JSON phân quyền truy cập đọc file diện rộng mà không phát sinh bất kỳ lỗi cú pháp nào.
-* 📸 <img src="/images/week2/anh10.png" alt="Upload index html thành công" style="max-width:100%; height:auto;" /> : Bảng danh sách quản lý đối tượng hiển thị trạng thái tệp tin mã nguồn `index.html` đã được upload thành công lên đám mây, báo trạng thái *Succeeded* màu xanh.
-* 📸 <img src="/images/week2/anh11.png" alt="Kiểm tra giao diện qua link Endpoint S3" style="max-width:100%; height:auto;" /> : Ảnh chụp giao diện website hoàn thiện chạy mượt mà trên trình duyệt khi người dùng click trực tiếp vào đường link URL Endpoint do dịch vụ S3 phân phối toàn cầu.
+<img src="/images/week2/anh7.png" alt="Khởi tạo S3 Bucket thành công" style="max-width:100%; height:auto;" /> : Giao diện trang khởi tạo S3 Bucket thành công, ghi nhận việc cấu hình tên định danh độc nhất và bước gỡ bỏ thành công tấm khiên chắn truy cập công khai mặc định.
+<img src="/images/week2/anh8.png" alt="Kích hoạt Static Website Hosting" style="max-width:100%; height:auto;" /> : Ảnh chụp màn hình mục Properties xác nhận tính năng Static website hosting đã bật sang chế độ xanh hoạt động kèm việc khai báo tệp chỉ mục mặc định `index.html`.
+<img src="/images/week2/anh9.png" alt="Soạn thảo cấu trúc Bucket Policy" style="max-width:100%; height:auto;" /> : Ảnh chụp giao diện soạn thảo Bucket Policy, hiển thị trọn vẹn đoạn mã JSON phân quyền truy cập đọc file diện rộng mà không phát sinh bất kỳ lỗi cú pháp nào.
+<img src="/images/week2/anh10.png" alt="Upload index html thành công" style="max-width:100%; height:auto;" /> : Bảng danh sách quản lý đối tượng hiển thị trạng thái tệp tin mã nguồn `index.html` đã được upload thành công lên đám mây, báo trạng thái *Succeeded* màu xanh.
+<img src="/images/week2/anh11.png" alt="Kiểm tra giao diện qua link Endpoint S3" style="max-width:100%; height:auto;" /> : Ảnh chụp giao diện website hoàn thiện chạy mượt mà trên trình duyệt khi người dùng click trực tiếp vào đường link URL Endpoint do dịch vụ S3 phân phối toàn cầu.
 
 ---
 
@@ -210,9 +210,9 @@ Mảnh ghép cuối cùng để cấu thành nên cấu trúc của một ứng 
 6. Kéo thẳng xuống cuối trang, giữ nguyên toàn bộ các thông số mặc định an toàn khác và nhấn nút màu cam lớn **Create database**. Hệ thống sẽ chuyển hướng quay trở về danh sách quản trị chính của RDS Databases.
 
 ##### **4. Hệ thống ảnh minh chứng (Screenshots Verification)**
-* 📸 <img src="/images/week2/anh12.png" alt="Lựa chọn cấu hình Engine MySQL" style="max-width:100%; height:auto;" /> : Ảnh chụp màn hình bước lựa chọn Engine MySQL kết hợp với việc tích chọn phân vùng mẫu mã nguồn Dev/Test trên giao diện tạo mới Database RDS.
-* 📸 <img src="/images/week2/anh13.png" alt="Hạ bậc cấu hình db t3 micro và ổ đĩa 20GB" style="max-width:100%; height:auto;" /> : Minh chứng ghi nhận việc khai báo thành công mật khẩu bảo mật chuẩn không chứa ký tự cấm và bước hạ bậc cấu hình chip về dòng `db.t3.micro` cùng phân vùng ổ đĩa gp3 giới hạn 20 GiB dữ liệu.
-* 📸 <img src="/images/week2/anh14.png" alt="Trạng thái cơ sở dữ liệu Available" style="max-width:100%; height:auto;" /> : Ảnh chụp bảng danh sách Databases hoàn thiện. Dòng tên cơ sở dữ liệu `my-docker-db` đã chuyển màu từ trạng thái khởi tạo sang trạng thái xanh hoạt động ổn định hoàn toàn là **`Available`**, đồng thời hiển thị trọn vẹn chuỗi địa chỉ liên kết Endpoint sẵn sàng cho các kết nối backend tương lai.
+<img src="/images/week2/anh12.png" alt="Lựa chọn cấu hình Engine MySQL" style="max-width:100%; height:auto;" /> : Ảnh chụp màn hình bước lựa chọn Engine MySQL kết hợp với việc tích chọn phân vùng mẫu mã nguồn Dev/Test trên giao diện tạo mới Database RDS.
+<img src="/images/week2/anh13.png" alt="Hạ bậc cấu hình db t3 micro và ổ đĩa 20GB" style="max-width:100%; height:auto;" /> : Minh chứng ghi nhận việc khai báo thành công mật khẩu bảo mật chuẩn không chứa ký tự cấm và bước hạ bậc cấu hình chip về dòng `db.t3.micro` cùng phân vùng ổ đĩa gp3 giới hạn 20 GiB dữ liệu.
+<img src="/images/week2/anh14.png" alt="Trạng thái cơ sở dữ liệu Available" style="max-width:100%; height:auto;" /> : Ảnh chụp bảng danh sách Databases hoàn thiện. Dòng tên cơ sở dữ liệu `my-docker-db` đã chuyển màu từ trạng thái khởi tạo sang trạng thái xanh hoạt động ổn định hoàn toàn là **`Available`**, đồng thời hiển thị trọn vẹn chuỗi địa chỉ liên kết Endpoint sẵn sàng cho các kết nối backend tương lai.
 
 ---
 

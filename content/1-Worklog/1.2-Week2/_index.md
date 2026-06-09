@@ -70,8 +70,8 @@ Security is always the highest priority in the cloud environment under the Share
 4. After initialization, log out of the Root account. Proceed to set up the multi-layered security mechanism **Virtual MFA (Multi-Factor Authentication)** via the Google Authenticator app on a personal mobile device for both the Root account and the IAM account `Admin-Cuong`. From this point forward, all system configuration operations are performed safely on this new IAM User.
 
 ##### **4. Screenshots Verification**
-* 📸 <img src="/images/week2/iam-create-user-step1.png" alt="IAM Create User" style="max-width:100%; height:auto;" /> : Detailed screenshot of the IAM User `Admin-Cuong` initialization step, configuring login parameters through the AWS Management Console.
-* 📸 <img src="/images/week2/iam-dashboard.png" alt="IAM Dashboard" style="max-width:100%; height:auto;" /> : Screenshot of the overall IAM Dashboard interface. The screen displays an absolute security compliance status with green checkmarks indicating that the Root account has MFA enabled and the IAM account is protected by a multi-layered structure.
+<img src="/images/week2/iam-create-user-step1.png" alt="IAM Create User" style="max-width:100%; height:auto;" /> : Detailed screenshot of the IAM User `Admin-Cuong` initialization step, configuring login parameters through the AWS Management Console.
+<img src="/images/week2/iam-dashboard.png" alt="IAM Dashboard" style="max-width:100%; height:auto;" /> : Screenshot of the overall IAM Dashboard interface. The screen displays an absolute security compliance status with green checkmarks indicating that the Root account has MFA enabled and the IAM account is protected by a multi-layered structure.
 
 ---
 
@@ -91,8 +91,8 @@ Computer networking is the foundation of every infrastructure system. This Lab p
 4. Navigate to **Route Tables**. The system automatically creates a default route table (Main Route Table)
 
 ##### **4. Screenshots Verification**
-* 📸 <img src="/images/week2/vpc-architecture.png" alt="VPC Architecture Topology" style="max-width:100%; height:auto;" /> : Logic diagram representing network partition planning, the subdivided structure of CIDR IP ranges, and the packet path through the Internet Gateway.
-* 📸 <img src="/images/week2/vpc-create-success.png" alt="VPC Configuration Success" style="max-width:100%; height:auto;" /> : Summary table of the status on the AWS Console confirming that the network system `MyLabVPC` has transitioned to a clean active state, attached with the exact route table containing the rule line `0.0.0.0/0 -> igw`.
+<img src="/images/week2/vpc-architecture.png" alt="VPC Architecture Topology" style="max-width:100%; height:auto;" /> : Logic diagram representing network partition planning, the subdivided structure of CIDR IP ranges, and the packet path through the Internet Gateway.
+<img src="/images/week2/vpc-create-success.png" alt="VPC Configuration Success" style="max-width:100%; height:auto;" /> : Summary table of the status on the AWS Console confirming that the network system `MyLabVPC` has transitioned to a clean active state, attached with the exact route table containing the rule line `0.0.0.0/0 -> igw`.
 
 ---
 
@@ -131,12 +131,12 @@ With the security framework and network architecture established, this Lab lever
 8. Click the orange **Launch instance** button at the bottom right of the screen to command the AWS infrastructure to provision the actual server instance.
 
 ##### **4. Screenshots Verification**
-* 📸 <img src="/images/week2/anh1.png" alt="EC2 Instance Naming" style="max-width:100%; height:auto;" /> : Screenshot of the server naming step `MyWebServer` and the selection of the Amazon Linux 2023 AMI from the repository.
-* 📸 <img src="/images/week2/anh2.png" alt="EC2 Hardware and Key Pair" style="max-width:100%; height:auto;" /> : Evidence of the restricted `t2.micro` hardware configuration and the successful initialization step for the secure private key pair `my-key.pem`.
-* 📸 <img src="/images/week2/anh3.png" alt="EC2 Network Security Groups" style="max-width:100%; height:auto;" /> : Screenshot of the entire Network Settings panel, recording the assignment of the server to the custom network range `MyLabVPC`, allocation of the Public IP, and the firewall configuration opening public port 80.
-* 📸 <img src="/images/week2/anh4.png" alt="EC2 User Data Provisioning" style="max-width:100%; height:auto;" /> : Detailed screenshot of the advanced User Data configuration field, displaying the intact shell script for automatic Apache web service provisioning.
-* 📸 <img src="/images/week2/anh5.png" alt="EC2 Green Running State" style="max-width:100%; height:auto;" /> : Interface of the active instance list, displaying the `MyWebServer` instance line turned into a bright green `Running` state and passing the 2/2 health checks from the AWS infrastructure.
-* 📸 <img src="/images/week2/anh6.png" alt="EC2 Apache Web Server Browser" style="max-width:100%; height:auto;" /> : Actual screenshot of the Chrome browser on the local machine. Upon entering the Public IP address of the server into the URL bar, the webpage immediately displays the large heading line *"Welcome to My AWS Web Server..."*, proving that the automation script worked flawlessly at 100%.
+<img src="/images/week2/anh1.png" alt="EC2 Instance Naming" style="max-width:100%; height:auto;" /> : Screenshot of the server naming step `MyWebServer` and the selection of the Amazon Linux 2023 AMI from the repository.
+<img src="/images/week2/anh2.png" alt="EC2 Hardware and Key Pair" style="max-width:100%; height:auto;" /> : Evidence of the restricted `t2.micro` hardware configuration and the successful initialization step for the secure private key pair `my-key.pem`.
+<img src="/images/week2/anh3.png" alt="EC2 Network Security Groups" style="max-width:100%; height:auto;" /> : Screenshot of the entire Network Settings panel, recording the assignment of the server to the custom network range `MyLabVPC`, allocation of the Public IP, and the firewall configuration opening public port 80.
+<img src="/images/week2/anh4.png" alt="EC2 User Data Provisioning" style="max-width:100%; height:auto;" /> : Detailed screenshot of the advanced User Data configuration field, displaying the intact shell script for automatic Apache web service provisioning.
+<img src="/images/week2/anh5.png" alt="EC2 Green Running State" style="max-width:100%; height:auto;" /> : Interface of the active instance list, displaying the `MyWebServer` instance line turned into a bright green `Running` state and passing the 2/2 health checks from the AWS infrastructure.
+<img src="/images/week2/anh6.png" alt="EC2 Apache Web Server Browser" style="max-width:100%; height:auto;" /> : Actual screenshot of the Chrome browser on the local machine. Upon entering the Public IP address of the server into the URL bar, the webpage immediately displays the large heading line *"Welcome to My AWS Web Server..."*, proving that the automation script worked flawlessly at 100%.
 
 ---
 
@@ -174,11 +174,11 @@ As the volume of files (images, frontend interface source code HTML/CSS/JS) incr
 7. Return to the first tab, **Objects**. Click the **Upload** button > Select **Add files** and choose an existing user interface file `index.html` from your local machine to upload to the system.
 
 ##### **4. Screenshots Verification**
-* 📸 <img src="/images/week2/anh7.png" alt="S3 Bucket Creation" style="max-width:100%; height:auto;" /> : Interface of the successfully initialized S3 Bucket, recording the unique identifier configuration and the successful removal of the default block public access shield.
-* 📸 <img src="/images/week2/anh8.png" alt="S3 Properties Static Website Hosting" style="max-width:100%; height:auto;" /> : Screenshot of the Properties section confirming that the Static website hosting feature has been toggled to an active green state along with the declaration of the default index file `index.html`.
-* 📸 <img src="/images/week2/anh9.png" alt="S3 Bucket Policy Editor" style="max-width:100%; height:auto;" /> : Screenshot of the Bucket Policy editor interface, displaying the intact JSON authorization code for wide-scale file read access without generating any syntax errors.
-* 📸 <img src="/images/week2/anh10.png" alt="S3 Object Upload Success" style="max-width:100%; height:auto;" /> : Object management list table displaying the successful upload status of the source code file `index.html` to the cloud, showing a green *Succeeded* state.
-* 📸 <img src="/images/week2/anh11.png" alt="S3 Global Endpoint Browser Verification" style="max-width:100%; height:auto;" /> : Actual screenshot of the finalized website running smoothly in the browser when users click directly on the URL Endpoint link distributed globally by the S3 service.
+<img src="/images/week2/anh7.png" alt="S3 Bucket Creation" style="max-width:100%; height:auto;" /> : Interface of the successfully initialized S3 Bucket, recording the unique identifier configuration and the successful removal of the default block public access shield.
+<img src="/images/week2/anh8.png" alt="S3 Properties Static Website Hosting" style="max-width:100%; height:auto;" /> : Screenshot of the Properties section confirming that the Static website hosting feature has been toggled to an active green state along with the declaration of the default index file `index.html`.
+<img src="/images/week2/anh9.png" alt="S3 Bucket Policy Editor" style="max-width:100%; height:auto;" /> : Screenshot of the Bucket Policy editor interface, displaying the intact JSON authorization code for wide-scale file read access without generating any syntax errors.
+<img src="/images/week2/anh10.png" alt="S3 Object Upload Success" style="max-width:100%; height:auto;" /> : Object management list table displaying the successful upload status of the source code file `index.html` to the cloud, showing a green *Succeeded* state.
+<img src="/images/week2/anh11.png" alt="S3 Global Endpoint Browser Verification" style="max-width:100%; height:auto;" /> : Actual screenshot of the finalized website running smoothly in the browser when users click directly on the URL Endpoint link distributed globally by the S3 service.
 
 ---
 
@@ -209,9 +209,9 @@ The final puzzle piece required to complete a full application architecture is s
 6. Scroll directly to the bottom of the page, keep all other secure default parameters intact, and click the large orange **Create database** button. The system will redirect back to the main RDS Databases management list.
 
 ##### **4. Screenshots Verification**
-* 📸 <img src="/images/week2/anh12.png" alt="RDS MySQL Engine Selection" style="max-width:100%; height:auto;" /> : Screenshot of the MySQL Engine selection step combined with selecting the Dev/Test source code template partition on the RDS Database creation interface.
-* 📸 <img src="/images/week2/anh13.png" alt="RDS Instance Size and Storage gp3" style="max-width:100%; height:auto;" /> : Evidence recording the successful declaration of a secure standard password containing no forbidden characters, and the step lowering the chip configuration to the `db.t3.micro` line with a gp3 disk partition limited to 20 GiB of data.
-* 📸 <img src="/images/week2/anh14.png" alt="RDS Database Available State and Endpoint" style="max-width:100%; height:auto;" /> : Screenshot of the finalized Databases management list. The database row name `my-docker-db` has transitioned from initialization to a fully stable, active green state showing **`Available`**, while displaying the complete Endpoint connection string ready for future backend connections.
+<img src="/images/week2/anh12.png" alt="RDS MySQL Engine Selection" style="max-width:100%; height:auto;" /> : Screenshot of the MySQL Engine selection step combined with selecting the Dev/Test source code template partition on the RDS Database creation interface.
+<img src="/images/week2/anh13.png" alt="RDS Instance Size and Storage gp3" style="max-width:100%; height:auto;" /> : Evidence recording the successful declaration of a secure standard password containing no forbidden characters, and the step lowering the chip configuration to the `db.t3.micro` line with a gp3 disk partition limited to 20 GiB of data.
+<img src="/images/week2/anh14.png" alt="RDS Database Available State and Endpoint" style="max-width:100%; height:auto;" /> : Screenshot of the finalized Databases management list. The database row name `my-docker-db` has transitioned from initialization to a fully stable, active green state showing **`Available`**, while displaying the complete Endpoint connection string ready for future backend connections.
 
 ---
 

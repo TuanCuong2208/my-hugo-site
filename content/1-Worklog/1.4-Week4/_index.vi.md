@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-# Tuần 4: Làm chủ Tư thế An ninh Tập trung, Thiết kế Hạ tầng Định tuyến Liên VPC và Chuẩn hóa Đường ống Native CI/CD
 
 ### I. Tóm tắt tổng quan
 Tuần 4 đánh dấu một giai đoạn tối ưu hóa hạ tầng diện rộng và gia cố an toàn hệ thống trong lộ trình thực tập chương trình First Cloud AI Journey – Workforce Bootcamp 2026 tại Văn phòng AWS Việt Nam. Tôi đã chuyển trọng tâm sang quản trị tư thế an ninh và liên kết mạng phức hợp quy mô lớn qua 5 bài Lab nền tảng: Lab 18 (Quản trị An ninh trung tâm Security Hub), Lab 19 (Đấu nối mạng ảo VPC Peering), Lab 20 (Trục định tuyến tập trung Transit Gateway), Lab 23 (Tự động hóa phân phối CodePipeline) và Lab 26 (Tường lửa ứng dụng web AWS WAF).

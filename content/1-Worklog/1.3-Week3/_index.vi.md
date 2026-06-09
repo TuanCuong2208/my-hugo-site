@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-# Tuần 3: Làm chủ Mạng ảo Nâng cao, Tích hợp Hybrid DNS Resolver và Tự động hóa Hạ tầng bằng Dòng lệnh
 
 ### I. Tóm tắt tổng quan
 Tuần này đánh dấu một bước chuyển mình mang tính chiến lược trong lộ trình thực tập chương trình First Cloud AI Journey – Workforce Bootcamp 2026 tại Văn phòng AWS Việt Nam. Tôi đã dịch chuyển từ việc thiết kế hạ tầng đơn tầng sang việc xây dựng hệ thống mạng doanh nghiệp phức hợp đa tầng và kết nối lai qua 6 bài Lab lớn: Lab 7 (Kiến trúc Subnet nội bộ), Lab 8 (VPC Routing & Ingress Gateways), Lab 10 (Route 53 Hybrid DNS Resolver), Lab 11 (Quản trị bằng AWS CLI), Lab 13 (Advanced VPC Topology đa tầng cách ly), và Lab 14 (Elastic Load Balancing cân bằng tải).

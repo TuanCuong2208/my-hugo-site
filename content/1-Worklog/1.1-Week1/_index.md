@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-# Week 1: Comprehensive Cloud Onboarding & Mastering AWS Fundamentals
 
 ### I. Executive Summary
 The inaugural week of the First Cloud AI Journey (FCJ) Internship served as a critical transition phase. My primary focus was to move beyond basic cloud awareness and establish a professional-grade development environment. This involved not only technical configurations but also aligning with the AWS "Well-Architected Framework" right from day one. By the end of this week, I successfully secured my cloud perimeter and demonstrated technical proficiency by claiming $100 in promotional credits.

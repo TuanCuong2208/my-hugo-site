@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-# Week 3: Mastering Advanced Virtual Networks, Hybrid DNS Resolver Integration and Infrastructure Automation via Command Line
 
 ### I. Executive Summary
 This week marks a strategic shift in my internship roadmap during the First Cloud AI Journey – Workforce Bootcamp 2026 at the AWS Vietnam Office. I transitioned from single-tier infrastructure design to building complex multi-tier enterprise networks and hybrid connectivity across 6 major Labs: Lab 7 (Internal Subnet Architecture), Lab 8 (VPC Routing & Ingress Gateways), Lab 10 (Route 53 Hybrid DNS Resolver), Lab 11 (Administration via AWS CLI), Lab 13 (Isolated Multi-Tier Advanced VPC Topology), and Lab 14 (Elastic Load Balancing for traffic distribution).

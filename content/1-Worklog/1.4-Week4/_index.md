@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-# Week 4: Mastering Centralized Security Posture, Inter-VPC Routing Topologies and Native CI/CD Pipeline Standardization
 
 ### I. Executive Summary
 This week marks a major strategic optimization milestone in my internship journey at AWS Vietnam. I completely shifted my operational focus into security posture management, edge application defense, and highly scalable enterprise network architectures across 5 foundational Labs: Lab 18 (Centralized Security Posture via Security Hub), Lab 19 (Inter-VPC Peering Connection), Lab 20 (Centralized Routing over Transit Gateway), Lab 23 (Automated Continuous Delivery CodePipeline), and Lab 26 (Edge Defense Framework via AWS WAF).

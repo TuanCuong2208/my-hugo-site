@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-# Tuần 1: Tổng quan về Hạ tầng Cloud & Chinh phục Cột mốc $100 Credits
 
 ### I. Tóm tắt tổng quan
 Tuần đầu tiên của kỳ thực tập First Cloud AI Journey (FCJ) đóng vai trò là giai đoạn chuyển giao quan trọng. Mục tiêu trọng tâm của tôi là vượt qua mức nhận thức cơ bản về đám mây để thiết lập một môi trường phát triển chuẩn chuyên nghiệp. Điều này không chỉ bao gồm các cấu hình kỹ thuật mà còn là việc tuân thủ "AWS Well-Architected Framework" ngay từ ngày đầu tiên. Kết thúc tuần này, tôi đã bảo mật thành công phạm vi đám mây của mình và chứng minh năng lực kỹ thuật thông qua việc nhận $100 credit khuyến mãi.

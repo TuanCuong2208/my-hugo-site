@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-# Week 2: Mastering AWS Infrastructure - From Identity, Virtual Networking to Core Compute and Storage Services
 
 ### I. Executive Summary
 This week marks a strategic and comprehensive turning point in the internship roadmap. I have completely shifted from surface-level conceptual understanding to directly designing, configuring, and mastering the most foundational infrastructure pieces on the AWS cloud ecosystem. The research content spans across 6 major Labs: from surveying the global physical infrastructure, tightening identity security with IAM, planning logically isolated virtual networks with VPC, to directly deploying the core service trio that constitutes a real-world application: Compute servers (EC2), Object storage systems (S3), and Managed relational databases (RDS).

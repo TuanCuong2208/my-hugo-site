@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-# Tuần 2: Làm chủ Hạ tầng AWS - Từ Định danh, Mạng ảo đến các Dịch vụ tính toán và Lưu trữ lõi
 
 ### I. Tóm tắt tổng quan
 Tuần này đánh dấu một bước chuyển mình mang tính chiến lược và toàn diện trong lộ trình thực tập. Tôi đã dịch chuyển hoàn toàn từ các tư duy nhận thức bề nổi sang việc trực tiếp thiết kế, cấu hình và làm chủ các mảnh ghép hạ tầng cốt lõi nhất trên hệ sinh thái điện toán đám mây AWS. Nội dung nghiên cứu trải dài qua 6 bài Lab lớn: từ việc khảo sát hạ tầng vật lý toàn cầu, thắt chặt an ninh định danh bằng IAM, quy hoạch mạng lưới ảo hóa biệt lập bằng VPC, cho đến việc trực tiếp triển khai bộ ba dịch vụ lõi cấu thành nên một ứng dụng thực tế: Máy chủ tính toán (EC2), Hệ thống lưu trữ đối tượng (S3), và Cơ sở dữ liệu quan hệ quản trị (RDS). 

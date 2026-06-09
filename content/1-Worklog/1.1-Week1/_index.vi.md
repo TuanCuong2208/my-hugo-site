@@ -50,3 +50,6 @@ Trong tuần tới, tôi sẽ tập trung vào các bài Lab cốt lõi sau:
 1. **Lab 1:** IAM nâng cao và Đơn vị tổ chức (OU).
 2. **Lab 2:** Virtual Private Cloud (VPC) - Thiết kế cấu trúc mạng tùy chỉnh.
 3. **Lab 3:** Elastic Compute Cloud (EC2) - Auto Scaling và Load Balancing.
+4. **Lab 4:** Amazon EC2 - Khởi tạo và cấu hình máy chủ ảo Windows/Linux.
+5. **Lab 5:** Amazon Relational Database Service (Amazon RDS) - Triển khai và quản trị cơ sở dữ liệu quan hệ.
+6. **Lab 6:** Deploying FCJ Management Application with Auto Scaling Group - Tự động co dãn và cân bằng tải hệ thống.

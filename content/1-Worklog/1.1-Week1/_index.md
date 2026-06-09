@@ -50,3 +50,6 @@ Moving forward, I will focus on the following core labs:
 1. **Lab 1:** Advanced IAM and Organizational Units (OU).
 2. **Lab 2:** Virtual Private Cloud (VPC) - Designing a custom network topology.
 3. **Lab 3:** Elastic Compute Cloud (EC2) - Auto Scaling and Load Balancing.
+4. **Lab 4:** Amazon Elastic Compute Cloud (EC2) - Launching and configuring Windows and Linux virtual machines.
+5. **Lab 5:** Amazon Relational Database Service (RDS) - Deploying and managing relational databases.
+6. **Lab 6:** Deploying FCJ Management Application with Auto Scaling Group - Implementing high availability and load balancing.

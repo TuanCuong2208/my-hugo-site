@@ -70,7 +70,7 @@ Security is always the highest priority in the cloud environment under the Share
 4. After initialization, log out of the Root account. Proceed to set up the multi-layered security mechanism **Virtual MFA (Multi-Factor Authentication)** via the Google Authenticator app on a personal mobile device for both the Root account and the IAM account `Admin-Cuong`. From this point forward, all system configuration operations are performed safely on this new IAM User.
 
 ##### **4. Screenshots Verification**
-* 📸 **`/my-hugo-site/images/week2/iam-create-user-step1.png`**: Detailed screenshot of the IAM User `Admin-Cuong` initialization step, configuring login parameters through the AWS Management Console.
+* 📸 **`/images/week2/iam-create-user-step1.png`**: Detailed screenshot of the IAM User `Admin-Cuong` initialization step, configuring login parameters through the AWS Management Console.
 * 📸 **`/my-hugo-site/images/week2/iam-dashboard.png`**: Screenshot of the overall IAM Dashboard interface. The screen displays an absolute security compliance status with green checkmarks indicating that the Root account has MFA enabled and the IAM account is protected by a multi-layered structure.
 
 ---

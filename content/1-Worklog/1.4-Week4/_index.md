@@ -109,31 +109,6 @@ To empower virtual computing instances sitting deep within the spoke networks to
 
 ---
 
-#### **4. Lab 26: AWS Web Application Firewall (AWS WAF) - Implementing Application-Layer Layer-7 Security Shields**
-
-##### **Overview**
-Modern malicious cyber operations increasingly focus exploit execution paths directly at the application layer (Layer 7), utilizing vectors like SQL Injection or Cross-Site Scripting (XSS) that bypass standard perimeter firewall structures such as layer-4 Security Groups. This Lab details the implementation of AWS Web Application Firewall (AWS WAF) to erect an intelligent filtering shield, parsing and vetting inbound HTTP/HTTPS requests prior to hitting the Application Load Balancer (ALB) to insulate foundational Web Server backends.
-
-##### **Core Technical Concepts**
-* **Web ACL (Access Control List):** The definitive administrative container holding evaluation rulesets. The Web ACL acts as the centralized edge inspection station, associated directly onto infrastructure entryways like Application Load Balancers (ALB) or Amazon CloudFront distributions.
-* **WAF Managed Rules:** Vendor-maintained, pre-packaged threat intelligence rule collections managed by AWS, continuously updated to trace and mitigate industry vulnerabilities (such as the OWASP Top 10) to automatically drop automated application attacks.
-
-##### **Step-by-step Execution**
-
-###### **Step 1: Instantiating the Web ACL container and binding core compute ingress entrypoints**
-I accessed the centralized AWS WAF dashboard panel, navigated to the Web ACLs section, and triggered the initialization workflow. I designated the entity as `App-Protection-WAF`, classified the resource scope under regional deployment models, and explicitly associated it onto the active `MyWebALB` infrastructure established in Week 3.
-<img src="/images/week4/10.png" alt="Initializing the Web ACL and Associating it with the Application Load Balancer" style="max-width:100%; height:auto;" />
-
-###### **Step 2: Engineering intelligence-driven Managed Rules to defend against OWASP flaws**
-During the rule definition logic sequence, I selected the addition of AWS Managed Rule Groups. I activated vital out-of-the-box protective shields, including the *Core rule set* (handling baseline web exploits) and the *SQL database* rule collection (designed to inspect and intercept illicit query injection vectors threatening data layers).
-<img src="/images/week4/11.png" alt="Integrating AWS Managed Rulesets inside the Security Framework" style="max-width:100%; height:auto;" />
-
-###### **Step 3: Monitoring verified metric traffic streams via the centralized WAF Dashboard**
-Following successful deployment of the Web ACL configuration, the inspection system began processing live traffic footprints. I audited the **Overview** dashboard analytics page to evaluate the packet tracking charts. The platform executed flawlessly, accurately logging legitimate `Allowed` traffic components while successfully dropping and isolating malicious exploit vectors under a strict `Blocked` designation.
-<img src="/images/week4/12.png" alt="Analyzing the Real-time Allowed and Blocked Packet Traffic via WAF Console" style="max-width:100%; height:auto;" />
-
----
-
 #### **5. Lab 23: Deploy Applications to EC2 with AWS CodePipeline - Standardizing Automated Software Delivery via AWS Native Code Suite**
 
 ##### **Overview**

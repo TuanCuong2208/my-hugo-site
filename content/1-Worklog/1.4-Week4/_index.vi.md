@@ -109,31 +109,6 @@ Tôi di chuyển đến mục Transit gateway attachments để tiến hành c�
 
 ---
 
-#### **4. Lab 26: AWS Web Application Firewall (AWS WAF) - Triển khai lá chắn bảo mật lớp ứng dụng**
-
-##### **Tổng quan (Overview)**
-Các cuộc tấn công mạng ngày nay thường nhắm trực tiếp vào tầng ứng dụng (Layer 7) như SQL Injection hay Cross-Site Scripting (XSS), vốn là những lỗ hổng mạng mà các Security Groups lớp mạng thông thường không thể ngăn chặn. Bài Lab này tập trung vào việc triển khai AWS Web Application Firewall (AWS WAF) để xây dựng một lá chắn bảo mật thông minh, lọc toàn bộ HTTP/HTTPS requests độc hại trước khi chúng tiếp cận bộ cân bằng tải ALB bảo vệ Web Server.
-
-##### **Khái niệm cốt lõi (Core Concepts)**
-* **Web ACL (Access Control List):** Tập hợp các quy tắc (Rules) kiểm soát truy cập biên. Web ACL đóng vai trò là trạm kiểm soát trung tâm, đính kèm trực tiếp vào Application Load Balancer (ALB) hoặc Amazon CloudFront.
-* **WAF Managed Rules:** Bộ quy tắc được AWS xây dựng sẵn và liên tục cập nhật dựa trên danh sách lỗ hổng bảo mật phổ biến (như OWASP Top 10), giúp hệ thống tự động nhận diện và block các đợt quét tấn công tự động.
-
-##### **Quá trình triển khai chi tiết (Step-by-step Execution)**
-
-###### **Bước 1: Khởi tạo cấu hình thực thể Web ACL kiểm soát biên**
-Tôi truy cập bảng điều khiển AWS WAF, chọn mục Web ACLs và bấm nút khởi tạo. Tôi đặt tên định danh là `App-Protection-WAF`, chọn vùng tài nguyên là khu vực chạy máy ảo toàn cục (Regional) và chỉ định gắn liên kết trực tiếp vào bộ cân bằng tải `MyWebALB` đã dựng từ Tuần 3.
-<img src="/images/week4/10.png" alt="Khởi tạo thực thể Web ACL và đính kèm vào Application Load Balancer" style="max-width:100%; height:auto;" />
-
-###### **Bước 2: Cấu hình tập luật bảo vệ thông minh chống lỗ hổng OWASP**
-Tại bước thiết lập luật (Add Rules), tôi chọn thêm các bộ quy tắc được quản lý hoàn toàn bởi AWS (AWS Managed Rule Groups), kích hoạt các nhóm luật bảo vệ cốt lõi như *Core rule set* (chống lỗ hổng phổ biến) và *SQL database* (chặn đứng mã độc SQL Injection phá hoại cơ sở dữ liệu).
-<img src="/images/week4/11.png" alt="Thiết lập các tập luật bảo vệ AWS Managed Rules" style="max-width:100%; height:auto;" />
-
-###### **Bước 3: Xác thực luồng lọc dữ liệu an toàn trên bảng điều khiển WAF**
-Sau khi áp dụng Web ACL thành công, hệ thống bắt đầu giám sát traffic theo thời gian thực. Tôi truy cập tab Overview để kiểm tra biểu đồ phân tích lưu lượng. Hệ thống hoạt động hoàn hảo, ghi nhận chính xác các requests an toàn được phép đi qua (Allowed) và cô lập hoàn toàn các requests có dấu hiệu tấn công bất hợp pháp (Blocked).
-<img src="/images/week4/12.png" alt="Biểu đồ giám sát luồng traffic Allowed và Blocked trên giao diện AWS WAF" style="max-width:100%; height:auto;" />
-
----
-
 #### **5. Lab 23: Deploy Applications to EC2 with AWS CodePipeline - Chuẩn hóa chu trình CI/CD tự động bằng bộ công cụ AWS Native**
 
 ##### **Tổng quan (Overview)**
@@ -147,15 +122,15 @@ Bên cạnh việc sử dụng các bên thứ ba, hệ sinh thái AWS cung cấ
 
 ###### **Bước 1: Khởi tạo kho lưu trữ mã nguồn nội bộ AWS CodeCommit**
 Tôi truy cập bảng điều khiển CodeCommit, tiến hành tạo một repository bảo mật đặt tên là `NodeJS-App-Repo`. Tiếp theo, cấu hình phân quyền truy cập và thực hiện đẩy (Push) toàn bộ mã nguồn ứng dụng Node.js cùng tệp cấu hình `buildspec.yml` và `appspec.yml` từ máy tính cục bộ lên đám mây.
-<img src="/images/week4/13.png" alt="Khởi tạo và đẩy mã nguồn lên kho lưu trữ AWS CodeCommit" style="max-width:100%; height:auto;" />
+<img src="/images/week4/10.png" alt="Khởi tạo và đẩy mã nguồn lên kho lưu trữ AWS CodeCommit" style="max-width:100%; height:auto;" />
 
 ###### **Bước 2: Cấu hình kịch bản phân phối deployment ứng dụng qua AWS CodeDeploy**
 Tôi di chuyển đến mục AWS CodeDeploy, khởi tạo một ứng dụng (Application) và nhóm đích triển khai (Deployment Group) ứng dụng. Tôi cấu hình hệ thống trỏ thẳng vào thẻ Tag của máy chủ EC2 đích, chỉ định cơ chế cài đặt deployment cuốn chiếu và gán vai trò IAM Role phù hợp để CodeDeploy Agent trên EC2 có quyền giao tiếp an toàn.
-<img src="/images/week4/14.png" alt="Thiết lập nhóm triển khai Deployment Group trên AWS CodeDeploy" style="max-width:100%; height:auto;" />
+<img src="/images/week4/11.png" alt="Thiết lập nhóm triển khai Deployment Group trên AWS CodeDeploy" style="max-width:100%; height:auto;" />
 
 ###### **Bước 3: Đấu nối trục liên kết đường ống tổng thể AWS CodePipeline và kiểm toán kết quả**
 Cuối cùng, tôi khởi tạo một đường ống tổng thể AWS CodePipeline kết nối tuần tự: lấy mã nguồn từ *CodeCommit Source Stage*, chuyển tiếp sang máy chủ biên dịch *CodeBuild Stage*, và kết thúc tại lớp phát hành *CodeDeploy Stage*. Hệ thống tự động kích hoạt chu trình phân phối, báo trạng thái đồng loạt chuyển sang màu xanh thành công (**`Succeeded`**), giúp ứng dụng Node.js vận hành mượt mà trên môi trường EC2 thực tế.
-<img src="/images/week4/15.png" alt="Xác thực trạng thái Succeeded hoàn tất đường ống phân phối tự động AWS CodePipeline" style="max-width:100%; height:auto;" />
+<img src="/images/week4/12.png" alt="Xác thực trạng thái Succeeded hoàn tất đường ống phân phối tự động AWS CodePipeline" style="max-width:100%; height:auto;" />
 
 ---
 

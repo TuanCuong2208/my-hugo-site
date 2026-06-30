@@ -17,7 +17,7 @@ Trong suốt quá trình thực tập, tôi đã có cơ hội tham dự các s�
 ---
 
 ### [Sự kiện 2: FCAJ Community Day - June 2026]({{% relref "4.2-Event2" %}})
-&emsp; **Thời gian:** 09:00 - 12:00, Thứ Bảy, ngày 27 tháng 06 năm 2026
-&emsp; **Địa điểm:** Tầng 26, Tháp tài chính Bitexco, 02 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh
-&emsp; **Vai trò:** Người tham dự
-&emsp; **Mô tả:** Hội thảo công nghệ chuyên sâu tập trung vào việc ứng dụng Agentic AI, Voice Agents và giao thức MCP nhằm tối ưu hóa quy trình vận hành hệ thống hạ tầng DevOps cũng như tự động hóa quản trị nhân sự an toàn trong mạng nội bộ Enterprise.
+&emsp;**Thời gian:** 09:00 - 12:00, Thứ Bảy, ngày 27 tháng 06 năm 2026  
+&emsp;**Địa điểm:** Tầng 26, Tháp tài chính Bitexco, 02 Hải Triều, Bến Nghé, Quận 1, TP. Hồ Chí Minh  
+&emsp;**Vai trò:** Người tham dự  
+&emsp;**Mô tả:** Hội thảo công nghệ chuyên sâu tập trung vào việc ứng dụng Agentic AI, Voice Agents và giao thức MCP nhằm tối ưu hóa quy trình vận hành hệ thống hạ tầng DevOps cũng như tự động hóa quản trị nhân sự an toàn trong mạng nội bộ Enterprise.

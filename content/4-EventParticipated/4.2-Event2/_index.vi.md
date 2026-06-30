@@ -1,9 +1,9 @@
 ---
-title: "Sự kiện 1"
+title: "Sự kiện 2"
 date: 2026-06-30
 weight: 2
 chapter: false
-pre: "<b>4.1. </b>"
+pre: "<b>4.2. </b>"
 ---
 
 # BÀI THU HOẠCH "FCAJ COMMUNITY DAY WORKSHOP"

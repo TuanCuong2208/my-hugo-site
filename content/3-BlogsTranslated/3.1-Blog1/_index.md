@@ -1,5 +1,5 @@
 ---
-title: "Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture"
+title: "Blog 1"
 date: 2026-06-30
 weight: 1
 chapter: false

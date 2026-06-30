@@ -1,5 +1,5 @@
 ---
-title: "Mở Rộng 1 Triệu AWS Lambda Functions: Bài Học Giác Ngộ Về Kiến Trúc Serverless Quy Mô Khủng"
+title: "Blog 1"
 date: 2026-06-30
 weight: 1
 chapter: false

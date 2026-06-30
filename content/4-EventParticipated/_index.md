@@ -16,8 +16,8 @@ During my internship, I have had the opportunity to attend various professional 
 
 ---
 
-### [Event 2: FCAJ Community Day - June 2026]({{% relref "4.2-Event2" %}})
-&emsp; **Time:** 09:00 - 12:00, Saturday, June 27, 2026  
+### [Event 2: FCAJ Community Day - June 2026]({{% relref "4.2-Event2" %}})  
+&emsp; **Date & Time:** 09:00 - 12:00, Saturday, June 27, 2026  
 &emsp; **Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu, Ben Nghe, District 1, Ho Chi Minh City  
 &emsp; **Role:** Attendee  
 &emsp; **Description:** A deep-dive technology workshop focusing on the production-grade deployment of Agentic AI, Vietnamese Voice Agents, and Model Context Protocol (MCP) to automate enterprise DevOps operations and workforce management safely inside private network subnets.

@@ -1,7 +1,7 @@
 ---
 title: "AWS Study Group - Team Research Publications"
 date: 2026-06-30
-weight: 1
+weight: 3
 chapter: true
 pre: " <b> 3. </b> "
 ---
@@ -12,7 +12,7 @@ Welcome to the centralized repository of our team's deep-dive research and acade
 
 ## 📚 Deep-Dive Research Directory
 
-### 📑 [Blog 1 - Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture](./blog-1/)
+### [Blog 1 - Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture](./blog-1/)
 
 * **Short Summary:** This publication dissects performance optimization and large-scale asynchronous data streams when hitting the threshold of one million concurrently executing functions. By analyzing critical default platform limits (AWS Service Quotas), our research group outlines a robust decoupled architecture designed to eliminate traditional infrastructure anti-patterns, resolve service connection bottlenecks, and build proactive fail-safe systems.
 * **Architectural Pattern:** Event-Driven Architecture (EDA) & Workflow Orchestration.

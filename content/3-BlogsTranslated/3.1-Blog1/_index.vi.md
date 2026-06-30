@@ -5,11 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Mở Rộng 1 Triệu AWS Lambda Functions: Bài Học "Xương Máu" Về Kiến Trúc Serverless Quy Mô Khủng
 
 Khi bắt đầu tiếp cận với mô hình Serverless, hầu hết chúng ta đều bị hấp dẫn bởi lời hứa hẹn đầy cánh hồng của các nhà cung cấp đám mây: *"Chỉ cần tập trung viết code, deploy và hệ thống sẽ tự động scale từ zero đến vô cực"*. Thế nhưng, giữa lý thuyết màu hồng đó và thực tế vận hành ở quy mô doanh nghiệp lớn lại tồn tại một khoảng cách rất xa.
 

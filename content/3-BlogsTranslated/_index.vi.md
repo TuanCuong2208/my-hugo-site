@@ -1,7 +1,7 @@
 ---
 title: "AWS Study Group - Các Bài Nghiên Cứu Của Nhóm"
 date: 2026-06-30
-weight: 1
+weight: 3
 chapter: true
 pre: " <b> 3. </b> "
 ---
@@ -12,7 +12,7 @@ Chào mừng bạn đến với trang tổng hợp các kết quả học tập 
 
 ## 📚 Danh Sách Các Bài Nghiên Cứu Chuyên Sâu
 
-### 📑 [Blog 1 - Mở Rộng 1 Triệu AWS Lambda Functions: Bài Học "Xương Máu" Về Kiến Trúc Serverless Quy Mô Khủng](./blog-1/)
+### [Blog 1 - Mở Rộng 1 Triệu AWS Lambda Functions: Bài Học "Xương Máu" Về Kiến Trúc Serverless Quy Mô Khủng](./blog-1/)
 
 * **Tóm tắt nội dung:** Bài viết tập trung mổ xẻ bài toán tối ưu hóa hiệu năng và quản lý dòng chảy dữ liệu bất đồng bộ diện rộng khi hệ thống chạm ngưỡng hàng triệu functions chạy đồng thời. Qua việc phân tích sâu các giới hạn mặc định (AWS Service Quotas), nhóm nghiên cứu làm rõ giải pháp kết hợp bộ ba core services nhằm loại bỏ hoàn toàn các anti-pattern truyền thống, chống nghẽn cổ chai và xây dựng hệ thống chịu lỗi chủ động (Fail-safe architecture).
 * **Kiến trúc áp dụng:** Kiến trúc hướng sự kiện (Event-Driven Architecture) & Điều phối quy trình (Orchestration).

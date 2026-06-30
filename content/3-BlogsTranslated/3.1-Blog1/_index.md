@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture
 
 When first adopting the Serverless paradigm, most of us are captivated by the cloud providers' rosy promise: *"Just focus on writing code, deploy it, and the system will automatically scale from zero to infinity."* However, a massive chasm exists between this utopian theory and the harsh realities of production operations at an enterprise scale.
 

@@ -41,6 +41,7 @@ Amazon FSx for Windows File Server provides a fully managed file storage system 
 
 **3. Proofs**
 * **1.png:** Configuration screen showing technical specifications, SSD capacity selection, and the Active Directory integration requirement.
+<img src="/images/week5/1.png" alt="FSx configuration" style="max-width:100%; height:auto;" />
 
 ---
 
@@ -55,8 +56,10 @@ Amazon S3 is an object storage service providing industry-leading scalability, d
 * **Step 3: Security Governance:** Implemented a Bucket Policy granting `s3:GetObject` permissions to allow public rendering of the website content.
 
 **3. Proofs**
-* **2.png:** Configuration screen showing Static Website Hosting successfully enabled.
+* **2.png:** Configuration screen showing Static Website Hosting successfully enabled
+<img src="/images/week5/2.png" alt="Static website hosting" style="max-width:100%; height:auto;" />
 * **3.png:** Bucket Policy configuration allowing public access for website content.
+<img src="/images/week5/3.png" alt="Bucket Policy" style="max-width:100%; height:auto;" />
 
 ---
 
@@ -72,7 +75,9 @@ This lab focuses on advanced AWS IAM permission techniques using Conditions. Ins
 
 **3. Proofs**
 * **4.png:** Configuration screen for the JSON Policy with the `aws:ResourceTag/Department` Condition.
+<img src="/images/week5/4.png" alt="IAM Policy with Condition" style="max-width:100%; height:auto;" />
 * **5.png:** Detailed Role view after successfully attaching the specialized Policy.
+<img src="/images/week5/5.png" alt="IAM Role details" style="max-width:100%; height:auto;" />
 
 ---
 
@@ -88,7 +93,9 @@ Permission Boundary is an advanced IAM security feature that sets a maximum "per
 
 **3. Proofs**
 * **6.png:** Policy configuration acting as the "Permission Boundary" with specific access restrictions.
+<img src="/images/week5/6.png" alt="Permission Boundary Policy" style="max-width:100%; height:auto;" />
 * **7.png:** IAM User interface confirming the successful assignment of the Permission Boundary.
+<img src="/images/week5/7.png" alt="IAM User with Boundary" style="max-width:100%; height:auto;" />
 
 ---
 
@@ -104,7 +111,9 @@ AWS KMS is a managed service that makes it easy to create and control cryptograp
 
 **3. Proofs**
 * **8.png:** Confirmation screen showing the successful creation of `Lab33-My-KMS-Key`.
+<img src="/images/week5/8.png" alt="KMS Key creation" style="max-width:100%; height:auto;" />
 * **9.png:** Output display showing the resulting ciphertext after encryption with the KMS key.
+<img src="/images/week5/9.png" alt="KMS Encryption output" style="max-width:100%; height:auto;" />
 
 ---
 

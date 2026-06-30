@@ -41,6 +41,7 @@ Amazon FSx for Windows File Server cung cấp hệ thống lưu trữ tệp (fil
 
 **3. Minh chứng (Proofs)**
 * **1.png:** Màn hình cấu hình thông số kỹ thuật, lựa chọn dung lượng SSD và yêu cầu tích hợp Active Directory trong bước thiết lập FSx.
+<img src="/images/week5/1.png" alt="FSx configuration" style="max-width:100%; height:auto;" />
 
 ---
 
@@ -56,7 +57,9 @@ Amazon S3 là dịch vụ lưu trữ đối tượng (object storage) cung cấp
 
 **3. Minh chứng (Proofs)**
 * **2.png:** Màn hình cấu hình Static website hosting đã kích hoạt thành công.
+<img src="/images/week5/2.png" alt="Static website hosting" style="max-width:100%; height:auto;" />
 * **3.png:** Bucket Policy cho phép truy cập công khai để hiển thị nội dung website.
+<img src="/images/week5/3.png" alt="Bucket Policy" style="max-width:100%; height:auto;" />
 
 ---
 
@@ -72,7 +75,9 @@ Lab này tập trung vào kỹ thuật phân quyền nâng cao trong AWS IAM b�
 
 **3. Minh chứng (Proofs)**
 * **4.png:** Màn hình cấu hình Policy JSON với điều kiện (Condition) `aws:ResourceTag/Department`.
+<img src="/images/week5/4.png" alt="IAM Policy with Condition" style="max-width:100%; height:auto;" />
 * **5.png:** Màn hình chi tiết của Role sau khi đã gán thành công Policy chuyên biệt.
+<img src="/images/week5/5.png" alt="IAM Role details" style="max-width:100%; height:auto;" />
 
 ---
 
@@ -88,8 +93,9 @@ Permission Boundary là một tính năng bảo mật nâng cao trong IAM, cho p
 
 **3. Minh chứng (Proofs)**
 * **6.png:** Cấu hình Policy đóng vai trò là "Permission Boundary" với các hạn chế quyền hạn cụ thể.
+<img src="/images/week5/6.png" alt="Permission Boundary Policy" style="max-width:100%; height:auto;" />
 * **7.png:** Màn hình User IAM đã được gán thành công Boundary.
-
+<img src="/images/week5/7.png" alt="IAM User with Boundary" style="max-width:100%; height:auto;" />
 ---
 
 #### 5. Lab 33: AWS Key Management Service (KMS)
@@ -104,7 +110,9 @@ AWS KMS là dịch vụ được quản lý giúp người dùng dễ dàng tạ
 
 **3. Minh chứng (Proofs)**
 * **8.png:** Màn hình xác nhận khóa `Lab33-My-KMS-Key` đã được khởi tạo.
+<img src="/images/week5/8.png" alt="KMS Key creation" style="max-width:100%; height:auto;" />
 * **9.png:** Kết quả đầu ra là chuỗi văn bản đã được mã hóa bằng khóa KMS.
+<img src="/images/week5/9.png" alt="KMS Encryption output" style="max-width:100%; height:auto;" />
 
 ---
 

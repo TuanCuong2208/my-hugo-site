@@ -1,5 +1,5 @@
 ---
-title: "Week 3: Advanced Network Architecture Expansion, Hybrid DNS and Enterprise AWS CLI Administration"
+title: "Week 3 Worklog"
 date: 2026-05-05
 weight: 3
 chapter: false

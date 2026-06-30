@@ -1,5 +1,5 @@
 ---
-title: "Tuần 3: Mở rộng Kiến trúc Mạng nâng cao, Hybrid DNS và Quản trị AWS CLI Enterprise"
+title: "Worklog Tuần 3"
 date: 2026-05-05
 weight: 3
 chapter: false

@@ -1,5 +1,5 @@
 ---
-title: "Week 6: Database Migration, Analytics Platforms, and NoSQL Modeling"
+title: "Week 6 Worklog"
 date: 2026-05-26
 weight: 6
 chapter: false

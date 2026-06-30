@@ -1,5 +1,5 @@
 ---
-title: "Week 2: Architectural Foundations & Core Services"
+title: "Week 2 Worklog"
 date: 2026-04-28
 weight: 2
 chapter: false

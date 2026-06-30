@@ -1,5 +1,5 @@
 ---
-title: "Week 5: Advanced IAM Governance, Storage Security & Data Encryption"
+title: "Week 5 Worklog"
 date: 2026-05-19
 weight: 5
 chapter: false
@@ -40,7 +40,7 @@ Amazon FSx for Windows File Server provides a fully managed file storage system 
 * **Step 3: Optimization:** Daily automated backups and scheduled maintenance windows are essential configurations to ensure long-term data integrity and system reliability.
 
 **3. Proofs**
-* **1.png:** Configuration screen showing technical specifications, SSD capacity selection, and the Active Directory integration requirement.
+* **1:** Configuration screen showing technical specifications, SSD capacity selection, and the Active Directory integration requirement.
 <img src="/images/week5/1.png" alt="FSx configuration" style="max-width:100%; height:auto;" />
 
 ---
@@ -56,9 +56,9 @@ Amazon S3 is an object storage service providing industry-leading scalability, d
 * **Step 3: Security Governance:** Implemented a Bucket Policy granting `s3:GetObject` permissions to allow public rendering of the website content.
 
 **3. Proofs**
-* **2.png:** Configuration screen showing Static Website Hosting successfully enabled
+* **2:** Configuration screen showing Static Website Hosting successfully enabled
 <img src="/images/week5/2.png" alt="Static website hosting" style="max-width:100%; height:auto;" />
-* **3.png:** Bucket Policy configuration allowing public access for website content.
+* **3:** Bucket Policy configuration allowing public access for website conten
 <img src="/images/week5/3.png" alt="Bucket Policy" style="max-width:100%; height:auto;" />
 
 ---
@@ -74,9 +74,9 @@ This lab focuses on advanced AWS IAM permission techniques using Conditions. Ins
 * **Step 3: Intelligent Authorization:** Verified that only EC2 instances tagged with `Department: Finance` fall within the scope of this Role's management permissions.
 
 **3. Proofs**
-* **4.png:** Configuration screen for the JSON Policy with the `aws:ResourceTag/Department` Condition.
+* **4:** Configuration screen for the JSON Policy with the `aws:ResourceTag/Department` Condition.
 <img src="/images/week5/4.png" alt="IAM Policy with Condition" style="max-width:100%; height:auto;" />
-* **5.png:** Detailed Role view after successfully attaching the specialized Policy.
+* **5:** Detailed Role view after successfully attaching the specialized Policy.
 <img src="/images/week5/5.png" alt="IAM Role details" style="max-width:100%; height:auto;" />
 
 ---
@@ -92,9 +92,9 @@ Permission Boundary is an advanced IAM security feature that sets a maximum "per
 * **Step 3: Verification:** Tested granting excessive permissions to the user to confirm that the Boundary successfully blocks unauthorized actions.
 
 **3. Proofs**
-* **6.png:** Policy configuration acting as the "Permission Boundary" with specific access restrictions.
+* **6:** Policy configuration acting as the "Permission Boundary" with specific access restrictions.
 <img src="/images/week5/6.png" alt="Permission Boundary Policy" style="max-width:100%; height:auto;" />
-* **7.png:** IAM User interface confirming the successful assignment of the Permission Boundary.
+* **7:** IAM User interface confirming the successful assignment of the Permission Boundary.
 <img src="/images/week5/7.png" alt="IAM User with Boundary" style="max-width:100%; height:auto;" />
 
 ---
@@ -110,14 +110,12 @@ AWS KMS is a managed service that makes it easy to create and control cryptograp
 * **Step 3: Encryption Execution:** Used the KMS key to encrypt sample data, verifying the service's security capabilities.
 
 **3. Proofs**
-* **8.png:** Confirmation screen showing the successful creation of `Lab33-My-KMS-Key`.
+* **8:** Confirmation screen showing the successful creation of `Lab33-My-KMS-Key`.
 <img src="/images/week5/8.png" alt="KMS Key creation" style="max-width:100%; height:auto;" />
-* **9.png:** Output display showing the resulting ciphertext after encryption with the KMS key.
+* **9:** Output display showing the resulting ciphertext after encryption with the KMS key.
 <img src="/images/week5/9.png" alt="KMS Encryption output" style="max-width:100%; height:auto;" />
 
 ---
-
-
 
 ### III. Activity Log & Detailed Roadmap (June 22, 2026 – June 30, 2026)
 

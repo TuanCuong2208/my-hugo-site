@@ -1,5 +1,5 @@
 ---
-title: "Tuần 1: Nền tảng AWS & Khởi đầu chiến lược"
+title: "Worklog Tuần 1"
 date: 2026-04-21
 weight: 1
 chapter: false

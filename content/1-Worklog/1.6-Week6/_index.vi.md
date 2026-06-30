@@ -1,5 +1,5 @@
 ---
-title: "Tuần 6: Di chuyển cơ sở dữ liệu, Nền tảng phân tích và Mô hình hóa NoSQL"
+title: "Worklog Tuần 6"
 date: 2026-05-26
 weight: 6
 chapter: false

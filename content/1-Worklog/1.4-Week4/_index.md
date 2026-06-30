@@ -1,5 +1,5 @@
 ---
-title: "Week 4: Enterprise Security Governance, Complex Network Topologies and Automated Delivery Pipelines"
+title: "Week 4 Worklog"
 date: 2026-05-12
 weight: 4
 chapter: false

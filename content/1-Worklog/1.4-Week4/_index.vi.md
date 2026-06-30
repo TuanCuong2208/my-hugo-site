@@ -1,5 +1,5 @@
 ---
-title: "Tuần 4: Định chuẩn An ninh Doanh nghiệp, Cấu trúc Mạng Phức hợp và Tự động hóa Chu trình Phân phối"
+title: "Worklog Tuần 4"
 date: 2026-05-12
 weight: 4
 chapter: false

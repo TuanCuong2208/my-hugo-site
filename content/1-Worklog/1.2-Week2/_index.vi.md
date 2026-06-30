@@ -1,5 +1,5 @@
 ---
-title: "Tuần 2: Nền tảng Kiến trúc & Các dịch vụ lõi"
+title: "Worklog Tuần 2"
 date: 2026-04-28
 weight: 2
 chapter: false

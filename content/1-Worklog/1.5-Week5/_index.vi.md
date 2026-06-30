@@ -1,5 +1,5 @@
 ---
-title: "Tuần 5: Quản trị IAM chuyên sâu, Bảo mật lưu trữ và Mã hóa dữ liệu (Advanced IAM Governance, Storage Security & Data Encryption)"
+title: "Worklog Tuần 5"
 date: 2026-05-19
 weight: 5
 chapter: false
@@ -40,7 +40,7 @@ Amazon FSx for Windows File Server cung cấp hệ thống lưu trữ tệp (fil
 * **Bước 3: Tối ưu hóa:** Cấu hình tự động sao lưu hàng ngày (Daily backup) và bảo trì định kỳ là các bước thiết yếu để đảm bảo tính toàn vẹn của dữ liệu trong quá trình vận hành lâu dài.
 
 **3. Minh chứng (Proofs)**
-* **1.png:** Màn hình cấu hình thông số kỹ thuật, lựa chọn dung lượng SSD và yêu cầu tích hợp Active Directory trong bước thiết lập FSx.
+* **1:** Màn hình cấu hình thông số kỹ thuật, lựa chọn dung lượng SSD và yêu cầu tích hợp Active Directory trong bước thiết lập FSx.
 <img src="/images/week5/1.png" alt="FSx configuration" style="max-width:100%; height:auto;" />
 
 ---
@@ -56,9 +56,9 @@ Amazon S3 là dịch vụ lưu trữ đối tượng (object storage) cung cấp
 * **Bước 3: Quản trị bảo mật:** Áp dụng Bucket Policy cho phép `s3:GetObject` đối với mọi người dùng, đảm bảo website hiển thị đúng nội dung cần thiết.
 
 **3. Minh chứng (Proofs)**
-* **2.png:** Màn hình cấu hình Static website hosting đã kích hoạt thành công.
+* **2:** Màn hình cấu hình Static website hosting đã kích hoạt thành công.
 <img src="/images/week5/2.png" alt="Static website hosting" style="max-width:100%; height:auto;" />
-* **3.png:** Bucket Policy cho phép truy cập công khai để hiển thị nội dung website.
+* **3:** Bucket Policy cho phép truy cập công khai để hiển thị nội dung website.
 <img src="/images/week5/3.png" alt="Bucket Policy" style="max-width:100%; height:auto;" />
 
 ---
@@ -74,9 +74,9 @@ Lab này tập trung vào kỹ thuật phân quyền nâng cao trong AWS IAM b�
 * **Bước 3: Phân quyền thông minh:** Đảm bảo rằng chỉ những EC2 instance có gắn thẻ `Department: Finance` mới nằm trong phạm vi quản lý của Role này.
 
 **3. Minh chứng (Proofs)**
-* **4.png:** Màn hình cấu hình Policy JSON với điều kiện (Condition) `aws:ResourceTag/Department`.
+* **4:** Màn hình cấu hình Policy JSON với điều kiện (Condition) `aws:ResourceTag/Department`.
 <img src="/images/week5/4.png" alt="IAM Policy with Condition" style="max-width:100%; height:auto;" />
-* **5.png:** Màn hình chi tiết của Role sau khi đã gán thành công Policy chuyên biệt.
+* **5:** Màn hình chi tiết của Role sau khi đã gán thành công Policy chuyên biệt.
 <img src="/images/week5/5.png" alt="IAM Role details" style="max-width:100%; height:auto;" />
 
 ---
@@ -92,9 +92,9 @@ Permission Boundary là một tính năng bảo mật nâng cao trong IAM, cho p
 * **Bước 3: Kiểm chứng:** Thử nghiệm việc cấp quyền vượt mức cho User để xác nhận rằng Boundary đã chặn thành công các hành động không mong muốn.
 
 **3. Minh chứng (Proofs)**
-* **6.png:** Cấu hình Policy đóng vai trò là "Permission Boundary" với các hạn chế quyền hạn cụ thể.
+* **6:** Cấu hình Policy đóng vai trò là "Permission Boundary" với các hạn chế quyền hạn cụ thể.
 <img src="/images/week5/6.png" alt="Permission Boundary Policy" style="max-width:100%; height:auto;" />
-* **7.png:** Màn hình User IAM đã được gán thành công Boundary.
+* **7:** Màn hình User IAM đã được gán thành công Boundary.
 <img src="/images/week5/7.png" alt="IAM User with Boundary" style="max-width:100%; height:auto;" />
 ---
 
@@ -109,9 +109,9 @@ AWS KMS là dịch vụ được quản lý giúp người dùng dễ dàng tạ
 * **Bước 3: Thực thi mã hóa:** Sử dụng khóa KMS để mã hóa dữ liệu mẫu, xác minh khả năng bảo mật của dịch vụ.
 
 **3. Minh chứng (Proofs)**
-* **8.png:** Màn hình xác nhận khóa `Lab33-My-KMS-Key` đã được khởi tạo.
+* **8:** Màn hình xác nhận khóa `Lab33-My-KMS-Key` đã được khởi tạo.
 <img src="/images/week5/8.png" alt="KMS Key creation" style="max-width:100%; height:auto;" />
-* **9.png:** Kết quả đầu ra là chuỗi văn bản đã được mã hóa bằng khóa KMS.
+* **9:** Kết quả đầu ra là chuỗi văn bản đã được mã hóa bằng khóa KMS.
 <img src="/images/week5/9.png" alt="KMS Encryption output" style="max-width:100%; height:auto;" />
 
 ---

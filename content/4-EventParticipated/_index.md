@@ -16,8 +16,8 @@ During my internship, I have had the opportunity to attend various professional 
 
 ---
 
-### [Event 2: GenAI-powered App-DB Modernization]({{% relref "4.2-Event2" %}})  
-&emsp;**Date & Time:** 09:00 AM, August 13, 2025  
-&emsp;**Location:** Floor 26, Bitexco Financial Tower, 02 Hai Trieu Street, Ben Nghe, District 1, Ho Chi Minh City  
-&emsp;**Role:** Attendee  
-&emsp;**Description:** Deep-dive workshop on modernizing applications and databases utilizing GenAI capabilities, Domain-Driven Design (DDD), and Event-Driven Architectures.
+### [Event 2: FCAJ Community Day - June 2026]({{% relref "4.2-Event2" %}})
+&emsp;**Time:** 09:00 - 12:00, Saturday, June 27, 2026
+&emsp;**Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu, Ben Nghe, District 1, Ho Chi Minh City
+&emsp;**Role:** Attendee
+&emsp;**Description:** A deep-dive technology workshop focusing on the production-grade deployment of Agentic AI, Vietnamese Voice Agents, and Model Context Protocol (MCP) to automate enterprise DevOps operations and workforce management safely inside private network subnets.

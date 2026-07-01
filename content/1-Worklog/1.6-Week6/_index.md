@@ -1,5 +1,5 @@
 ---
-title: "Week 6: Analytics Platforms and NoSQL Data Modeling"
+title: "Week 6 Worklog"
 date: 2026-05-26
 weight: 6
 chapter: false
@@ -99,10 +99,26 @@ Deploying an end-to-end analytics data streaming pipeline tackles complex high-s
 ---
 
 ### V. Infrastructure Challenges, Error Resolution Logs & Expert Perspectives
-*(This section will document infrastructure errors and engineering mitigation actions once the implementations are finalized)*
+
+#### 1. Error Resolution Logs
+* **Issue Encountered:** While attempting to deploy an AWS Glue Crawler configuration under Lab 40 in the personal AWS Student workspace environment, the console returned a fatal execution access error stating: `Account 905846954499 is denied access`.
+* **Root Cause Analysis:** Selecting the quick configuration option to automatically spin up a new service identity role (*Create new IAM role*) requires advanced administrative permissions to alter global AWS Identity and Access Management policies. This specific automated behavior was strictly blocked by the Service Control Policies (SCP) enforced on the personal student account to restrict dynamic policy modifications.
+* **Mitigation Strategy:** Shifted the execution approach towards manually preparing the logical configuration framework and directly testing serverless ad-hoc structures within the Amazon Athena Query Editor interface to fulfill logical log query definitions without identity generation overhead.
+
+#### 2. Expert Perspectives & Architectural Optimization
+* **Lambda Architectures and Data Lakes:** For massive analytics deployments, housing raw datasets within Amazon S3 ensures extreme cost efficiency and high availability. However, to maximize serverless performance in Amazon Athena, it is an industry best practice to configure data conversion from legacy row-based stream blocks (CSV, JSON) into compressed columnar formats (such as Apache Parquet). This pipeline reduces total volume dimensions during structural data scans by 80-90%, dramatically lowering operational run-time compute costs.
+
+---
 
 ### VI. Professional Reflections
-*(This section will summarize technical conclusions and engineering insights learned upon week closure)*
+
+* **NoSQL Database Modeling Paradox (DynamoDB Single-table Design):** Hands-on operational cycles under Lab 39 driven heavily on NoSQL designs completely reformed the standard normalized relational database (RDBMS) mindset. In Amazon DynamoDB, data layout patterns must be meticulously designed based on predefined application access patterns rather than normalized entities. Mastering composite primary keys (combining a Partition Key with a Sort Key) paired with Global Secondary Indexes (GSIs) is crucial to keeping system lookups down to predictable single-digit millisecond latency profiles at scale.
+* **Real-time Stream Ingress Processing:** Successfully engineering data ingress channels using Amazon Kinesis Data Streams established a solid foundation regarding sharding throughput mechanics and dynamic On-demand capacity setups, which are critical for handling uninterrupted high-velocity stream analytics in production setups.
+
+---
 
 ### VII. Strategic Planning & Optimization Roadmap for Next Week
-*(This section will define आगामी target operational goals for next week's architecture expansion)*
+
+* **Continuous Learning at the AWS Office:** Maintain a consistent presence at the AWS Vietnam office to absorb professional cloud computing insights from field experts. Accelerate the execution of upcoming hands-on labs to further solidify core operational cloud architecture knowledge.
+* **Capstone Project Topic Finalization:** Continue evaluating, discussing, and selecting highly optimal, technically challenging project concepts that align with the team's core competencies for the upcoming final semester milestone.
+* **Refining Capstone Graduation Thesis Architecture:** Dedicate focused effort towards modeling, polishing, and finalizing the end-to-end cloud infrastructure architecture design for the graduation thesis (AI-powered Smart Tour Booking System). Consolidate all technical diagrams and structural workflows to present to office mentors for advanced code feedback, architectural verification, and continuous optimization adjustments prior to software implementation phases.

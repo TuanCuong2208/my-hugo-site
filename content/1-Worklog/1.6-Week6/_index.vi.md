@@ -1,5 +1,5 @@
 ---
-title: "Tuần 6: Nền tảng phân tích và Mô hình hóa dữ liệu NoSQL"
+title: "Worklog Tuần 6"
 date: 2026-05-26
 weight: 6
 chapter: false
@@ -98,11 +98,27 @@ Xây dựng một hệ thống xử lý phân tích đầu cuối (End-to-End An
 
 ---
 
-### V. Infrastructure Challenges, Error Resolution Logs & Expert Perspectives
-*(Mục này sẽ được viết chi tiết sau khi hoàn thành toàn bộ tác vụ thực hành hệ thống)*
+### V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia (Infrastructure Challenges, Error Resolution Logs & Expert Perspectives)
 
-### VI. Professional Reflections
-*(Mục này sẽ ghi nhận các bài học kinh nghiệm thu được sau khi kết thúc tuần)*
+#### 1. Nhật ký xử lý lỗi hệ thống (Error Resolution Logs)
+* **Sự cố phát sinh (Issue):** Khi tiến hành khởi tạo dịch vụ AWS Glue Crawler ở bài Lab 40 trong môi trường tài khoản cá nhân (Student account), hệ thống trả về thông báo lỗi nghiêm trọng nghiêm cấm quyền hạn: `Account 905846954499 is denied access`. 
+* **Phân tích nguyên nhân (Root Cause Analysis):** Tác vụ lựa chọn tự động khởi tạo nhanh cấu hình IAM Role (*Create new IAM role*) yêu cầu quyền quản trị cấp cao để can thiệp vào tài nguyên Identity and Access Management của AWS. Tuy nhiên, các chính sách bảo mật biên (Service Control Policies - SCP) áp đặt lên tài khoản sinh viên đã chặn đứng hành động này nhằm kiểm soát tài nguyên.
+* **Giải pháp khắc phục (Mitigation):** Chuyển dịch phương án sang việc chuẩn bị sẵn các khung lược đồ Metadata logic thủ công kết hợp kiểm chứng trực tiếp không gian làm việc phi máy chủ trên giao diện Query Editor của Amazon Athena để đáp ứng mục tiêu phân tích log.
 
-### VII. Strategic Planning & Optimization Roadmap for Next Week
-*(Mục này sẽ xác định các mục tiêu tối ưu hóa hạ tầng cho tuần kế tiếp)*
+#### 2. Góc nhìn chuyên gia & Tối ưu hóa (Expert Perspectives)
+* **Kiến trúc Lambda và Data Lake:** Đối với việc vận hành hệ thống dữ liệu lớn, việc duy trì lưu trữ thô trên Amazon S3 mang lại hiệu năng tối ưu về mặt chi phí. Tuy nhiên, để tăng tốc độ truy vấn trên Athena, chuyên gia khuyến nghị luôn luôn phải cấu hình Glue để nén dữ liệu và chuyển đổi từ định dạng dòng truyền thống (CSV, JSON) sang định dạng cột (Columnar format như Apache Parquet). Điều này giúp giảm tới 80-90% dung lượng dữ liệu cần quét (Data scanned), từ đó tối ưu hóa chi phí vận hành trực tiếp.
+
+---
+
+### VI. Đánh giá và Chiêm nghiệm chuyên môn (Professional Reflections)
+
+* **Tư duy thiết kế NoSQL (DynamoDB Single-table Design):** Quá trình thực hành trên bài Lab 39 đã thay đổi hoàn toàn tư duy thiết kế hệ thống từ RDBMS (SQL truyền thống) sang NoSQL. Đối với DynamoDB, việc thiết kế không dựa trên cấu trúc chuẩn hóa dữ liệu thực thể mà bắt buộc phải dựa trên các mẫu truy cập (Access Patterns) được định hình từ trước của ứng dụng. Kỹ thuật tận dụng khóa chính hỗn hợp (Composite Primary Key: Partition Key + Sort Key) và chỉ mục thứ cấp GSI là chìa khóa cốt lõi để duy trì độ trễ dưới 10 mili-giây ở quy mô lớn.
+* **Xử lý dữ liệu thời gian thực (Real-time Streaming):** Việc làm chủ luồng Amazon Kinesis Data Streams giúp nhận thức rõ ràng tầm quan trọng của cơ chế phân luồng (Sharding) và chế độ On-demand trong việc xử lý luồng dữ liệu liên tục không ngắt quãng, phục vụ trực tiếp cho các bài toán phân tích dữ liệu dòng (Stream Analytics) hiện đại.
+
+---
+
+### VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới (Strategic Planning & Optimization Roadmap for Next Week)
+
+* **Học tập và Phát triển tại Văn phòng AWS:** Tiếp tục duy trì tần suất lên văn phòng AWS Vietnam để trực tiếp trao đổi, học hỏi môi trường thực tế từ các chuyên gia kỹ thuật đám mây. Tập trung đẩy mạnh tiến độ hoàn thành các bài Lab chuyên sâu tiếp theo nhằm củng cố vững chắc nền tảng kiến thức hạ tầng Cloud.
+* **Nghiên cứu và Lựa chọn Đề tài Đồ án:** Tiếp tục quá trình thảo luận, đánh giá và lựa chọn các đề tài công nghệ tối ưu, phù hợp nhất với năng lực của các thành viên trong nhóm để chuẩn bị cho đồ án cuối kỳ quan trọng sắp tới.
+* **Hoàn thiện Kiến trúc Đồ án tốt nghiệp:** Tập trung cao độ vào việc thiết kế, hoàn thiện và đóng gói sơ đồ cấu trúc kiến trúc tổng thể cho đồ án tốt nghiệp (Hệ thống đặt tour du lịch tích hợp Chatbot AI). Chuẩn bị tài liệu báo cáo chi tiết để gửi lên các anh chị Mentor tại văn phòng nhận xét, thẩm định và đưa ra những định hướng tối ưu hóa cấu trúc trước khi tiến hành code thực tế.

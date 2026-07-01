@@ -1,5 +1,5 @@
 ---
-title: "Week 6 Worklog"
+title: "Week 6: Analytics Platforms and NoSQL Data Modeling"
 date: 2026-05-26
 weight: 6
 chapter: false
@@ -7,108 +7,102 @@ pre: "<b> 1.6. </b> "
 ---
 
 ### I. Executive Summary
-This week focuses on database modernization and constructing advanced data analytics ecosystems on AWS cloud infrastructure. The core activities cover cloud database migration processes utilizing AWS DMS and SCT, efficient Data Lake infrastructure setup with AWS Glue, and optimization of NoSQL access pattern designs on DynamoDB. Lastly, it details building an end-to-end Big Data analytics pipeline integrating data ingestion (Kinesis), processing (EMR), and reporting visualization (QuickSight).
+This week focuses on modernizing cloud storage layers and building advanced data analytics infrastructures within the AWS ecosystem. The core architectural elements cover constructing automated Data Lake pipelines using Amazon S3 and AWS Glue, and designing highly optimized NoSQL database storage models using Amazon DynamoDB. Lastly, it details establishing an end-to-end distributed Big Data analytics ecosystem combining data stream ingestion (Kinesis), parallel distributed computing (EMR), and analytical reporting dashboards (QuickSight).
 
 ### II. Strategic Objectives
-* **Database Migration:** Mastering schema conversion workflows and securely automating data migration tasks from legacy systems to AWS.
-* **Data Lake Architecture:** Building and managing a centralized data repository, automated through a Data Catalog to classify structured/semi-structured data for analytical tasks.
-* **NoSQL Optimization:** Gaining deep knowledge of Single-table design concepts and maximizing query performance based on real-world application access patterns in DynamoDB.
-* **Analytics Automation:** Establishing a comprehensive end-to-end Data Pipeline, seamlessly streaming live operations data straight into functional interactive business dashboards.
+* **Data Lake Architecture:** Structuring centralized enterprise repositories and automating schema ingestion patterns via the Glue Data Catalog to drive deep data analysis.
+* **NoSQL Optimization:** Master advanced single-table design concepts and optimize query execution plans against high-scale application access patterns inside DynamoDB.
+* **Analytics Automation:** Deploying an end-to-end automated analytical data stream, securely translating raw unformatted transactional inputs into business intelligence charts.
 
 ### III. Activity Log & Detailed Roadmap (From 26/05/2026 to 01/06/2026)
 
 | Timeframe | Activity Category | In-depth Operational Tasks Executed | Results / Deliverables Achieved |
 | :--- | :--- | :--- | :--- |
-| **Day 1** *(26/05)* | Database Migration | Deploy Lab 43: Utilize AWS Schema Conversion Tool (SCT) to convert schema structures and configure AWS Database Migration Service (DMS) for live replication. | Automated database migration pipeline established successfully between source and target DB. |
-| **Day 2** *(27/05)* | Data Lake Lifecycle | Deploy Lab 35: Architect a centralized data storage pool on Amazon S3 and configure AWS Glue Crawler to index metadata into the Glue Data Catalog. | Centralized Data Lake environment ready to serve structured and semi-structured schema mapping. |
-| **Day 3** *(28/05)* | NoSQL Data Modeling | Deploy Lab 39: Implement advanced Primary Key, Partition Key, Sort Key, and Secondary Indexes (GSI/LSI) modeling strategies on Amazon DynamoDB. | Standardized data schema ready, minimizing RCUs/WCUs consumption while maximizing query response times. |
-| **Day 4** *(29/05)* | Cost & Query Analytics | Deploy Lab 40: Implement AWS Glue in conjunction with Amazon Athena to execute serverless ad-hoc standard SQL queries over system logs stored in S3. | Detailed system operational reports extracted, validating performance benchmarks and cost optimization. |
-| **Day 5-6** *(30-31/05)*| End-to-End Analytics | Deploy Lab 72: Integrate full AWS analytical platform suite combining Amazon Kinesis (ingestion), Amazon EMR (distributed processing), and Amazon QuickSight. | Stream processing platform implemented successfully with functional real-time analytical dashboards. |
-| **Day 7** *(01/06)* | Audit & Packaging | Consolidate all engineering technical documentation, validate screenshot asset pathways, and execute final web deployment via Hugo framework. | Week 6 worklog portfolio running live and fully optimized on GitHub Pages. |
+| **Day 1-2** *(26-27/05)* | Data Lake Lifecycle | Deploy Lab 35: Structure a centralized data repository on Amazon S3 and configure an AWS Glue Crawler to sync structural metadata into the Glue Data Catalog. | Centralized Data Lake environment ready to serve structured and semi-structured automated mappings. |
+| **Day 3** *(28/05)* | NoSQL Data Modeling | Deploy Lab 39: Implement advanced Primary Key, Partition Key, Sort Key, and Secondary Index (GSI) single-table modeling blueprints on Amazon DynamoDB. | Standardized data schema ready, minimizing RCUs/WCUs consumption while maximizing query response times. |
+| **Day 4** *(29/05)* | Cost & Query Analytics | Deploy Lab 40: Orchestrate an AWS Glue metadata pipeline and configure Amazon Athena to execute serverless standard ANSI SQL actions over raw S3 system logs. | Detailed system operational reports extracted, validating performance benchmarks and infrastructure cost trends. |
+| **Day 5-6** *(30-31/05)*| End-to-End Analytics | Deploy Lab 72: Build an end-to-end analytical data stream pipeline aggregating Amazon Kinesis (ingestion), Amazon EMR (processing), and Amazon QuickSight. | Stream processing platform implemented successfully with functional real-time analytical business dashboards. |
+| **Day 7** *(01/06)* | Finalization | Consolidate engineering technical writeups, standardize screenshot media asset mapping rules, and execute web updates via the Hugo framework. | Week 6 worklog portfolio running live and fully optimized on GitHub Pages. |
 
 ### IV. In-depth Technical Execution & Analysis
 
-#### 1. Lab 43: AWS Database Schema Conversion Tool and Database Migration Service
-****1. Technical Overview****
-This lab illustrates the systematic process of a heterogeneous database migration onto the AWS cloud infrastructure. The process utilizes the AWS Schema Conversion Tool (SCT) to analyze database engine compatibility and automatically convert schema definitions (such as views, stored procedures, and functions). Following the conversion, the AWS Database Migration Service (DMS) drives data sync tasks using a managed Replication Instance to execute initial loads (Full Load) and continuous replication (CDC), successfully eliminating system migration downtime.
+#### 1. Lab 35: Data Lake on AWS
 
-****2. Execution Process****
-* **Step 1: Ingestion Infrastructure Setup:** Launch a managed Replication Instance in the AWS DMS environment acting as the main migration execution engine. Define connectivity configurations (Source Endpoints for local databases and Target Endpoints for AWS cloud databases) and run connectivity validation checks.
-* **Step 2: Schema Conversion using AWS SCT:** Install and utilize the desktop-based AWS SCT application to connect to the source engine, generate a detailed Migration Assessment Report to spot any code incompatibilities, convert the database schema, and apply it directly onto the target database.
-* **Step 3: Database Migration Task Configuration:** Create and configure a DMS Replication Task specifying the desired migration type, implement strict Table Mappings rules to accurately isolate data tables to sync, and monitor the operation execution until the task transitions to a completed state.
+**1. Technical Overview**
+The Data Lake architecture on AWS delivers a highly secure, cost-effective, and infinitely scalable centralized data storage pool capable of housing multi-format corporate assets. This training module emphasizes structuring raw file inbound paths within Amazon S3 bucket storage layers combined with managed AWS Glue orchestration engines to parse metadata schemas directly into the unified Glue Data Catalog, allowing downstream ad-hoc analytical execution.
 
-****3. Proofs****
-* **1.png:** Configuration screen showing the AWS SCT desktop application interface, showcasing the Migration Assessment Report metrics along with source and target database schema structures mapped after translation.
-* **2.png:** Configuration screen showing active Endpoint statuses in the AWS DMS Management Console, validating both Source and Target Endpoints display a green `Successful` connectivity status.
-* **3.png:** Configuration screen showing the completed Database Migration Task displaying a status of `Load complete`, paired with deep metrics detailing row modification counts synchronized to the destination DB.
+**2. Execution Process**
+* **Step 1: Inbound S3 Architecture Provisioning:** Spin up targeted Amazon S3 buckets acting as the primary secure raw data landing zones for incoming objects.
+* **Step 2: AWS Glue Crawler Orchestration:** Configure appropriate IAM execution roles and deploy an automated Glue Crawler directed at the source S3 bucket directory.
+* **Step 3: Data Catalog Sync Enforcement:** Execute the deployed Crawler configuration to analyze file layout formats, triggering automated schema inference and cataloging structural logical tables.
 
----
-
-#### 2. Lab 35: Data Lake on AWS
-****1. Technical Overview****
-The Data Lake architecture on AWS delivers a highly secure, cost-effective, and infinitely scalable centralized data storage pool capable of housing multi-format corporate assets (structured, semi-structured, and unstructured). The training focuses on utilizing Amazon S3 as the core storage layer integrated with AWS Glue to govern an automated metadata repository (Glue Data Catalog), enabling down-stream computational engines to read data on-the-fly without manual ingest structures.
-
-****2. Execution Process****
-* **Step 1: S3 Bucket Topologies Structuring:** Build individual Amazon S3 storage buckets segregated cleanly by architectural ingestion tiers (such as Raw Inbound Zones and Processed Analytical Zones).
-* **Step 2: AWS Glue Crawler Orchestration:** Construct an IAM Service Role provisioning specific data read access to S3 assets. Initialize an AWS Glue Crawler targeting the raw storage bucket paths to automate the scanning process.
-* **Step 3: Glue Data Catalog Definition:** Run the configured Glue Crawler to trigger automated schema inference over the unstructured raw object sets, automatically parsing logical database tables into the central Glue Data Catalog metadata lake.
-
-****3. Proofs****
-* **4.png:** Configuration screen showing the Amazon S3 Storage Console displaying the list of created data buckets and structured inbound file repository directories for the raw Data Lake layer.
-* **5.png:** Configuration screen showing structural Table Schema definitions within the AWS Glue Data Catalog after successful Crawler termination, highlighting parsed Column names and inferred Data Types.
+**3. Proofs**
+* **1:** Configuration screen showing the Amazon S3 Management Console, verifying active data lake storage buckets created successfully inside the current AWS region.
+<img src="/images/week6/1.png" alt="S3 Buckets List" style="max-width:100%; height:auto;" />
+* **2:** Configuration screen showing the detailed view of file asset layouts or active raw object directories sitting within the primary S3 storage container.
+<img src="/images/week6/2.png" alt="S3 Bucket Objects View" style="max-width:100%; height:auto;" />
 
 ---
 
-#### 3. Lab 39: Amazon DynamoDB Immersion Day
-****1. Technical Overview****
-Amazon DynamoDB is a fully managed, single-digit millisecond latency Key-Value and Document NoSQL database engineered to provide massive scaling. This lab focuses on architectural patterns required for NoSQL modeling at scale, utilizing both Provisioned and On-Demand capacity models, while implementing secondary indexes (GSIs) to decouple workloads and serve highly customized application access patterns efficiently.
+#### 2. Lab 39: Amazon DynamoDB Immersion Day
 
-****2. Execution Process****
-* **Step 1: DynamoDB Table Definition:** Launch a new NoSQL table through the DynamoDB Management Console, selecting optimal capacity configurations and designating specific attribute sets as the vital Partition Key boundary.
-* **Step 2: Advanced Access Patterns Design:** Create and engineer functional Global Secondary Indexes (GSIs) to bypass primary key limitations, enabling low-latency alternate data lookup vectors across different tables.
-* **Step 3: Query Execution and Performance Validation:** Issue automated data reads using the AWS Console or programmatic CLI actions via AWS CloudShell to validate response structures, verifying operational correctness and checking total consumed RCUs.
+**1. Technical Overview**
+Amazon DynamoDB is a fully managed, single-digit millisecond latency Key-Value and Document NoSQL database engineered to handle massive internet-scale operations. The deep-dive exercises focus extensively on translating real-world relational access patterns into optimal single-table NoSQL designs by choosing high-cardinality Partition Keys, complementary Sort Keys, and active Global Secondary Indexes (GSIs).
 
-****3. Proofs****
-* **6.png:** Configuration screen showing table specification configurations inside the DynamoDB Console, explicitly displaying Partition Key/Sort Key arrangements along with active Global Secondary Indexes (GSI) settings.
-* **7.png:** Configuration screen showing query returns under the Items view tab in the DynamoDB Console or via AWS CloudShell outputs, confirming query and scan operational outputs.
+**2. Execution Process**
+* **Step 1: DynamoDB Table Structure Provisioning:** Create a fresh NoSQL table instance via the DynamoDB Console, designating core string schemas as the main Partition Key configuration.
+* **Step 2: Alternate Access Pattern Indexing:** Design and initialize Global Secondary Indexes (GSIs) to decouple application query parameters and unlock flexible indexing alternatives.
+* **Step 3: Transaction Operations Testing:** Use programmatic actions or AWS CloudShell terminal structures to insert trial items (PutItem) and execute targeted Query and Scan evaluations.
 
----
-
-#### 4. Lab 40: Cost and Performance Analysis with AWS Glue and Amazon Athena
-****1. Technical Overview****
-Coupling AWS Glue metadata curation with Amazon Athena's interactive ad-hoc querying builds an advanced serverless analytics platform optimized for enterprise environments. AWS Glue Crawlers automate schema discovery over raw logs (such as usage log tracking files) sitting in S3, while Amazon Athena provides an on-demand SQL framework to dissect system cost and infrastructure performance logs without any underlying computing infrastructure to maintain.
-
-****2. Execution Process****
-* **Step 1: Log Target Glue Crawler Orchestration:** Create and configure a managed Glue Crawler targeted to scan raw operational log paths inside designated Amazon S3 storage infrastructure.
-* **Step 2: Columnar Data Format Conversion:** Implement performance optimization techniques by compressing and transforming legacy row-based log objects (like CSV or JSON) into optimized columnar formats (like Parquet) to save scanning overhead.
-* **Step 3: Serverless Athena Ad-hoc SQL Interrogation:** Access the Amazon Athena query workspace, link to the Data Catalog table, and compose standard ANSI SQL expressions to pinpoint performance trends.
-
-****3. Proofs****
-* **8.png:** Configuration screen showing execution logs of the targeted AWS Glue Crawler shifting to a `Ready` state or confirming a successful indexing run into the metadata store.
-* **9.png:** Configuration screen showing the Amazon Athena Query Editor displaying the written SQL statement executed, structural tabular data outputs, and specific computation benchmarks like Execution Time and Data Scanned volumes.
+**3. Proofs**
+* **3:** Configuration screen showing table properties metrics in the DynamoDB Console, verifying active Partition Key, Sort Key, and table resource sizing profiles.
+<img src="/images/week6/3.png" alt="DynamoDB Table Configuration" style="max-width:100%; height:auto;" />
+* **4:** Configuration screen showing the active Console Items view interface, validating target query metrics returned data rows successfully following a conditional Query call.
+<img src="/images/week6/4.png" alt="DynamoDB Query Results" style="max-width:100%; height:auto;" />
 
 ---
 
-#### 5. Lab 72: Analytics on AWS Workshop
-****1. Technical Overview****
-Building a comprehensive end-to-end Big Data analytics pipeline addresses data processing needs from stream ingestion to business intelligence visualization. This architecture pairs Amazon Kinesis Data Streams for high-velocity streaming intake with an Amazon EMR (Elastic MapReduce) framework to handle distributed computations (via Apache Spark or Hadoop ecosystems) over S3 datasets, culminating in interactive visual reporting via Amazon QuickSight.
+#### 3. Lab 40: Cost and Performance Analysis with AWS Glue and Amazon Athena
 
-****2. Execution Process****
-* **Step 1: Kinesis Ingestion Pipeline Initialization:** Deploy a dedicated Kinesis Data Stream pipeline, right-sizing target Shard counts to support continuous throughput requirements from upstream log generators.
-* **Step 2: Distributed Processing Cluster Bootstrapping:** Launch an active multi-node Amazon EMR cluster, specifying software configurations and injecting EMR Steps to clean, translate, and dump raw streams into analytical tables.
-* **Step 3: Business Intelligence Hookup via Amazon QuickSight:** Authenticate into the QuickSight workspace, generate a functional corporate Data Set mapped to the curated analytics engine, and customize visualization components (Visuals) to form a live dashboard.
+**1. Technical Overview**
+Coupling AWS Glue metadata curation with Amazon Athena's interactive ad-hoc querying builds a serverless analytics model that cuts downstream infrastructure management overhead. AWS Glue Crawlers handle the heavy-lifting of scanning and creating schema blueprints over unstructured application usage tracking text log files inside S3, while Amazon Athena applies a serverless execution runtime to query logs using standard SQL.
 
-****3. Proofs****
-* **10.png:** Configuration screen showing the Amazon Kinesis Data Streams monitoring dashboard displaying active CloudWatch metrics, validating stream data throughput entering the cloud architecture.
-* **11.png:** Configuration screen showing the finalized, fully functional, and interactive business intelligence analytics dashboard running live inside the Amazon QuickSight workspace environment.
+**2. Execution Process**
+* **Step 1: Log Target Glue Crawler Mapping:** Instantiate an enterprise Glue Crawler configuration targeted strictly to scan underlying row-based raw system logs on S3.
+* **Step 2: Columnar Serialization Enforcement:** Leverage high-performance processing strategies by converting unstructured payloads into optimized Apache Parquet layouts to scale down processing costs.
+* **Step 3: Serverless Ad-hoc SQL Query Interrogation:** Open the interactive Amazon Athena Query Editor interface, connect to the mapped catalog table, and run query scripts.
+
+**3. Proofs**
+* **5:** Configuration screen showing the execution lifecycle of the operational Glue Crawler, confirming a completed run cycle status into the centralized catalog.
+<img src="/images/week6/5.png" alt="AWS Glue Crawler Status" style="max-width:100%; height:auto;" />
+* **6:** Configuration screen showing the Amazon Athena Query Editor interface displaying a successful SQL execution query string alongside tabular returned outputs and total execution metrics.
+<img src="/images/week6/6.png" alt="Amazon Athena Query Editor" style="max-width:100%; height:auto;" />
+
+---
+
+#### 4. Lab 72: Analytics on AWS Workshop
+
+**1. Technical Overview**
+Deploying an end-to-end analytics data streaming pipeline tackles complex high-scale corporate data processing from pipeline ingestion straight down to interactive boardroom presentation. The pipeline maps Amazon Kinesis Data Streams for high-velocity log ingest actions, transfers payloads onto multi-node Amazon EMR (Elastic MapReduce) clusters for Apache Spark cluster processing, and establishes data feeds into Amazon QuickSight for intelligence reports.
+
+**2. Execution Process**
+* **Step 1: Streaming Ingest Ingress Orchestration:** Initialize an operational Amazon Kinesis Data Stream pipeline, tuning individual component Shard allocations to sustain incoming traffic streams.
+* **Step 2: Parallel Computing Cluster Bootstrapping:** Spin up a managed Amazon EMR cluster structure, mapping distinct data processing steps (EMR Steps) to convert unstructured inbound stream chunks.
+* **Step 3: BI Dashboard Visualizations Alignment:** Log into the corporate Amazon QuickSight console space, mount the underlying analyzed dataset layer, and structure interactive graphic components (Visuals).
+
+**3. Proofs**
+* **7:** Configuration screen showing CloudWatch ingestion tracking metrics inside the Kinesis Console, verifying continuous data intake across active stream pipes.
+<img src="/images/week6/7.png" alt="Kinesis Stream Data Metrics" style="max-width:100%; height:auto;" />
+* **8:** Configuration screen showing the complete interactive Business Intelligence reporting dashboard setup operating inside the corporate Amazon QuickSight instance environment.
+<img src="/images/week6/8.png" alt="Amazon QuickSight Dashboard View" style="max-width:100%; height:auto;" />
 
 ---
 
 ### V. Infrastructure Challenges, Error Resolution Logs & Expert Perspectives
-*(This section will be analyzed deeply and document engineering challenges encountered during execution once all labs are complete)*
+*(This section will document infrastructure errors and engineering mitigation actions once the implementations are finalized)*
 
 ### VI. Professional Reflections
-*(This section will capture personal takeaways and architectural evaluations upon completion)*
+*(This section will summarize technical conclusions and engineering insights learned upon week closure)*
 
 ### VII. Strategic Planning & Optimization Roadmap for Next Week
-*(This section will map out upcoming operational objectives based on current implementation feedback)*
+*(This section will define आगामी target operational goals for next week's architecture expansion)*

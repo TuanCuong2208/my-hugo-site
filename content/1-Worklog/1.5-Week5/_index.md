@@ -117,18 +117,6 @@ AWS KMS is a managed service that makes it easy to create and control cryptograp
 
 ---
 
-### III. Activity Log & Detailed Roadmap (June 22, 2026 – June 30, 2026)
-
-| Time | Activity Category | Specialized Tasks Performed | Results/Proofs Achieved |
-| :--- | :--- | :--- | :--- |
-| **Day 1** | Enterprise Storage | Deployed Lab 25: Configured Amazon FSx for Windows, setup File Shares, and performance benchmarking. | Windows file storage ready, supporting SMB protocol for the AD environment. |
-| **Day 2** | S3 Security Basics | Deployed Lab 57: Static website hosting on S3, public access policy, and CloudFront optimization. | Static website globally distributed with low latency, secured via CDN. |
-| **Day 3** | IAM & Tagging | Deployed Lab 28: Established Attribute-Based Access Control (ABAC) using Resource Tags. | Access control governed flexibly based on EC2 instance identifiers (Tags). |
-| **Day 4** | Permission Boundary | Deployed Lab 30: Configured IAM Permission Boundary to cap maximum permissions. | Prevented privilege escalation actions outside the designated scope. |
-| **Day 5** | Data Encryption | Deployed Lab 33: Configured AWS KMS for data encryption at rest. | Data protected securely with centralized key management and strict control. |
-
----
-
 ### V. Infrastructure Challenges, Error Log & Expert Perspective
 
 * **Challenges:** The primary obstacle in Lab 25 was the mandatory requirement for *AWS Managed Microsoft Active Directory*. The deployment process was costly and time-consuming, requiring careful resource planning.

@@ -20,11 +20,11 @@ Welcome to the centralized repository of our team's deep-dive research and acade
 
 ---
 
-### ⏳ [Blog 2 - New Features & Cost Optimization (Coming Soon)](#)
+### [Blog 2 - From Monolith to Multi-Account: Pinterest's Total AWS Organization Transformation Journey at Scale](./blog-2/)
 
-* **Short Summary:** [Currently updating our upcoming research regarding latest AWS feature releases, compute optimization models, and infrastructure budget management strategies...]
-* **Architectural Pattern:** [To be updated...]
-* **Core AWS Services:** `AWS Cost Explorer` | `AWS Compute Optimizer` | *Updating...*
+* **Short Summary:** This publication dissects the operational pain points of a legacy monolithic cloud account and details Pinterest's infrastructure transformation to resolve API throttling, reduce the system's Blast Radius, and enhance overall cloud security. The research clarifies the layout of Organizational Units (OUs) alongside the enforcement of global guardrails for robust cost optimization and centralized identity governance.
+* **Architectural Pattern:** Multi-Account Strategy & Centralized Cloud Governance.
+* **Core AWS Services:** `AWS Organizations` | `AWS Control Tower` | `AWS IAM Identity Center` | `AWS Config` | `Amazon CloudTrail`
 
 ---
 

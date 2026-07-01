@@ -20,11 +20,11 @@ Chào mừng bạn đến với trang tổng hợp các kết quả học tập 
 
 ---
 
-### ⏳ [Blog 2 - Tính năng mới & Tối ưu chi phí (Coming Soon)](#)
+### [Blog 2 - Từ Monolith đến Multi-Account: Hành Trình Tái Cấu Trúc Toàn Diện AWS Organizations Ở Quy Mô Khủng Của Pinterest](./blog-2/)
 
-* **Tóm tắt nội dung:** [Đang cập nhật nội dung nghiên cứu tiếp theo của nhóm về các cập nhật công nghệ mới nhất của AWS và chiến lược tối ưu hóa ngân sách tài nguyên...]
-* **Kiến trúc áp dụng:** [Đang cập nhật...]
-* **AWS Services cốt lõi:** `AWS Cost Explorer` | `AWS Compute Optimizer` | *Updating...*
+* **Tóm tắt nội dung:** Bài viết đi sâu mổ xẻ những "nỗi đau" của kiến trúc tài khoản đơn khối và hành trình lột xác hạ tầng của Pinterest nhằm giải quyết bài toán giới hạn API Limits, thu hẹp Blast Radius và tăng cường tính an toàn hệ thống. Nhóm nghiên cứu làm rõ phương pháp thiết kế, phân rã các đơn vị tổ chức (OU), đồng thời áp dụng các chính sách kiểm soát tối cao để tối ưu hóa chi phí (Cost Optimization) và quản trị định danh diện rộng.
+* **Kiến trúc áp dụng:** Quản trị đa tài khoản (Multi-Account Strategy) & Quản trị tập trung (Centralized Governance).
+* **AWS Services cốt lõi:** `AWS Organizations` | `AWS Control Tower` | `AWS IAM Identity Center` | `AWS Config` | `Amazon CloudTrail`
 
 ---
 

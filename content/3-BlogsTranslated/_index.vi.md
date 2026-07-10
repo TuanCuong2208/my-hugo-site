@@ -28,8 +28,10 @@ Chào mừng bạn đến với trang tổng hợp các kết quả học tập 
 
 ---
 
-### ⏳ [Blog 3 - Ứng dụng thực tế và Đúc kết (Coming Soon)](#)
+### 🛡️ [Blog 3 - Xây Dựng Dịch Vụ Authentication Và Session Management Với Amazon Aurora DSQL](./blog-3/)
 
-* **Tóm tắt nội dung:** [Đang cập nhật nội dung nghiên cứu tiếp theo của nhóm về các dự án thực chiến, case-study doanh nghiệp và tổng hợp các best practices...]
-* **Kiến trúc áp dụng:** [Đang cập nhật...]
-* **AWS Services cốt lõi:** *Updating...*
+* **Tóm tắt nội dung:** Bài viết giới thiệu cách AWS xây dựng dịch vụ Authentication và Session Management hiện đại bằng Amazon Aurora DSQL, Amazon ECS Express Mode, AWS Fargate và IAM Authentication. Nội dung tập trung phân tích bài toán Strong Read-after-Write Consistency, bảo vệ Session Token, quản lý Credential an toàn và thiết kế backend có khả năng mở rộng bằng các dịch vụ managed/serverless.
+
+* **Kiến trúc áp dụng:** Kiến trúc Backend Serverless (Serverless Backend Architecture) & Authentication Service.
+
+* **AWS Services cốt lõi:** `Amazon Aurora DSQL` | `Amazon ECS Express Mode` | `AWS Fargate` | `AWS IAM` | `Amazon CloudWatch`

@@ -28,8 +28,10 @@ Welcome to the centralized repository of our team's deep-dive research and acade
 
 ---
 
-### ⏳ [Blog 3 - Practical Applications and Key Takeaways (Coming Soon)](#)
+### 🛡️ [Blog 3 - Building a Modern Authentication and Session Management Service with Amazon Aurora DSQL](./blog-3/)
 
-* **Short Summary:** [Currently updating our upcoming research focused on production deployment case studies, enterprise workload migrations, and consolidated industry best practices...]
-* **Architectural Pattern:** [To be updated...]
-* **Core AWS Services:** *Updating...*
+* **Summary:** This article explores how AWS builds a modern Authentication and Session Management service using Amazon Aurora DSQL, Amazon ECS Express Mode, AWS Fargate, and IAM Authentication. It highlights the importance of Strong Read-after-Write Consistency, secure session token handling, credential management, and designing a scalable backend with managed and serverless AWS services.
+
+* **Architecture:** Serverless Backend Architecture & Authentication Service.
+
+* **Core AWS Services:** `Amazon Aurora DSQL` | `Amazon ECS Express Mode` | `AWS Fargate` | `AWS IAM` | `Amazon CloudWatch`

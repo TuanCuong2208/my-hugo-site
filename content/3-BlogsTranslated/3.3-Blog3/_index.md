@@ -1,126 +1,107 @@
 ---
 title: "Blog 3"
-date: 2024-01-01
-weight: 1
+date: 2026-07-10
+weight: 3
 chapter: false
-pre: " <b> 3.3. </b> "
+pre: "<b> 3.3. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+Authentication and Session Management are fundamental components of almost every backend application. From user registration and login to maintaining active sessions, logging out, and revoking access, these features require data to be processed accurately and consistently.
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+In small-scale applications, implementing authentication is usually straightforward. However, as the system grows and begins serving thousands or even millions of users, challenges such as replication lag, database scaling, credential management, and infrastructure maintenance become increasingly difficult to handle.
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+In this article, we'll explore how AWS builds a modern authentication service by combining **Amazon Aurora DSQL**, **Amazon ECS Express Mode running on AWS Fargate**, and **AWS IAM**. This architecture provides strong data consistency, seamless scalability, and significantly reduces operational overhead by leveraging managed AWS services.
 
 ---
 
-## Architecture Guidance
+## Key Highlights of the Architecture
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
+The proposed solution focuses on using managed and serverless services to simplify backend operations while maintaining security and scalability.
 
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
+### Amazon Aurora DSQL
 
-**The solution architecture is now as follows:**
+Amazon Aurora DSQL is a serverless, PostgreSQL-compatible distributed SQL database that provides **strong read-after-write consistency**.
 
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+This feature is particularly important for authentication workloads, where newly created users, login sessions, or revoked tokens must become available immediately after they are written to the database.
 
----
+Aurora DSQL also eliminates the need to provision database instances or manage read replicas, automatically scaling based on application demand.
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+### Amazon ECS Express Mode with AWS Fargate
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+The backend application is built with Node.js and Express, packaged as a container, and deployed using Amazon ECS Express Mode on AWS Fargate.
 
----
+This allows developers to focus on application logic instead of managing virtual machines, operating systems, or container infrastructure. AWS automatically handles deployment, scaling, and runtime management.
 
-## Technology Choices and Communication Scope
+### AWS IAM Authentication
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Instead of storing database credentials in configuration files or environment variables, the application authenticates directly with Aurora DSQL using **AWS IAM Authentication**.
+
+By granting permissions through the ECS Task Role, short-lived IAM authentication tokens are generated automatically whenever the application connects to the database. This approach improves security while reducing the risk of credential leakage.
 
 ---
 
-## The Pub/Sub Hub
+## Database Design for Authentication
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
+The authentication service stores data in two primary tables:
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+- **users**: Stores user account information.
+- **sessions**: Stores active login sessions.
 
----
+Each session record typically contains:
 
-## Core Microservice
+- Session token hash
+- Creation timestamp
+- Expiration timestamp
+- Revocation timestamp (if applicable)
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
-
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+Separating user information from session data makes the system easier to maintain and supports multiple active sessions across different devices.
 
 ---
 
-## Front Door Microservice
+## How Authentication Works
 
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
+The authentication workflow can be summarized as follows:
 
----
-
-## Staging ER7 Microservice
-
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
+1. The client sends an HTTPS request to the backend application.
+2. The Node.js/Express service validates the request and executes the required business logic.
+3. During registration, the user's password is hashed using **bcrypt**, a UUID is generated, and the account is stored in Aurora DSQL.
+4. During login, the application validates the user's email and password. If successful, a new session token is generated.
+5. Before storing the session, the token is hashed using **SHA-256**, while the original token is returned to the client only once.
+6. For every authenticated request, the backend hashes the incoming session token and compares it with the stored hash to verify whether the session is still valid.
+7. When a user logs out or a session is revoked, the `revoked_at` field is updated, immediately invalidating that session.
 
 ---
 
-## New Features in the Solution
+## Why Aurora DSQL Fits Authentication Workloads
 
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+One of Aurora DSQL's biggest advantages is its **strong read-after-write consistency**.
+
+In many distributed database systems, recently written data may not be immediately available due to replication delays. This can lead to situations where:
+
+- A newly registered user cannot log in immediately.
+- A newly created session is not recognized.
+- A revoked session continues to be accepted for a short period.
+
+Aurora DSQL minimizes these issues by ensuring that data becomes immediately available after a successful write operation.
+
+Combined with IAM Authentication, the architecture also improves security by removing the need to manage long-lived database passwords.
+
+---
+
+## Key Takeaways
+
+Although authentication is one of the most common backend features, building it for cloud-native applications requires careful consideration of **consistency**, **security**, and **scalability**.
+
+By combining Amazon Aurora DSQL, Amazon ECS Express Mode, AWS Fargate, and IAM Authentication, developers can build a modern authentication service that scales automatically, maintains strong data consistency, and significantly reduces operational complexity.
+
+This architecture is a great example of AWS's recommended approach to designing backend applications by clearly separating compute, database, and security layers while taking full advantage of managed cloud services.
+
+---
+
+## References and Community Discussion
+
+If you'd like to learn more about this architecture and how AWS implements authentication and session management using Amazon Aurora DSQL, check out the resources below. You can also join the AWS Study Group FCJ discussion to explore additional insights shared by the community.
+
+* **Original AWS Blog:** [User Authentication and Session Management with Amazon Aurora DSQL](https://aws.amazon.com/blogs/database/user-authentication-and-session-management-with-amazon-aurora-dsql/)
+
+* **AWS Study Group FCJ Discussion:** [AWS Study Group FCJ - User Authentication and Session Management with Amazon Aurora DSQL](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2205379233560370/)

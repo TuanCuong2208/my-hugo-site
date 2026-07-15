@@ -1,40 +1,40 @@
 ---
 title: "Báo cáo thực tập"
-date: 2024-01-01
+date: 2026-04-20
 weight: 1
 chapter: false
 ---
 
-# Báo cáo thực tập
-### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+# Báo Cáo Thực Tập
 
-&emsp; **Số điện thoại:** 0989888999
+### Thông Tin Sinh Viên:
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Họ và tên:** Nguyễn Tuấn Cường
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Số điện thoại:** 0975725049
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Email:** nguyentuancuong626tp@gmail.com
 
-&emsp; **Lớp:** AWS082025
+&emsp; **Trường:** Trường Đại học Công nghệ TP.HCM (HUTECH)
 
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
+&emsp; **Chuyên ngành:** Kỹ thuật Phần mềm
 
-&emsp; **Vị trí thực tập:** FCJ Cloud Intern
+&emsp; **Đơn vị thực tập:** Amazon Web Services Vietnam Co., Ltd.
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Vị trí thực tập:** Thực tập sinh FCJ Cloud
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+&emsp; **Thời gian thực tập:** Từ 17/04/2026 đến 30/07/2026
 
+![Ảnh đại diện của tôi](images/my-face.png)
 
+---
 
-### Nội dung báo cáo
+### Nội Dung Báo Cáo
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [Các bài blogs đã dịch](3-BlogsTranslated/)
-4.  [Các events đã tham gia](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Tự đánh giá](6-Self-evaluation/)
-7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
+1. [Nhật ký thực tập](1-Worklog/)
+2. [Đề xuất](2-Proposal/)
+3. [Các bài blog đã dịch](3-BlogsTranslated/)
+4. [Các sự kiện đã tham gia](4-EventParticipated/)
+5. [Workshop](5-Workshop/)
+6. [Tự đánh giá](6-Self-evaluation/)
+7. [Chia sẻ và phản hồi](7-Feedback/)

@@ -1,34 +1,36 @@
 <div style="display:flex; justify-content:space-between; align-items:center; gap:60px; margin:40px 0;">
 
-    <!-- Thông tin sinh viên -->
     <div style="flex:1;">
 
-## Thông Tin Sinh Viên
+<h2>Thông Tin Sinh Viên</h2>
 
-**Họ và tên:** Nguyễn Tuấn Cường
+<p><strong>Họ và tên:</strong> Nguyễn Tuấn Cường</p>
 
-**Số điện thoại:** 0975725049
+<p><strong>Số điện thoại:</strong> 0975725049</p>
 
-**Email:** nguyentuancuong626tp@gmail.com
+<p><strong>Email:</strong>
+<a href="mailto:nguyentuancuong626tp@gmail.com">
+nguyentuancuong626tp@gmail.com
+</a>
+</p>
 
-**Trường:** Trường Đại học Công nghệ TP.HCM (HUTECH)
+<p><strong>Trường:</strong> Trường Đại học Công nghệ TP.HCM (HUTECH)</p>
 
-**Chuyên ngành:** Kỹ thuật Phần mềm
+<p><strong>Chuyên ngành:</strong> Kỹ thuật Phần mềm</p>
 
-**Đơn vị thực tập:** Amazon Web Services Vietnam Co., Ltd.
+<p><strong>Đơn vị thực tập:</strong> Amazon Web Services Vietnam Co., Ltd.</p>
 
-**Vị trí thực tập:** Thực tập sinh FCJ Cloud
+<p><strong>Vị trí thực tập:</strong> Thực tập sinh FCJ Cloud</p>
 
-**Thời gian thực tập:** Từ 17/04/2026 đến 30/07/2026
+<p><strong>Thời gian thực tập:</strong> Từ 17/04/2026 đến 30/07/2026</p>
 
     </div>
 
-    <!-- Ảnh đại diện -->
-    <div style="flex:0 0 320px; text-align:center;">
+    <div style="flex:0 0 340px; text-align:center;">
 
 <img src="/images/my-face.png"
      alt="Nguyễn Tuấn Cường"
-     style="width:320px; height:auto; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.15);" />
+     style="width:340px; height:auto; border-radius:12px;" />
 
     </div>
 

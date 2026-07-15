@@ -25,7 +25,9 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ 17/04/2026 đến 30/07/2026
 
-![Ảnh đại diện của tôi](images/my-face.png)
+<p align="center">
+    <img src="/images/my-face.png" alt="Ảnh đại diện của tôi" style="width:220px; border-radius:50%;" />
+</p>
 
 ---
 

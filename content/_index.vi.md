@@ -1,43 +1,37 @@
-# BÁO CÁO THỰC TẬP
+<h1 align="center" style="color:#6B87A8; font-size:56px; margin-top:20px; margin-bottom:45px;">
+BÁO CÁO THỰC TẬP
+</h1>
 
-<div align="center">
-
-# BÁO CÁO THỰC TẬP
-
-</div>
-
-<br>
-
-<table style="width:100%; border:none;">
+<table style="width:90%; margin:auto; border:none; border-collapse:collapse;">
 <tr>
 
-<td style="width:65%; vertical-align:top; border:none; padding-right:40px;">
+<td style="width:58%; border:none; vertical-align:middle; padding-right:30px;">
 
 ## Thông Tin Sinh Viên
 
-**Họ và tên:** Nguyễn Tuấn Cường
+&nbsp;&nbsp;**Họ và tên:** Nguyễn Tuấn Cường
 
-**Số điện thoại:** 0975725049
+&nbsp;&nbsp;**Số điện thoại:** 0975725049
 
-**Email:** nguyentuancuong626tp@gmail.com
+&nbsp;&nbsp;**Email:** <a href="mailto:nguyentuancuong626tp@gmail.com">nguyentuancuong626tp@gmail.com</a>
 
-**Trường:** Trường Đại học Công nghệ TP.HCM (HUTECH)
+&nbsp;&nbsp;**Trường:** Trường Đại học Công nghệ TP.HCM (HUTECH)
 
-**Chuyên ngành:** Kỹ thuật Phần mềm
+&nbsp;&nbsp;**Chuyên ngành:** Kỹ thuật Phần mềm
 
-**Đơn vị thực tập:** Amazon Web Services Vietnam Co., Ltd.
+&nbsp;&nbsp;**Đơn vị thực tập:** Amazon Web Services Vietnam Co., Ltd.
 
-**Vị trí thực tập:** Thực tập sinh FCJ Cloud
+&nbsp;&nbsp;**Vị trí thực tập:** Thực tập sinh FCJ Cloud
 
-**Thời gian thực tập:** Từ 17/04/2026 đến 30/07/2026
+&nbsp;&nbsp;**Thời gian thực tập:** Từ 17/04/2026 đến 30/07/2026
 
 </td>
 
-<td style="width:35%; text-align:center; vertical-align:middle; border:none;">
+<td style="width:42%; border:none; text-align:center; vertical-align:middle;">
 
 <img src="/images/my-face.png"
 alt="Nguyễn Tuấn Cường"
-style="width:320px; border-radius:12px;" />
+style="width:290px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.15);" />
 
 </td>
 
@@ -47,6 +41,12 @@ style="width:320px; border-radius:12px;" />
 ---
 
 ## Nội Dung Báo Cáo
+
+Trong suốt quá trình thực tập tại **Amazon Web Services (AWS) Vietnam**, tôi đã tham gia chương trình đào tạo AWS Cloud Foundation kết hợp với quá trình tự nghiên cứu, thực hành và xây dựng đồ án theo định hướng Serverless trên nền tảng AWS.
+
+Website này tổng hợp toàn bộ quá trình học tập, các bài Lab đã hoàn thành, các blog kỹ thuật đã biên soạn, những sự kiện chuyên môn đã tham gia cũng như những kinh nghiệm và bài học tích lũy được trong suốt kỳ thực tập.
+
+Các nội dung chính bao gồm:
 
 1. [Nhật ký công việc](1-worklog/)
 2. [Bản đề xuất](2-Proposal/)

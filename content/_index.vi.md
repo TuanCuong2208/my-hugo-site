@@ -1,3 +1,11 @@
+---
+title: "Báo Cáo Thực Tập"
+date: 2026-07-15
+weight: 1
+chapter: false
+pre: "<b>1. </b>"
+---
+
 <h1 align="center" style="color:#6B87A8; font-size:56px; margin-top:20px; margin-bottom:45px;">
 BÁO CÁO THỰC TẬP
 </h1>
@@ -17,7 +25,7 @@ BÁO CÁO THỰC TẬP
 
 &nbsp;&nbsp;**Trường:** Trường Đại học Công nghệ TP.HCM (HUTECH)
 
-&nbsp;&nbsp;**Chuyên ngành:** Kỹ thuật Phần mềm
+&nbsp;&nbsp;**Chuyên ngành:** Công nghệ Phần mềm
 
 &nbsp;&nbsp;**Đơn vị thực tập:** Amazon Web Services Vietnam Co., Ltd.
 
@@ -42,13 +50,13 @@ style="width:290px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.15);" 
 
 ## Nội Dung Báo Cáo
 
-Trong suốt quá trình thực tập tại **Amazon Web Services (AWS) Vietnam**, tôi đã tham gia chương trình đào tạo AWS Cloud Foundation kết hợp với quá trình tự nghiên cứu, thực hành và xây dựng đồ án theo định hướng Serverless trên nền tảng AWS.
+Website này được xây dựng nhằm tổng hợp toàn bộ quá trình học tập, nghiên cứu và thực tập của tôi tại **Amazon Web Services (AWS) Vietnam** trong chương trình **AWS Cloud Foundation**.
 
-Website này tổng hợp toàn bộ quá trình học tập, các bài Lab đã hoàn thành, các blog kỹ thuật đã biên soạn, những sự kiện chuyên môn đã tham gia cũng như những kinh nghiệm và bài học tích lũy được trong suốt kỳ thực tập.
+Trong suốt thời gian thực tập, tôi đã hoàn thành các bài Lab, nghiên cứu tài liệu kỹ thuật, tham gia Workshop, dịch và biên soạn các bài blog về AWS, đồng thời xây dựng một đồ án theo định hướng **Serverless** để tổng hợp những kiến thức đã tích lũy.
 
-Các nội dung chính bao gồm:
+Báo cáo được tổ chức thành các phần chính sau:
 
-1. [Nhật ký công việc](1-worklog/)
+1. [Nhật ký công việc](1-Worklog/)
 2. [Bản đề xuất](2-Proposal/)
 3. [Các blog đã dịch](3-BlogsTranslated/)
 4. [Các sự kiện đã tham gia](4-EventParticipated/)

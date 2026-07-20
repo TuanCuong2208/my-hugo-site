@@ -31,6 +31,8 @@ pre: "<b>3.</b>"
 
 <div class="publication-page">
 
+---
+
 # Team Research Publications
 
 During my internship, I regularly studied technical articles published by AWS and other engineering teams. Besides completing AWS Academy labs, I summarized several publications to better understand cloud-native architectures, distributed systems, and engineering best practices.
@@ -45,7 +47,7 @@ This page collects the research notes and article summaries completed throughout
 
 **Article**
 
-[Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture](./blog-1/)
+[Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture](./3.1-Blog1/)
 
 This article explains how AWS designs highly scalable Serverless systems using Event-Driven Architecture. It focuses on asynchronous workloads, service quotas, and workflow orchestration.
 
@@ -59,7 +61,7 @@ This article explains how AWS designs highly scalable Serverless systems using E
 
 **Article**
 
-[From Monolith to Multi-Account: Pinterest's Total AWS Organization Transformation Journey at Scale](./blog-2/)
+[From Monolith to Multi-Account: Pinterest's Total AWS Organization Transformation Journey at Scale](./3.2-Blog2/)
 
 This article summarizes Pinterest's migration from a single AWS account to a centralized multi-account environment. It highlights governance, security, and operational best practices for large-scale cloud environments.
 
@@ -73,7 +75,7 @@ This article summarizes Pinterest's migration from a single AWS account to a cen
 
 **Article**
 
-[Building a Modern Authentication and Session Management Service with Amazon Aurora DSQL](./blog-3/)
+[Building a Modern Authentication and Session Management Service with Amazon Aurora DSQL](./3.3-Blog3/)
 
 This article describes how AWS builds a scalable authentication and session management service using Amazon Aurora DSQL. It emphasizes secure credential handling, strong read-after-write consistency, and the benefits of managed serverless services.
 

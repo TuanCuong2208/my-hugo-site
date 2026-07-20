@@ -38,47 +38,32 @@ During my internship, I regularly studied technical articles published by AWS an
 
 This page collects the research notes and article summaries completed throughout my internship.
 
+## In-Depth Research Articles
 
-## Deep-Dive Research Directory
+### Article 1 - Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Large-Scale Serverless Architecture
+[Read more here](./3.1-Blog1/)
 
-### Blog 1 - Scaling to 1 Million AWS Lambda Functions
-
-**Article**
-
-[Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture](./3.1-Blog1/)
-
-This article explains how AWS designs highly scalable Serverless systems using Event-Driven Architecture. It focuses on asynchronous workloads, service quotas, and workflow orchestration.
-
-**Architecture Pattern:** Event-Driven Architecture & Workflow Orchestration
-
+**Summary:** This article focuses on scaling performance and managing asynchronous workloads at the scale of millions of concurrent functions. By analyzing AWS Service Quotas, the research team highlights how to eliminate traditional anti-patterns, prevent bottlenecks, and build a proactive fail-safe architecture.  
+**Applied Architecture:** Event-Driven Architecture & Workflow Orchestration  
 **Core AWS Services:** AWS Lambda | Amazon SQS | AWS Step Functions | AWS SAM | AWS CloudFormation
 
 ---
 
-### Blog 2 - Pinterest Multi-Account Transformation
+### Article 2 - From Monolith to Multi-Account: Pinterest’s Comprehensive AWS Organizations Restructuring Journey at Scale
+[Read more here](./3.2-Blog2/)
 
-**Article**
-
-[From Monolith to Multi-Account: Pinterest's Total AWS Organization Transformation Journey at Scale](./3.2-Blog2/)
-
-This article summarizes Pinterest's migration from a single AWS account to a centralized multi-account environment. It highlights governance, security, and operational best practices for large-scale cloud environments.
-
-**Architecture Pattern:** Multi-Account Strategy & Centralized Cloud Governance
-
-**Core AWS Services:** AWS Organizations | AWS Control Tower | AWS IAM Identity Center | AWS Config | Amazon CloudTrail
+**Summary:** This article analyzes challenges such as API limits, reducing blast radius, and strengthening system safety. The research team explains how to design Organizational Units (OU), apply centralized control policies to optimize costs, and manage identities at scale.  
+**Applied Architecture:** Multi-Account Strategy & Centralized Governance  
+**Core AWS Services:** AWS Organizations | AWS Control Tower | IAM Identity Center | AWS Config | Amazon CloudTrail
 
 ---
 
-### Blog 3 - Authentication & Session Management
+### Article 3 - Building an Authentication and Session Management Service with Amazon Aurora DSQL
+[Read more here](./3.3-Blog3/)
 
-**Article**
-
-[Building a Modern Authentication and Session Management Service with Amazon Aurora DSQL](./3.3-Blog3/)
-
-This article describes how AWS builds a scalable authentication and session management service using Amazon Aurora DSQL. It emphasizes secure credential handling, strong read-after-write consistency, and the benefits of managed serverless services.
-
-**Architecture Pattern:** Serverless Backend Architecture & Authentication Service
-
+**Summary:** This article introduces how to build a modern Authentication and Session Management service using Amazon Aurora DSQL, Amazon ECS Express Mode, AWS Fargate, and IAM Authentication. It emphasizes strong read-after-write consistency, secure session token protection, safe credential management, and scalable backend design with managed/serverless services.  
+**Applied Architecture:** Serverless Backend Architecture & Authentication Service  
 **Core AWS Services:** Amazon Aurora DSQL | Amazon ECS Express Mode | AWS Fargate | AWS IAM | Amazon CloudWatch
+
 
 </div>

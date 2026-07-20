@@ -1,12 +1,14 @@
 ---
-title: "AWS Study Group - Team Research Publications"
+title: "Team Research Publications"
 date: 2026-06-30
 weight: 3
 chapter: true
 pre: "<b>3.</b>"
 ---
 
-# AWS STUDY GROUP
+<div style="text-align:left; max-width:1000px; margin:0 auto;">
+
+# Team Research Publications
 
 During my internship, I regularly studied technical articles published by AWS and other engineering teams. Besides completing AWS Academy labs, I summarized several publications to better understand cloud-native architectures, distributed systems, and engineering best practices.
 
@@ -18,7 +20,7 @@ This page collects the research notes and article summaries completed throughout
 
 ### Blog 1 - Scaling to 1 Million AWS Lambda Functions
 
-**Article:**
+**Article:**  
 [Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture](./blog-1/)
 
 This article explains how AWS designs highly scalable Serverless systems using Event-Driven Architecture. It focuses on asynchronous workloads, service quotas, and workflow orchestration.
@@ -31,7 +33,7 @@ This article explains how AWS designs highly scalable Serverless systems using E
 
 ### Blog 2 - Pinterest Multi-Account Transformation
 
-**Article:**
+**Article:**  
 [From Monolith to Multi-Account: Pinterest's Total AWS Organization Transformation Journey at Scale](./blog-2/)
 
 This article summarizes Pinterest's migration to a centralized multi-account environment and the governance practices used to improve scalability and security.
@@ -44,11 +46,13 @@ This article summarizes Pinterest's migration to a centralized multi-account env
 
 ### Blog 3 - Authentication & Session Management
 
-**Article:**
+**Article:**  
 [Building a Modern Authentication and Session Management Service with Amazon Aurora DSQL](./blog-3/)
 
-This article describes how AWS builds a scalable authentication platform using Aurora DSQL while maintaining secure session management and strong consistency.
+This article describes how AWS builds a scalable authentication platform using Amazon Aurora DSQL while maintaining secure session management and strong read-after-write consistency.
 
-**Architecture Pattern:** Serverless Backend & Authentication Service
+**Architecture Pattern:** Serverless Backend Architecture & Authentication Service
 
 **Core AWS Services:** Amazon Aurora DSQL | Amazon ECS Express Mode | AWS Fargate | AWS IAM | Amazon CloudWatch
+
+</div>

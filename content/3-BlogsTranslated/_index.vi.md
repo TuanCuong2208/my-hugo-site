@@ -1,5 +1,5 @@
 ---
-title: "Các Ấn Phẩm Nghiên Cứu Của Nhóm"
+title: "Các bài nguyên cứu của nhóm"
 date: 2026-06-30
 weight: 3
 chapter: true
@@ -40,7 +40,8 @@ Trang này tổng hợp các ghi chú nghiên cứu và bản tóm tắt bài vi
 
 ## Danh Sách Các Bài Nghiên Cứu Chuyên Sâu
 
-### [Blog 1 - Mở Rộng 1 Triệu AWS Lambda Functions: Bài Học "Xương Máu" Về Kiến Trúc Serverless Quy Mô Lớn](./blog-1/)
+### Bài viết 1 - Mở Rộng 1 Triệu AWS Lambda Functions: Bài Học "Xương Máu" Về Kiến Trúc Serverless Quy Mô Lớn
+[Xem chi tiết tại đây](./blog-1/)
 
 **Tóm tắt nội dung:** Bài viết tập trung vào việc mở rộng hiệu năng và quản lý xử lý bất đồng bộ ở quy mô hàng triệu functions chạy đồng thời. Qua việc phân tích giới hạn dịch vụ (AWS Service Quotas), nhóm nghiên cứu làm rõ cách loại bỏ các anti-pattern truyền thống, chống nghẽn cổ chai và xây dựng hệ thống chịu lỗi chủ động (Fail-safe architecture).  
 **Kiến trúc áp dụng:** Kiến trúc hướng sự kiện (Event-Driven Architecture) & Điều phối quy trình (Orchestration).  
@@ -48,7 +49,8 @@ Trang này tổng hợp các ghi chú nghiên cứu và bản tóm tắt bài vi
 
 ---
 
-### [Blog 2 - Từ Monolith đến Multi-Account: Hành Trình Tái Cấu Trúc Toàn Diện AWS Organizations Ở Quy Mô Lớn Của Pinterest](./blog-2/)
+### Bài viết 2 - Từ Monolith đến Multi-Account: Hành Trình Tái Cấu Trúc Toàn Diện AWS Organizations Ở Quy Mô Lớn Của Pinterest
+[Xem chi tiết tại đây](./blog-2/)
 
 **Tóm tắt nội dung:** Bài viết phân tích những thách thức về API Limits, thu hẹp Blast Radius và tăng cường độ an toàn hệ thống. Nhóm nghiên cứu làm rõ phương pháp thiết kế Organizational Units (OU), áp dụng chính sách kiểm soát tập trung để tối ưu chi phí (Cost Optimization) và quản trị định danh diện rộng.  
 **Kiến trúc áp dụng:** Chiến lược đa tài khoản (Multi-Account Strategy) & Quản trị tập trung (Centralized Governance).  
@@ -56,11 +58,13 @@ Trang này tổng hợp các ghi chú nghiên cứu và bản tóm tắt bài vi
 
 ---
 
-### [Blog 3 - Xây Dựng Dịch Vụ Authentication Và Session Management Với Amazon Aurora DSQL](./blog-3/)
+### Bài viết 3 - Xây Dựng Dịch Vụ Authentication Và Session Management Với Amazon Aurora DSQL
+[Xem chi tiết tại đây](./blog-3/)
 
 **Tóm tắt nội dung:** Bài viết giới thiệu cách xây dựng dịch vụ Authentication và Session Management hiện đại bằng Amazon Aurora DSQL, Amazon ECS Express Mode, AWS Fargate và IAM Authentication. Nội dung tập trung vào Strong Read-after-Write Consistency, bảo vệ Session Token, quản lý Credential an toàn và thiết kế backend có khả năng mở rộng bằng các dịch vụ managed/serverless.  
 **Kiến trúc áp dụng:** Kiến trúc Backend Serverless (Serverless Backend Architecture) & Authentication Service.  
 **AWS Services cốt lõi:** Amazon Aurora DSQL | Amazon ECS Express Mode | AWS Fargate | AWS IAM | Amazon CloudWatch
+
 
 
 </div>

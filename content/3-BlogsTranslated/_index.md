@@ -33,7 +33,7 @@ pre: "<b>3.</b>"
 
 ---
 
-# Team Research Publications
+<h1 align="center">Team Research Publications</h1>
 
 During my internship, I regularly studied technical articles published by AWS and other engineering teams. Besides completing AWS Academy labs, I summarized several publications to better understand cloud-native architectures, distributed systems, and engineering best practices.
 

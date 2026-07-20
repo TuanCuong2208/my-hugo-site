@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.8. </b> "
 ---
 
-### I. Tóm tắt tổng quan (Executive Summary)
+### I. Tóm tắt tổng quan
 
 Sau khi hoàn thành bản thiết kế kiến trúc tổng thể của hệ thống trong tuần trước, nhóm tiếp tục bước sang giai đoạn hoàn thiện thiết kế kỹ thuật trước khi bắt đầu triển khai các chức năng đầu tiên của đồ án. Mục tiêu của tuần này là rà soát lại toàn bộ kiến trúc đã xây dựng, phân tích chi tiết hơn về các thành phần của hệ thống và xác định cách thức hiện thực hóa từng module trong quá trình phát triển.
 
@@ -16,7 +16,7 @@ Song song với đó, nhóm bắt đầu thiết kế mô hình dữ liệu cho 
 
 Kết thúc tuần làm việc, nhóm đã hoàn thiện các tài liệu thiết kế kỹ thuật ở mức cơ bản, tạo tiền đề để bước sang giai đoạn hiện thực hóa hệ thống trong tuần tiếp theo.
 
-### II. Mục tiêu chiến lược trong tuần (Strategic Objectives)
+### II. Mục tiêu chiến lược trong tuần 
 
 Sau khi xác định được kiến trúc tổng thể, mục tiêu của tuần thứ 8 là cụ thể hóa các thành phần kỹ thuật nhằm chuẩn bị cho quá trình phát triển hệ thống.
 
@@ -59,7 +59,7 @@ Ngoài việc thiết kế dữ liệu và API, nhóm cũng bắt đầu xây d�
 
 Kết thúc tuần làm việc, mặc dù chưa bắt đầu lập trình các chức năng cụ thể, nhóm đã hoàn thiện phần lớn tài liệu thiết kế kỹ thuật cần thiết. Đây được xem là nền tảng quan trọng giúp giảm thiểu các thay đổi lớn trong quá trình phát triển và tạo điều kiện thuận lợi cho việc triển khai hệ thống ở các tuần tiếp theo.
 
-### V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia (Infrastructure Challenges, Error Resolution Logs & Expert Perspectives)
+### V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia 
 
 Trong quá trình hoàn thiện thiết kế kỹ thuật, nhóm nhận thấy rằng việc xây dựng một hệ thống Serverless không chỉ đơn thuần là lựa chọn các dịch vụ AWS mà còn cần xác định rõ ranh giới trách nhiệm giữa từng thành phần. Nếu không có một thiết kế thống nhất ngay từ đầu, việc phát triển độc lập từng module có thể dẫn đến sự không tương thích giữa Backend, Database và quy trình xử lý sự kiện.
 
@@ -71,7 +71,7 @@ Ngoài các vấn đề về thiết kế, nhóm cũng chú trọng đến khả
 
 Thông qua quá trình nghiên cứu và thảo luận, nhóm nhận thấy rằng đầu tư thời gian cho giai đoạn thiết kế sẽ giúp giảm đáng kể các rủi ro kỹ thuật trong quá trình triển khai, đồng thời tạo ra nền tảng ổn định để phát triển các chức năng của hệ thống.
 
-### VI. Đánh giá và Chiêm nghiệm chuyên môn (Professional Reflections)
+### VI. Đánh giá và Chiêm nghiệm chuyên môn
 
 Tuần thứ 8 giúp nhóm hiểu rõ hơn vai trò của giai đoạn thiết kế trong quy trình phát triển một hệ thống Cloud. Mặc dù chưa trực tiếp xây dựng các chức năng nghiệp vụ, việc phân tích dữ liệu, thiết kế API và xác định luồng xử lý giữa các dịch vụ AWS đã giúp nhóm hình dung rõ ràng hơn về cách các thành phần sẽ phối hợp với nhau trong quá trình triển khai.
 
@@ -81,7 +81,7 @@ Ngoài ra, tuần làm việc này còn giúp nhóm nâng cao kỹ năng phân t
 
 Nhìn chung, mặc dù chưa tạo ra các chức năng cụ thể, nhóm đã xây dựng được một nền tảng thiết kế tương đối hoàn chỉnh và sẵn sàng chuyển sang giai đoạn triển khai các thành phần đầu tiên của hệ thống.
 
-### VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới (Strategic Planning & Optimization Roadmap for Next Week)
+### VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới
 
 Trong tuần tiếp theo, nhóm dự kiến sẽ chính thức bắt đầu giai đoạn hiện thực hóa hệ thống dựa trên các tài liệu thiết kế đã xây dựng trong hai tuần vừa qua.
 

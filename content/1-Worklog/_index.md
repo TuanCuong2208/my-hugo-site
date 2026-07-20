@@ -6,7 +6,6 @@ chapter: false
 pre: "<b> 1. </b> "
 ---
 
-# Worklog
 
 This page documents my internship journey and project development throughout **12 weeks**. Each weekly report summarizes the tasks completed, technologies explored, technical challenges encountered, and practical experience gained while working with Amazon Web Services (AWS).
 

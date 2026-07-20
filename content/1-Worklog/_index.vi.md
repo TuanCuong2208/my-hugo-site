@@ -6,7 +6,6 @@ chapter: false
 pre: "<b> 1. </b> "
 ---
 
-# Nhật ký công việc (Worklog)
 
 Trang này ghi lại toàn bộ quá trình thực tập và phát triển đồ án của tôi trong suốt **12 tuần**. Mỗi tuần đều phản ánh những công việc đã thực hiện, các kiến thức và công nghệ đã nghiên cứu, những khó khăn gặp phải cũng như kinh nghiệm tích lũy trong quá trình học tập và xây dựng hệ thống trên nền tảng Amazon Web Services (AWS).
 

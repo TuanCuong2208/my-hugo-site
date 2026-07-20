@@ -6,7 +6,30 @@ chapter: true
 pre: "<b>3.</b>"
 ---
 
-<div style="text-align:left; max-width:1000px; margin:0 auto;">
+<style>
+.publication-page{
+    text-align:left !important;
+    width:100%;
+}
+
+.publication-page h1,
+.publication-page h2,
+.publication-page h3,
+.publication-page h4,
+.publication-page p,
+.publication-page div,
+.publication-page ul,
+.publication-page ol,
+.publication-page li{
+    text-align:left !important;
+}
+
+.publication-page hr{
+    margin:25px 0;
+}
+</style>
+
+<div class="publication-page">
 
 # Team Research Publications
 
@@ -20,7 +43,8 @@ This page collects the research notes and article summaries completed throughout
 
 ### Blog 1 - Scaling to 1 Million AWS Lambda Functions
 
-**Article:**  
+**Article**
+
 [Scaling to 1 Million AWS Lambda Functions: Hard-Earned Lessons on Massive-Scale Serverless Architecture](./blog-1/)
 
 This article explains how AWS designs highly scalable Serverless systems using Event-Driven Architecture. It focuses on asynchronous workloads, service quotas, and workflow orchestration.
@@ -33,10 +57,11 @@ This article explains how AWS designs highly scalable Serverless systems using E
 
 ### Blog 2 - Pinterest Multi-Account Transformation
 
-**Article:**  
+**Article**
+
 [From Monolith to Multi-Account: Pinterest's Total AWS Organization Transformation Journey at Scale](./blog-2/)
 
-This article summarizes Pinterest's migration to a centralized multi-account environment and the governance practices used to improve scalability and security.
+This article summarizes Pinterest's migration from a single AWS account to a centralized multi-account environment. It highlights governance, security, and operational best practices for large-scale cloud environments.
 
 **Architecture Pattern:** Multi-Account Strategy & Centralized Cloud Governance
 
@@ -46,10 +71,11 @@ This article summarizes Pinterest's migration to a centralized multi-account env
 
 ### Blog 3 - Authentication & Session Management
 
-**Article:**  
+**Article**
+
 [Building a Modern Authentication and Session Management Service with Amazon Aurora DSQL](./blog-3/)
 
-This article describes how AWS builds a scalable authentication platform using Amazon Aurora DSQL while maintaining secure session management and strong read-after-write consistency.
+This article describes how AWS builds a scalable authentication and session management service using Amazon Aurora DSQL. It emphasizes secure credential handling, strong read-after-write consistency, and the benefits of managed serverless services.
 
 **Architecture Pattern:** Serverless Backend Architecture & Authentication Service
 

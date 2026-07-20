@@ -65,5 +65,4 @@ Trang này tổng hợp các ghi chú nghiên cứu và bản tóm tắt bài vi
 **Kiến trúc áp dụng:** Kiến trúc Backend Serverless (Serverless Backend Architecture) & Authentication Service.  
 **AWS Services cốt lõi:** Amazon Aurora DSQL | Amazon ECS Express Mode | AWS Fargate | AWS IAM | Amazon CloudWatch
 
-
 </div>

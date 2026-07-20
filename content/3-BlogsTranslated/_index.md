@@ -64,6 +64,7 @@ This page collects the research notes and article summaries completed throughout
 **Summary:** This article introduces how to build a modern Authentication and Session Management service using Amazon Aurora DSQL, Amazon ECS Express Mode, AWS Fargate, and IAM Authentication. It emphasizes strong read-after-write consistency, secure session token protection, safe credential management, and scalable backend design with managed/serverless services.  
 **Applied Architecture:** Serverless Backend Architecture & Authentication Service  
 **Core AWS Services:** Amazon Aurora DSQL | Amazon ECS Express Mode | AWS Fargate | AWS IAM | Amazon CloudWatch
+Watch
 
 
 </div>

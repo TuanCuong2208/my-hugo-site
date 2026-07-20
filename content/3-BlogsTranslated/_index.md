@@ -31,15 +31,13 @@ pre: "<b>3.</b>"
 
 <div class="publication-page">
 
----
 
-<h1 align="center">Team Research Publications</h1>
+<h1 style="text-align:center !important;">Team Research Publications</h1>
 
 During my internship, I regularly studied technical articles published by AWS and other engineering teams. Besides completing AWS Academy labs, I summarized several publications to better understand cloud-native architectures, distributed systems, and engineering best practices.
 
 This page collects the research notes and article summaries completed throughout my internship.
 
----
 
 ## Deep-Dive Research Directory
 

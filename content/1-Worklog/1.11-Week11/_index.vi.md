@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.11. </b> "
 ---
 
-# I. Tóm tắt tổng quan
+## I. Tóm tắt tổng quan
 
 Sau khi hoàn thiện Pipeline xử lý video tự động theo kiến trúc Event-Driven trong tuần trước, nhóm tiếp tục triển khai tầng truy cập và phân phối nội dung của hệ thống. Mục tiêu của giai đoạn này là tích hợp toàn bộ các dịch vụ đã xây dựng thành một nền tảng Video-on-Demand hoàn chỉnh, cho phép người dùng xác thực, tải video, theo dõi trạng thái xử lý và phát nội dung trực tuyến thông qua hạ tầng AWS.
 
@@ -18,7 +18,7 @@ Ngoài ra, AWS WAF cũng được cấu hình phía trước CloudFront nhằm t
 
 Kết thúc tuần làm việc, nhóm đã hoàn thành việc tích hợp tầng xác thực, tầng truy cập và tầng phân phối nội dung. Toàn bộ quy trình từ đăng nhập, tải video, xử lý bất đồng bộ đến phát video trực tuyến đã có thể hoạt động thống nhất trên cùng một hệ thống.
 
-# II. Mục tiêu chiến lược trong tuần
+## II. Mục tiêu chiến lược trong tuần
 
 Sau khi hoàn thiện Video Processing Pipeline, mục tiêu của tuần thứ 11 là triển khai tầng truy cập người dùng và tích hợp toàn bộ các thành phần của hệ thống thành một quy trình nghiệp vụ hoàn chỉnh.
 
@@ -35,7 +35,7 @@ Các mục tiêu chính bao gồm:
 
 Thông qua các mục tiêu trên, nhóm hướng đến việc hoàn thiện phiên bản MVP với đầy đủ các chức năng cốt lõi của nền tảng Video-on-Demand.
 
-# III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 30/06/2026 đến 06/07/2026)
+## III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 30/06/2026 đến 06/07/2026)
 
 | Thời gian | Danh mục hoạt động | Chi tiết các tác vụ thực hiện chuyên sâu | Kết quả/Minh chứng đạt được |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Thông qua các mục tiêu trên, nhóm hướng đến việc hoàn thiện ph
 | **Ngày 6** *(05/07)* | Integration Testing | Kiểm thử toàn bộ quy trình từ xác thực người dùng, Upload Video, xử lý bất đồng bộ đến phát video trực tuyến. | Toàn bộ các thành phần hoạt động đồng bộ theo kiến trúc thiết kế. |
 | **Ngày 7** *(06/07)* | Review & Optimization | Đánh giá hiệu năng của tầng truy cập, rà soát cấu hình bảo mật và chuẩn bị cho giai đoạn kiểm thử tổng thể. | Hoàn thành tầng truy cập và phân phối nội dung của hệ thống. |
 
-# IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
+## IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
 
 Sau khi hoàn thiện Pipeline xử lý video bất đồng bộ trong tuần trước, nhóm tiếp tục triển khai tầng truy cập của hệ thống nhằm kết nối người dùng với toàn bộ các dịch vụ đã xây dựng trên AWS. Trọng tâm của tuần này là hoàn thiện cơ chế xác thực, triển khai giao diện Web, cấu hình tầng phân phối nội dung và tích hợp các API thành một quy trình nghiệp vụ thống nhất. Đây là bước cuối cùng trước khi chuyển sang giai đoạn kiểm thử và tối ưu toàn bộ hệ thống.
 
@@ -67,7 +67,7 @@ Sau khi tầng truy cập được hoàn thiện, nhóm tiến hành tích hợp
 
 Đến cuối tuần, nhóm đã hoàn thành việc tích hợp tầng truy cập với toàn bộ hệ thống Backend. Người dùng có thể đăng nhập, tải video, theo dõi trạng thái xử lý và phát nội dung trực tuyến trên cùng một nền tảng. Đây là cột mốc quan trọng đánh dấu việc hoàn thiện phiên bản MVP của hệ thống về mặt chức năng.
 
-# V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia
+## V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia
 
 Trong quá trình triển khai Amazon Cognito, nhóm gặp khó khăn khi cấu hình cơ chế xác thực giữa Cognito và Amazon API Gateway. Một số yêu cầu ban đầu bị từ chối do Access Token chưa được truyền đúng định dạng trong Header của HTTP Request. Sau khi rà soát cấu hình Cognito Authorizer và chuẩn hóa quy trình gửi Token, toàn bộ API đã được bảo vệ và hoạt động đúng theo cơ chế xác thực JWT.
 
@@ -77,7 +77,7 @@ Trong quá trình cấu hình AWS WAF, nhóm nghiên cứu các Rule mặc đị
 
 Thông qua quá trình tích hợp, nhóm nhận thấy việc sử dụng các dịch vụ Managed Services của AWS giúp giảm đáng kể khối lượng quản trị hạ tầng. Thay vì tập trung vào việc vận hành máy chủ, nhóm có thể tập trung nhiều hơn vào thiết kế kiến trúc và tối ưu luồng nghiệp vụ của hệ thống.
 
-# VI. Đánh giá và Chiêm nghiệm chuyên môn
+## VI. Đánh giá và Chiêm nghiệm chuyên môn
 
 Tuần thứ 11 đánh dấu thời điểm toàn bộ các thành phần của hệ thống được tích hợp thành một nền tảng Video-on-Demand hoàn chỉnh. Việc kết nối tầng xác thực, tầng xử lý, tầng lưu trữ và tầng phân phối nội dung giúp nhóm có cái nhìn toàn diện hơn về cách xây dựng một ứng dụng Cloud-Native trên AWS.
 
@@ -87,7 +87,7 @@ Bên cạnh đó, nhóm nhận thấy kiến trúc nhiều tầng của hệ th�
 
 Nhìn chung, toàn bộ mục tiêu của tuần đã được hoàn thành đúng kế hoạch. Phiên bản MVP của hệ thống đã đáp ứng đầy đủ các chức năng cốt lõi và sẵn sàng bước sang giai đoạn kiểm thử tổng thể, giám sát và tối ưu hiệu năng.
 
-# VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới
+## VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới
 
 Trong tuần cuối của quá trình thực tập, nhóm sẽ tập trung kiểm thử toàn bộ hệ thống theo hướng End-to-End nhằm đánh giá tính ổn định của từng dịch vụ cũng như khả năng phối hợp giữa các thành phần trong kiến trúc Serverless.
 

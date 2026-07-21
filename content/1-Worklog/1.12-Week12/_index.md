@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.12. </b> "
 ---
 
-# I. Overview Summary
+## I. Overview Summary
 
 The final week of the internship was dedicated to comprehensive system validation, operational monitoring, and performance optimization of the Serverless Video-on-Demand Platform deployed on AWS. With all major functional components successfully integrated during the previous week, the team's primary objective shifted from feature development to evaluating system reliability, scalability, security, and operational readiness before project completion.
 
@@ -18,7 +18,7 @@ End-to-end testing was also performed across the complete business workflow, inc
 
 At the conclusion of the internship, the team finalized the MVP of the Serverless Video-on-Demand Platform, completed the technical documentation, summarized implementation results, and prepared demonstration materials for the internship presentation and project evaluation.
 
-# II. Weekly Strategic Objectives
+## II. Weekly Strategic Objectives
 
 The primary objective of the final week was to perform comprehensive validation of the completed system while optimizing operational configurations before project delivery.
 
@@ -35,7 +35,7 @@ The major objectives included:
 
 Through these activities, the team aimed to ensure that the entire platform was stable, secure, maintainable, and ready for demonstration and final evaluation.
 
-# III. Activity Log & Detailed Implementation Schedule (From 07/07/2026 to 13/07/2026)
+## III. Activity Log & Detailed Implementation Schedule (From 07/07/2026 to 13/07/2026)
 
 | Time | Activity Category | Detailed Technical Tasks | Results / Deliverables |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Through these activities, the team aimed to ensure that the entire platform was 
 | **Day 6** *(12/07)* | Documentation | Finalized technical documentation, updated architectural diagrams, and summarized implementation outcomes. | Completed the project's technical documentation package. |
 | **Day 7** *(13/07)* | Final Review | Reviewed the complete platform, prepared the system demonstration, and validated the MVP before project evaluation. | Successfully completed all internship objectives. |
 
-# IV. Technical Implementation & In-depth Analysis
+## IV. Technical Implementation & In-depth Analysis
 
 During the final week of the internship, the team concentrated on evaluating the complete platform after all functional components had been successfully implemented. Unlike previous weeks, which primarily emphasized development and integration, this phase focused on validating system reliability, scalability, security, operational readiness, and overall architectural quality. Activities included centralized monitoring, log analysis, end-to-end testing, security auditing, and performance optimization in preparation for the final project demonstration.
 
@@ -69,7 +69,7 @@ Following system validation, several optimization activities were performed. Ama
 
 By the conclusion of the final week, the team had successfully completed monitoring, validation, optimization, and documentation for the Serverless Video-on-Demand Platform. The MVP satisfied all initial project objectives, including secure user authentication, direct video uploads, asynchronous processing, metadata management, and global media delivery using AWS managed services.
 
-# V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
+## V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
 
 During centralized monitoring with Amazon CloudWatch, the team discovered that troubleshooting serverless applications requires understanding relationships among multiple independent AWS services rather than analyzing a single application log. Since each managed service generates its own operational logs, the team established a structured troubleshooting process by correlating logs collected from Amazon API Gateway, AWS Lambda, and AWS Step Functions. This approach significantly reduced the time required to identify processing failures.
 
@@ -79,7 +79,7 @@ Performance evaluation also demonstrated the effectiveness of Amazon CloudFront.
 
 Throughout the entire implementation process, the team concluded that AWS Managed Services substantially reduce infrastructure administration responsibilities. Instead of managing servers, operating systems, or scalability concerns manually, development efforts remained focused on business functionality, architectural quality, and application optimization.
 
-# VI. Evaluation and Professional Reflection
+## VI. Evaluation and Professional Reflection
 
 The final week marked the successful completion of the Serverless Video-on-Demand Platform according to the project's original objectives. Through comprehensive monitoring, testing, optimization, and documentation, the team gained valuable experience in evaluating a production-oriented cloud-native architecture deployed entirely on AWS.
 
@@ -89,7 +89,7 @@ The security review involving IAM, AWS WAF, and Amazon Cognito further strengthe
 
 Overall, every internship objective was successfully achieved. The completed MVP demonstrates the feasibility of implementing a scalable, secure, and highly available Serverless Video-on-Demand Platform using AWS managed services while providing a solid foundation for future enhancements and production deployment.
 
-# VII. Internship Summary
+## VII. Internship Summary
 
 Throughout the internship, the team successfully designed and implemented a **Serverless Video-on-Demand Platform on AWS** featuring secure user authentication with Amazon Cognito, direct video uploads to Amazon S3 through Presigned URLs, an Event-Driven Processing Pipeline utilizing Amazon EventBridge, Amazon SQS, EventBridge Pipes, AWS Step Functions, and AWS Elemental MediaConvert, metadata management using Amazon DynamoDB, and global content delivery through Amazon CloudFront.
 

@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.10. </b> "
 ---
 
-# I. Tóm tắt tổng quan
+## I. Tóm tắt tổng quan
 
 Sau khi hoàn thiện hạ tầng Backend phục vụ chức năng tải video lên Amazon S3 trong tuần trước, nhóm tiếp tục triển khai giai đoạn quan trọng nhất của hệ thống là **xây dựng quy trình xử lý video tự động theo kiến trúc Event-Driven Serverless**. Mục tiêu của tuần này là đảm bảo mỗi video sau khi được tải lên sẽ tự động trải qua toàn bộ quá trình xử lý, chuyển mã và lưu trữ mà không cần bất kỳ thao tác thủ công nào từ phía người quản trị.
 
@@ -18,7 +18,7 @@ Ngoài ra, nhóm cũng cấu hình AWS Elemental MediaConvert để chuyển đ�
 
 Kết thúc tuần làm việc, nhóm đã xây dựng thành công Pipeline xử lý video hoàn toàn tự động theo kiến trúc Serverless, đánh dấu việc hoàn thiện tầng xử lý nghiệp vụ cốt lõi của nền tảng Video-on-Demand trên AWS.
 
-# II. Mục tiêu chiến lược trong tuần
+## II. Mục tiêu chiến lược trong tuần
 
 Sau khi hoàn thiện chức năng Upload Video, mục tiêu của tuần thứ 10 là triển khai kiến trúc xử lý video bất đồng bộ dựa trên các dịch vụ Serverless của AWS.
 
@@ -35,7 +35,7 @@ Các mục tiêu chính bao gồm:
 
 Thông qua các mục tiêu trên, nhóm hướng đến việc xây dựng một hệ thống xử lý video có khả năng mở rộng cao, hoạt động hoàn toàn tự động và đáp ứng đúng kiến trúc Serverless được đề xuất trong đồ án.
 
-# III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 23/06/2026 đến 29/06/2026)
+## III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 23/06/2026 đến 29/06/2026)
 
 | Thời gian | Danh mục hoạt động | Chi tiết các tác vụ thực hiện chuyên sâu | Kết quả/Minh chứng đạt được |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Thông qua các mục tiêu trên, nhóm hướng đến việc xây dựng mộ
 | **Ngày 6** *(28/06)* | Kiểm thử Pipeline | Thực hiện nhiều kịch bản Upload Video, theo dõi EventBridge, SQS, Step Functions và MediaConvert để đánh giá toàn bộ luồng xử lý. | Pipeline hoạt động ổn định trong các kịch bản kiểm thử khác nhau. |
 | **Ngày 7** *(29/06)* | Đánh giá & Tối ưu | Rà soát kiến trúc xử lý, tối ưu Workflow, đánh giá khả năng mở rộng và chuẩn bị tích hợp tầng phân phối nội dung trong giai đoạn tiếp theo. | Hoàn thiện Video Processing Pipeline theo đúng kiến trúc thiết kế của hệ thống. |
 
-# IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
+## IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
 
 Sau khi hoàn thiện chức năng tải video trực tiếp lên Amazon S3 bằng Presigned URL ở tuần trước, nhóm chuyển sang triển khai tầng xử lý video tự động theo kiến trúc Event-Driven. Mục tiêu của giai đoạn này là xây dựng một Pipeline có khả năng tự động tiếp nhận sự kiện, điều phối quy trình xử lý và chuyển mã video mà không cần bất kỳ thao tác thủ công nào. Kiến trúc được thiết kế dựa trên việc kết hợp các dịch vụ Amazon EventBridge, Amazon SQS, Amazon EventBridge Pipes, AWS Step Functions và AWS Elemental MediaConvert nhằm đảm bảo tính mở rộng, khả năng chịu lỗi và tính độc lập giữa các thành phần.
 
@@ -67,7 +67,7 @@ Sau khi hoàn thành từng thành phần, nhóm tiến hành kiểm thử toàn
 
 Đến cuối tuần, nhóm đã hoàn thiện kiến trúc xử lý video bất đồng bộ theo đúng định hướng Serverless. Toàn bộ quy trình từ khi người dùng tải video lên Amazon S3 cho đến khi video được chuyển mã và lưu vào vùng lưu trữ đầu ra đều diễn ra hoàn toàn tự động, tạo nền tảng quan trọng cho việc triển khai tầng phân phối nội dung và giao diện người dùng trong giai đoạn tiếp theo.
 
-# V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia
+## V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia
 
 Trong quá trình triển khai Pipeline xử lý video, nhóm gặp khó khăn đầu tiên khi cấu hình quyền truy cập giữa AWS Step Functions và AWS Elemental MediaConvert. Do IAM Role chưa được cấp đầy đủ quyền truy cập vào Amazon S3 và MediaConvert nên một số Workflow ban đầu không thể khởi tạo tác vụ chuyển mã. Sau khi rà soát lại IAM Policy và Principle of Least Privilege, nhóm đã điều chỉnh quyền phù hợp để bảo đảm các dịch vụ chỉ được phép truy cập đúng tài nguyên cần thiết.
 
@@ -77,7 +77,7 @@ Trong quá trình tích hợp AWS Step Functions, nhóm nhận thấy việc chi
 
 Ngoài ra, nhóm cũng đánh giá vai trò của Amazon SQS trong việc tăng tính ổn định của hệ thống. Việc bổ sung hàng đợi giúp các dịch vụ phía sau không bị ảnh hưởng khi lưu lượng Upload tăng cao, đồng thời tạo tiền đề để mở rộng quy mô xử lý trong tương lai mà không cần thay đổi kiến trúc tổng thể.
 
-# VI. Đánh giá và Chiêm nghiệm chuyên môn
+## VI. Đánh giá và Chiêm nghiệm chuyên môn
 
 Tuần thứ 10 giúp nhóm hiểu rõ hơn về cách xây dựng một hệ thống xử lý bất đồng bộ trên nền tảng điện toán đám mây. Thay vì xây dựng các luồng xử lý đồng bộ như trong nhiều ứng dụng truyền thống, việc sử dụng EventBridge, Amazon SQS và AWS Step Functions giúp toàn bộ Pipeline trở nên linh hoạt, dễ mở rộng và có khả năng phục hồi cao hơn khi xảy ra lỗi.
 
@@ -87,7 +87,7 @@ Bên cạnh đó, nhóm nhận thấy AWS Elemental MediaConvert là dịch vụ
 
 Nhìn chung, toàn bộ mục tiêu đề ra trong tuần đã được hoàn thành. Pipeline xử lý video vận hành ổn định, các dịch vụ phối hợp đúng theo kiến trúc thiết kế và sẵn sàng cho giai đoạn triển khai tầng phân phối nội dung cũng như ứng dụng Web.
 
-# VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới
+## VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới
 
 Trong tuần tiếp theo, nhóm sẽ tập trung triển khai tầng truy cập của hệ thống dựa trên Amazon Cognito, Amazon CloudFront và Amazon S3 Frontend Bucket. Đồng thời, nhóm sẽ tích hợp giao diện Web với Amazon API Gateway nhằm cho phép người dùng thực hiện các chức năng đăng nhập, tải video, theo dõi trạng thái xử lý và phát video trực tuyến.
 

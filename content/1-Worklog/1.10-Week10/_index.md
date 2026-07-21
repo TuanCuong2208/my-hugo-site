@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.10. </b> "
 ---
 
-# I. Overview Summary
+## I. Overview Summary
 
 Following the completion of the backend infrastructure for direct video uploads to Amazon S3 in the previous week, the team proceeded to implement the core component of the system—the **Event-Driven Video Processing Pipeline**. The primary objective of this phase was to ensure that every uploaded video could be automatically processed, transcoded, and stored without requiring any manual intervention from system administrators.
 
@@ -18,7 +18,7 @@ In addition, AWS Elemental MediaConvert was configured to transcode uploaded vid
 
 By the end of the week, the team successfully completed a fully automated serverless video processing pipeline. This milestone established the core business logic of the Video-on-Demand platform and laid the foundation for implementing secure content delivery and user-facing functionalities in the following development stages.
 
-# II. Weekly Strategic Objectives
+## II. Weekly Strategic Objectives
 
 After completing the video upload functionality, the primary objective of Week 10 was to implement an asynchronous video processing architecture based entirely on AWS serverless services.
 
@@ -35,7 +35,7 @@ The main objectives included:
 
 Through these objectives, the team aimed to develop a scalable and fully automated processing pipeline that complies with the proposed serverless architecture of the project.
 
-# III. Activity Log & Detailed Implementation Schedule (From 23/06/2026 to 29/06/2026)
+## III. Activity Log & Detailed Implementation Schedule (From 23/06/2026 to 29/06/2026)
 
 | Time | Activity Category | Detailed Technical Tasks | Results / Deliverables |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Through these objectives, the team aimed to develop a scalable and fully automat
 | **Day 6** *(28/06)* | Pipeline Testing | Executed multiple upload scenarios while monitoring Amazon EventBridge, Amazon SQS, AWS Step Functions, and MediaConvert throughout the processing workflow. | The processing pipeline operated reliably under various testing scenarios. |
 | **Day 7** *(29/06)* | Review & Optimization | Reviewed the entire processing architecture, optimized workflow execution, evaluated scalability, and prepared for the content delivery layer. | Successfully completed the automated serverless Video Processing Pipeline. |
 
-# IV. Technical Implementation & In-depth Analysis
+## IV. Technical Implementation & In-depth Analysis
 
 Following the successful implementation of the direct video upload mechanism in the previous week, the team focused on building the core processing layer of the platform based on an event-driven serverless architecture. The objective of this phase was to develop an automated workflow capable of receiving upload events, orchestrating media processing tasks, and generating streaming-ready video files without requiring manual intervention. To accomplish this objective, the processing pipeline was designed by combining Amazon EventBridge, Amazon SQS, Amazon EventBridge Pipes, AWS Step Functions, and AWS Elemental MediaConvert.
 
@@ -67,7 +67,7 @@ After implementing each processing component, comprehensive end-to-end testing w
 
 By the conclusion of Week 10, the team had successfully established a fully automated event-driven processing pipeline. From the moment a user uploads a video until the transcoded output is generated and metadata is updated, every stage of the workflow is executed automatically through managed AWS services. This achievement represents one of the most critical technical milestones of the project and provides the foundation for implementing secure content delivery and frontend integration during the following development phase.
 
-# V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
+## V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
 
 During the deployment of the processing pipeline, one of the first challenges involved configuring the permissions between AWS Step Functions and AWS Elemental MediaConvert. Initially, several workflow executions failed because the assigned IAM Role did not have sufficient permissions to access Amazon S3 resources and initiate MediaConvert jobs. After reviewing the IAM policies and applying the Principle of Least Privilege, the required permissions were correctly assigned, allowing the workflow to execute successfully while maintaining system security.
 
@@ -77,7 +77,7 @@ While implementing AWS Step Functions, the team recognized the advantages of div
 
 The implementation further demonstrated the practical value of Amazon SQS within distributed systems. By introducing an intermediate message queue, the processing workflow remains stable even during periods of increased upload activity. This architecture provides sufficient flexibility for future system expansion while minimizing the risk of service overload or processing interruptions.
 
-# VI. Evaluation and Professional Reflection
+## VI. Evaluation and Professional Reflection
 
 Week 10 significantly improved the team's understanding of building asynchronous cloud-native applications using AWS managed services. Compared with the previous development phases, this stage focused less on implementing individual backend functions and more on designing a coordinated workflow capable of orchestrating multiple cloud services within a single processing pipeline.
 
@@ -87,7 +87,7 @@ In addition, deploying AWS Elemental MediaConvert provided valuable experience i
 
 Overall, every objective planned for Week 10 was successfully achieved. The automated video processing pipeline now operates reliably within the AWS cloud environment and establishes the technical foundation required for secure content delivery, frontend integration, and complete system deployment during the remaining stages of the project.
 
-# VII. Strategic Plan for the Following Week
+## VII. Strategic Plan for the Following Week
 
 During the following week, the team will focus on implementing the user access layer of the platform by integrating Amazon Cognito, Amazon CloudFront, and the Amazon S3 Frontend Bucket. In addition, the web application will be connected to Amazon API Gateway to support user authentication, video uploads, metadata retrieval, and video playback.
 

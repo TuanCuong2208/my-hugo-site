@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.12. </b> "
 ---
 
-# I. Tóm tắt tổng quan
+## I. Tóm tắt tổng quan
 
 Tuần cuối của kỳ thực tập được dành cho giai đoạn kiểm thử tổng thể, giám sát hệ thống và tối ưu hiệu năng của nền tảng Serverless Video-on-Demand trên AWS. Sau khi toàn bộ các thành phần chức năng đã được tích hợp hoàn chỉnh ở tuần trước, nhóm tập trung đánh giá tính ổn định của hệ thống trong điều kiện vận hành thực tế, đồng thời rà soát lại toàn bộ kiến trúc nhằm bảo đảm nền tảng đáp ứng các yêu cầu về hiệu năng, khả năng mở rộng và bảo mật.
 
@@ -18,7 +18,7 @@ Ngoài ra, nhóm thực hiện kiểm thử End-to-End đối với toàn bộ q
 
 Kết thúc tuần làm việc, nhóm hoàn thiện phiên bản MVP của hệ thống, tổng hợp kết quả triển khai, chuẩn bị tài liệu kỹ thuật và xây dựng nội dung trình diễn phục vụ báo cáo thực tập cũng như nghiệm thu đồ án.
 
-# II. Mục tiêu chiến lược trong tuần
+## II. Mục tiêu chiến lược trong tuần
 
 Mục tiêu chính của tuần cuối là đánh giá toàn diện chất lượng hệ thống sau khi hoàn thành toàn bộ các chức năng cốt lõi, đồng thời tối ưu các cấu hình trước khi kết thúc quá trình thực tập.
 
@@ -35,7 +35,7 @@ Các mục tiêu được đặt ra bao gồm:
 
 Thông qua các mục tiêu trên, nhóm hướng đến việc bảo đảm hệ thống hoạt động ổn định, an toàn và sẵn sàng cho quá trình trình diễn cũng như đánh giá kết quả thực tập.
 
-# III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 07/07/2026 đến 13/07/2026)
+## III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 07/07/2026 đến 13/07/2026)
 
 | Thời gian | Danh mục hoạt động | Chi tiết các tác vụ thực hiện chuyên sâu | Kết quả/Minh chứng đạt được |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Thông qua các mục tiêu trên, nhóm hướng đến việc bảo đảm h�
 | **Ngày 6** *(12/07)* | Documentation | Hoàn thiện tài liệu kỹ thuật, cập nhật sơ đồ kiến trúc và tổng hợp kết quả triển khai. | Bộ tài liệu kỹ thuật được hoàn chỉnh. |
 | **Ngày 7** *(13/07)* | Final Review | Tổng kết dự án, chuẩn bị nội dung Demo và đánh giá phiên bản MVP trước khi nghiệm thu. | Hoàn thành toàn bộ mục tiêu của kỳ thực tập. |
 
-# IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
+## IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
 
 Trong tuần cuối của kỳ thực tập, nhóm tập trung vào việc đánh giá tổng thể hệ thống sau khi toàn bộ các chức năng cốt lõi đã được triển khai hoàn chỉnh. Khác với các tuần trước chủ yếu tập trung vào phát triển và tích hợp từng thành phần, tuần này hướng đến việc kiểm chứng tính ổn định, khả năng mở rộng, mức độ bảo mật và hiệu năng vận hành của toàn bộ nền tảng Serverless Video-on-Demand trên AWS. Các hoạt động được thực hiện bao gồm giám sát hệ thống, phân tích log, kiểm thử toàn diện, rà soát cấu hình bảo mật và tối ưu tài nguyên nhằm chuẩn bị cho giai đoạn nghiệm thu và trình diễn sản phẩm.
 
@@ -69,7 +69,7 @@ Sau khi hoàn thành các hoạt động kiểm thử, nhóm tiến hành tối 
 
 Đến cuối tuần, nhóm hoàn tất việc kiểm thử, giám sát và tối ưu nền tảng Serverless Video-on-Demand. Phiên bản MVP đã đáp ứng đầy đủ các chức năng đặt ra ban đầu, bao gồm xác thực người dùng, tải video, xử lý bất đồng bộ, lưu trữ metadata và phát video trực tuyến thông qua hạ tầng AWS. Toàn bộ tài liệu kỹ thuật, sơ đồ kiến trúc và kết quả kiểm thử cũng được hoàn thiện nhằm phục vụ quá trình báo cáo và nghiệm thu đồ án.
 
-# V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia
+## V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia
 
 Trong quá trình theo dõi hệ thống bằng Amazon CloudWatch, nhóm nhận thấy việc phân tích log từ nhiều dịch vụ khác nhau đòi hỏi phải hiểu rõ mối quan hệ giữa các thành phần trong kiến trúc Serverless. Do mỗi dịch vụ ghi nhận nhật ký theo định dạng riêng, nhóm đã xây dựng quy trình đối chiếu log giữa Amazon API Gateway, AWS Lambda và AWS Step Functions để xác định nhanh nguyên nhân khi một yêu cầu xử lý gặp lỗi.
 
@@ -79,7 +79,7 @@ Trong quá trình kiểm thử hiệu năng, nhóm cũng quan sát thấy Amazon
 
 Qua toàn bộ quá trình triển khai, nhóm nhận thấy rằng việc kết hợp các dịch vụ Managed Services của AWS giúp giảm đáng kể khối lượng công việc liên quan đến quản trị hạ tầng. Điều này cho phép nhóm tập trung vào thiết kế kiến trúc, tối ưu quy trình nghiệp vụ và nâng cao chất lượng của ứng dụng thay vì dành nhiều thời gian cho việc vận hành máy chủ.
 
-# VI. Đánh giá và Chiêm nghiệm chuyên môn
+## VI. Đánh giá và Chiêm nghiệm chuyên môn
 
 Tuần cuối cùng đánh dấu việc hoàn thiện toàn bộ nền tảng Serverless Video-on-Demand theo đúng mục tiêu đề ra ban đầu. Thông qua quá trình kiểm thử, giám sát và tối ưu hệ thống, nhóm có cơ hội đánh giá toàn diện kiến trúc đã xây dựng cũng như hiểu rõ hơn về cách các dịch vụ AWS phối hợp để tạo thành một ứng dụng Cloud-Native hoàn chỉnh.
 
@@ -89,7 +89,7 @@ Thông qua việc rà soát IAM, đánh giá AWS WAF và kiểm thử toàn bộ
 
 Nhìn chung, toàn bộ mục tiêu của kỳ thực tập đã được hoàn thành. Phiên bản MVP đáp ứng đầy đủ các yêu cầu chức năng, có kiến trúc rõ ràng, sử dụng hiệu quả các dịch vụ Managed Services của AWS và thể hiện được tính khả thi của mô hình Serverless trong việc xây dựng nền tảng Video-on-Demand.
 
-# VII. Tổng kết kỳ thực tập
+## VII. Tổng kết kỳ thực tập
 
 Kết thúc kỳ thực tập, nhóm đã xây dựng thành công một nền tảng **Serverless Video-on-Demand Platform on AWS** với đầy đủ các chức năng cốt lõi, bao gồm xác thực người dùng bằng Amazon Cognito, tải video trực tiếp lên Amazon S3 thông qua Presigned URL, xử lý video bất đồng bộ bằng Event-Driven Pipeline sử dụng Amazon EventBridge, Amazon SQS, EventBridge Pipes, AWS Step Functions và AWS Elemental MediaConvert, lưu trữ metadata trên Amazon DynamoDB, đồng thời phân phối nội dung thông qua Amazon CloudFront.
 

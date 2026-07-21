@@ -41,7 +41,7 @@ The following sections provide an overview of the weekly worklogs completed thro
 
 **Week 11:** [Building the Video Processing Pipeline and Integrating AWS Services](1.11-week11/)
 
-**Week 12:** [System Testing, Optimization, and Project Completion]
+**Week 12:** [System Testing, Optimization, and Project Completion](1.12-week12/)
 
 > 💡 **Note:**  
 > This worklog reflects the actual learning, research, and project development process throughout the internship. The architectural designs, technical decisions, and implementation approaches presented in the early weeks were developed through self-study, AWS documentation, and references to similar projects. Therefore, some design decisions may be refined and improved as the project evolves during subsequent development phases.

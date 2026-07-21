@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.11. </b> "
 ---
 
-# I. Overview Summary
+## I. Overview Summary
 
 Following the successful implementation of the Event-Driven Video Processing Pipeline in the previous week, the team proceeded to develop the access layer and content delivery infrastructure of the platform. The primary objective of this phase was to integrate all previously developed AWS services into a complete Video-on-Demand system that allows users to authenticate, upload videos, monitor processing status, and stream media content through a secure cloud-native architecture.
 
@@ -18,7 +18,7 @@ To further strengthen the security architecture, AWS WAF was configured in front
 
 By the end of the week, the authentication layer, frontend deployment, content delivery infrastructure, and backend integration had been successfully completed. Users were able to authenticate, upload videos, monitor processing progress, and stream processed media through a unified serverless platform.
 
-# II. Weekly Strategic Objectives
+## II. Weekly Strategic Objectives
 
 Following the completion of the Event-Driven Video Processing Pipeline, the primary objective of Week 11 was to implement the user access layer and integrate every component of the platform into a complete business workflow.
 
@@ -35,7 +35,7 @@ The main objectives included:
 
 Through these objectives, the team aimed to complete the first fully functional MVP of the Serverless Video-on-Demand Platform.
 
-# III. Activity Log & Detailed Implementation Schedule (From 30/06/2026 to 06/07/2026)
+## III. Activity Log & Detailed Implementation Schedule (From 30/06/2026 to 06/07/2026)
 
 | Time | Activity Category | Detailed Technical Tasks | Results / Deliverables |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Through these objectives, the team aimed to complete the first fully functional 
 | **Day 6** *(05/07)* | Integration Testing | Performed end-to-end testing covering user authentication, video upload, asynchronous processing, metadata synchronization, and video playback. | All system components successfully operated together according to the designed architecture. |
 | **Day 7** *(06/07)* | Review & Optimization | Evaluated frontend performance, reviewed security configurations, and prepared the system for comprehensive testing. | Successfully completed the access layer and content delivery infrastructure. |
 
-# IV. Technical Implementation & In-depth Analysis
+## IV. Technical Implementation & In-depth Analysis
 
 Following the successful implementation of the Event-Driven Video Processing Pipeline, the team focused on developing the access layer that connects end users with all backend services deployed on AWS. The primary objective of this phase was to establish secure authentication, deploy the web application, configure the content delivery infrastructure, and integrate all backend APIs into a unified business workflow. This stage represents the final integration phase before comprehensive system validation and performance optimization.
 
@@ -67,7 +67,7 @@ Comprehensive integration testing was conducted after completing all system comp
 
 By the end of Week 11, the team had successfully integrated the authentication layer, frontend deployment, backend services, and content delivery infrastructure into a unified cloud-native application. Users were able to authenticate, upload videos, monitor processing progress, and stream media content through a fully functional MVP deployed entirely on AWS.
 
-# V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
+## V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
 
 One of the primary challenges encountered during this phase involved configuring authentication between Amazon Cognito and Amazon API Gateway. During the initial deployment, several API requests were rejected because JWT access tokens were not transmitted correctly within the HTTP Authorization header. After reviewing the Cognito Authorizer configuration and standardizing the token transmission process, authentication operated successfully and all protected APIs became accessible only to authorized users.
 
@@ -77,7 +77,7 @@ The implementation of AWS WAF also required careful evaluation of available secu
 
 Throughout the integration process, the team further recognized the advantages of AWS Managed Services. By relying on fully managed infrastructure instead of self-hosted servers, development efforts remained focused on business logic, system architecture, and application functionality rather than server provisioning, maintenance, and infrastructure administration.
 
-# VI. Evaluation and Professional Reflection
+## VI. Evaluation and Professional Reflection
 
 Week 11 represented the successful integration of all major components into a complete Serverless Video-on-Demand Platform. Connecting authentication, backend services, storage, processing, and content delivery provided the team with valuable experience in designing and deploying a production-oriented cloud-native application using AWS managed services.
 
@@ -87,7 +87,7 @@ The team also observed that separating authentication, processing, storage, and 
 
 Overall, every objective scheduled for Week 11 was successfully completed. The MVP now provides all essential business functionalities, including secure user authentication, direct video uploads, asynchronous processing, metadata synchronization, and video streaming through Amazon CloudFront. The platform is therefore ready for comprehensive validation, monitoring, and optimization during the final stage of the project.
 
-# VII. Strategic Plan for the Following Week
+## VII. Strategic Plan for the Following Week
 
 During the final week of the internship, the team will focus on comprehensive end-to-end system validation to evaluate the reliability, performance, and operational stability of every AWS service participating in the Serverless Video-on-Demand Platform.
 

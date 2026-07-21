@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.9. </b> "
 ---
 
-# I. Overview Summary
+## I. Overview Summary
 
 Following the successful implementation of direct video uploads using Amazon S3 Presigned URLs during the previous week, the team continued developing the core backend components responsible for managing video information throughout the platform. The primary objective of this stage was to establish business APIs, implement a metadata management mechanism, integrate Amazon DynamoDB with backend services, and prepare the infrastructure required for the Event-Driven Video Processing Pipeline that would be introduced in the following week.
 
@@ -18,7 +18,7 @@ The team also standardized the metadata structure stored in Amazon DynamoDB to s
 
 By the end of the week, the backend API layer and metadata management system had been fully completed. Users could upload videos directly to Amazon S3 while the platform successfully stored, retrieved, and managed all related metadata, providing a solid foundation for implementing the Event-Driven Processing Pipeline during the following development phase.
 
-# II. Weekly Strategic Objectives
+## II. Weekly Strategic Objectives
 
 Following the completion of the video upload functionality, the primary objective of Week 9 was to establish the backend data management layer supporting the overall business workflow of the Serverless Video-on-Demand Platform.
 
@@ -35,7 +35,7 @@ The major objectives included:
 
 Through these objectives, the team aimed to establish a reliable backend architecture capable of managing all video-related information while preparing the platform for asynchronous video processing.
 
-# III. Activity Log & Detailed Implementation Schedule (From 16/06/2026 to 22/06/2026)
+## III. Activity Log & Detailed Implementation Schedule (From 16/06/2026 to 22/06/2026)
 
 | Time | Activity Category | Detailed Technical Tasks | Results / Deliverables |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Through these objectives, the team aimed to establish a reliable backend archite
 | **Day 6** *(21/06)* | Security Configuration | Reviewed IAM roles, configured CORS, and validated permissions across Amazon API Gateway, AWS Lambda, Amazon DynamoDB, and Amazon S3. | Successfully completed backend security configuration. |
 | **Day 7** *(22/06)* | Review & Preparation | Reviewed backend architecture, validated metadata consistency, and prepared infrastructure for the upcoming Event-Driven Processing Pipeline. | Backend services were fully prepared for the next development phase. |
 
-# IV. Technical Implementation & In-depth Analysis
+## IV. Technical Implementation & In-depth Analysis
 
 After completing the direct video upload mechanism using Amazon S3 Presigned URLs during the previous week, the team concentrated on developing the backend layer responsible for managing business data throughout the Serverless Video-on-Demand Platform. The primary objective of this phase was to standardize communication among the web application, Amazon API Gateway, AWS Lambda, Amazon DynamoDB, and Amazon S3 while preparing the metadata required for the Event-Driven Video Processing Pipeline implemented during the following week.
 
@@ -67,7 +67,7 @@ Comprehensive testing was conducted after completing the backend implementation.
 
 Finally, the backend architecture was reviewed to ensure readiness for the Event-Driven Processing Pipeline scheduled for Week 10. Metadata structures had been standardized, backend APIs were fully operational, and the upload workflow was prepared for integration with Amazon EventBridge, Amazon SQS, EventBridge Pipes, AWS Step Functions, and AWS Elemental MediaConvert.
 
-# V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
+## V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
 
 One of the primary challenges encountered during backend development involved maintaining consistency between Amazon S3 and Amazon DynamoDB. In certain scenarios, users cancelled uploads before completion, resulting in metadata records existing while the corresponding video files were absent from the Amazon S3 Raw Upload Bucket. To address this issue, the team introduced validation procedures to verify upload completion before allowing subsequent processing stages to proceed, ensuring consistency between storage objects and metadata records.
 
@@ -77,7 +77,7 @@ During API testing, additional attention was given to Cross-Origin Resource Shar
 
 Throughout the implementation process, the team recognized that separating the upload layer, metadata management layer, and future processing layer provides significant architectural advantages. Independent service responsibilities simplify maintenance, improve scalability, and establish a strong foundation for the Event-Driven Processing Pipeline implemented during the following development phase.
 
-# VI. Evaluation and Professional Reflection
+## VI. Evaluation and Professional Reflection
 
 Week 9 provided valuable practical experience in designing backend services within a serverless architecture. Beyond exposing APIs to end users, the backend layer coordinates data exchange among multiple AWS managed services while maintaining metadata consistency throughout the entire video lifecycle.
 
@@ -87,7 +87,7 @@ The team also recognized the importance of establishing a well-structured metada
 
 Overall, every objective established for Week 9 was successfully achieved. The backend infrastructure and metadata management system were fully prepared for integration with the Event-Driven Video Processing Pipeline, representing the transition from data management toward automated video processing.
 
-# VII. Strategic Plan for the Following Week
+## VII. Strategic Plan for the Following Week
 
 During the following week, the team will implement the **Event-Driven Video Processing Pipeline** to automate the complete video processing workflow after files are uploaded to the Amazon S3 Raw Upload Bucket.
 

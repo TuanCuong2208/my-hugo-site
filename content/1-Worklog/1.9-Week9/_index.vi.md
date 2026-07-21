@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 1.9. </b> "
 ---
 
-# I. Tóm tắt tổng quan
+## I. Tóm tắt tổng quan
 
 Sau khi hoàn thành việc xây dựng nền tảng Backend cơ bản và cơ chế Upload Video sử dụng Presigned URL trong tuần trước, nhóm tiếp tục phát triển các thành phần cốt lõi phục vụ cho quy trình quản lý video của hệ thống. Trọng tâm của tuần này là hoàn thiện các API nghiệp vụ, xây dựng cơ chế quản lý metadata, tích hợp Amazon DynamoDB với các dịch vụ Backend và chuẩn bị hạ tầng cho Pipeline xử lý video theo kiến trúc Event-Driven ở giai đoạn tiếp theo.
 
@@ -18,7 +18,7 @@ Ngoài ra, nhóm cũng tiến hành chuẩn hóa cấu trúc metadata được l
 
 Đến cuối tuần, toàn bộ tầng Backend API và hệ thống quản lý metadata đã được hoàn thiện. Người dùng có thể tải video lên Amazon S3 thông qua Presigned URL, trong khi hệ thống có thể lưu trữ, truy vấn và quản lý đầy đủ thông tin của từng video, tạo nền tảng cho việc triển khai quy trình xử lý video bất đồng bộ theo kiến trúc Serverless.
 
-# II. Mục tiêu chiến lược trong tuần
+## II. Mục tiêu chiến lược trong tuần
 
 Sau khi hoàn thiện chức năng Upload Video, mục tiêu của tuần thứ 9 là xây dựng tầng quản lý dữ liệu và các API phục vụ toàn bộ quy trình nghiệp vụ của nền tảng Video-on-Demand.
 
@@ -35,7 +35,7 @@ Các mục tiêu chính bao gồm:
 
 Thông qua các mục tiêu trên, nhóm hướng đến việc hoàn thiện tầng Backend của hệ thống, bảo đảm toàn bộ dữ liệu được quản lý tập trung và sẵn sàng cho giai đoạn xử lý video tự động.
 
-# III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 16/06/2026 đến 22/06/2026)
+## III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 16/06/2026 đến 22/06/2026)
 
 | Thời gian | Danh mục hoạt động | Chi tiết các tác vụ thực hiện chuyên sâu | Kết quả/Minh chứng đạt được |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Thông qua các mục tiêu trên, nhóm hướng đến việc hoàn thiện t�
 | **Ngày 6** *(21/06)* | Security Configuration | Rà soát IAM Role, cấu hình CORS và kiểm tra quyền truy cập giữa Amazon API Gateway, AWS Lambda, Amazon DynamoDB và Amazon S3. | Hoàn thiện cấu hình bảo mật của tầng Backend. |
 | **Ngày 7** *(22/06)* | Review & Preparation | Đánh giá kiến trúc Backend, rà soát metadata và chuẩn bị hạ tầng cho Event-Driven Processing Pipeline. | Sẵn sàng triển khai Pipeline xử lý video trong tuần tiếp theo. |
 
-# IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
+## IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
 
 Sau khi hoàn thành cơ chế tải video trực tiếp lên Amazon S3 thông qua Presigned URL ở tuần trước, nhóm tiếp tục tập trung xây dựng tầng Backend phục vụ việc quản lý dữ liệu và điều phối các chức năng nghiệp vụ của nền tảng Video-on-Demand. Mục tiêu chính trong giai đoạn này là chuẩn hóa luồng trao đổi dữ liệu giữa giao diện người dùng, Amazon API Gateway, AWS Lambda, Amazon DynamoDB và Amazon S3, đồng thời chuẩn bị đầy đủ dữ liệu đầu vào cho Pipeline xử lý video theo kiến trúc Event-Driven sẽ được triển khai trong tuần tiếp theo.
 
@@ -67,7 +67,7 @@ Sau khi hoàn thiện toàn bộ Backend API, nhóm thực hiện nhiều kịch
 
 Cuối tuần, nhóm tiến hành rà soát lại toàn bộ kiến trúc Backend nhằm chuẩn bị cho việc triển khai Pipeline xử lý video tự động ở tuần tiếp theo. Metadata đã được chuẩn hóa, quy trình Upload đã hoạt động ổn định và các API đã sẵn sàng để tích hợp với Amazon EventBridge, Amazon SQS, EventBridge Pipes, AWS Step Functions và AWS Elemental MediaConvert trong giai đoạn xử lý bất đồng bộ.
 
-# V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia
+## V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia
 
 Trong quá trình xây dựng Backend API, nhóm gặp khó khăn khi đồng bộ dữ liệu giữa Amazon S3 và Amazon DynamoDB. Một số trường hợp người dùng hủy quá trình Upload trước khi hoàn tất dẫn đến việc metadata đã được tạo nhưng tệp video chưa xuất hiện trong Amazon S3 Raw Upload Bucket. Để xử lý tình huống này, nhóm bổ sung cơ chế kiểm tra trạng thái Upload trước khi các bước xử lý tiếp theo được thực hiện, giúp bảo đảm tính nhất quán giữa dữ liệu lưu trữ và metadata.
 
@@ -77,7 +77,7 @@ Trong quá trình kiểm thử API, nhóm cũng tiến hành đánh giá cấu h
 
 Thông qua các hoạt động triển khai và kiểm thử, nhóm nhận thấy rằng việc tách biệt hoàn toàn tầng Upload, tầng lưu trữ metadata và tầng xử lý video mang lại nhiều lợi ích về khả năng mở rộng. Kiến trúc này giúp mỗi thành phần có thể được phát triển và mở rộng độc lập, đồng thời tạo tiền đề để áp dụng mô hình Event-Driven Processing trong các giai đoạn tiếp theo.
 
-# VI. Đánh giá và Chiêm nghiệm chuyên môn
+## VI. Đánh giá và Chiêm nghiệm chuyên môn
 
 Tuần thứ 9 giúp nhóm hiểu rõ hơn về vai trò của tầng Backend trong một hệ thống Serverless. Bên cạnh việc cung cấp các API phục vụ người dùng, Backend còn chịu trách nhiệm điều phối dữ liệu giữa nhiều dịch vụ AWS khác nhau, bảo đảm tính nhất quán của thông tin và tạo nền tảng cho các quy trình xử lý tự động phía sau.
 
@@ -87,7 +87,7 @@ Ngoài ra, nhóm nhận thấy rằng việc chuẩn hóa metadata ngay từ đ�
 
 Nhìn chung, toàn bộ mục tiêu của tuần đã được hoàn thành đúng kế hoạch. Tầng Backend và hệ thống quản lý metadata đã sẵn sàng để tích hợp với kiến trúc Event-Driven, đánh dấu bước chuyển từ giai đoạn quản lý dữ liệu sang giai đoạn tự động hóa quy trình xử lý video.
 
-# VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới
+## VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới
 
 Trong tuần tiếp theo, nhóm sẽ triển khai **Event-Driven Video Processing Pipeline** nhằm tự động hóa toàn bộ quy trình xử lý video sau khi người dùng tải tệp lên Amazon S3 Raw Upload Bucket.
 

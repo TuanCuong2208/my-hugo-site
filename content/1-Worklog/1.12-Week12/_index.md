@@ -1,57 +1,96 @@
 ---
-title: "Week 12 Worklog"
-date: 2024-01-01
+title: "Worklog Week 12"
+date: 2026-07-07
 weight: 12
 chapter: false
-pre: " <b> 1.12. </b> "
+pre: "<b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# I. Overview Summary
 
-### Week 12 Objectives:
+The final week of the internship was dedicated to comprehensive system validation, operational monitoring, and performance optimization of the Serverless Video-on-Demand Platform deployed on AWS. With all major functional components successfully integrated during the previous week, the team's primary objective shifted from feature development to evaluating system reliability, scalability, security, and operational readiness before project completion.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+During this phase, Amazon CloudWatch served as the centralized monitoring platform for collecting logs, metrics, and operational events from Amazon API Gateway, AWS Lambda, AWS Step Functions, AWS Elemental MediaConvert, and Amazon CloudFront. These monitoring capabilities enabled the team to analyze system behavior, identify potential bottlenecks, and verify that every service operated according to the designed architecture.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+In addition to system monitoring, the team conducted a comprehensive security review by auditing IAM permissions based on the Principle of Least Privilege while evaluating the security configurations implemented through Amazon Cognito and AWS WAF. This review minimized unnecessary permissions and improved the overall security posture of the platform.
 
+End-to-end testing was also performed across the complete business workflow, including user authentication, video uploads, asynchronous processing, metadata synchronization through Amazon DynamoDB, and video streaming via Amazon CloudFront. Various testing scenarios were executed to verify interoperability among AWS managed services under different operating conditions.
 
-### Week 12 Achievements:
+At the conclusion of the internship, the team finalized the MVP of the Serverless Video-on-Demand Platform, completed the technical documentation, summarized implementation results, and prepared demonstration materials for the internship presentation and project evaluation.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+# II. Weekly Strategic Objectives
 
-* Successfully created and configured an AWS Free Tier account.
+The primary objective of the final week was to perform comprehensive validation of the completed system while optimizing operational configurations before project delivery.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+The major objectives included:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Configure Amazon CloudWatch for centralized monitoring.
+- Collect and analyze logs generated by Amazon API Gateway, AWS Lambda, and AWS Step Functions.
+- Monitor AWS Elemental MediaConvert processing workflows.
+- Perform comprehensive End-to-End testing.
+- Review IAM permissions following the Principle of Least Privilege.
+- Evaluate Amazon Cognito authentication and AWS WAF protection.
+- Optimize system performance and operational costs.
+- Finalize the MVP and complete technical documentation.
 
-* Used AWS CLI to perform basic operations such as:
+Through these activities, the team aimed to ensure that the entire platform was stable, secure, maintainable, and ready for demonstration and final evaluation.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+# III. Activity Log & Detailed Implementation Schedule (From 07/07/2026 to 13/07/2026)
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+| Time | Activity Category | Detailed Technical Tasks | Results / Deliverables |
+| :--- | :--- | :--- | :--- |
+| **Day 1** *(07/07)* | System Monitoring | Configured Amazon CloudWatch to collect operational logs and metrics from all AWS services participating in the platform. | Successfully established centralized monitoring for the system. |
+| **Day 2** *(08/07)* | Performance Analysis | Analyzed operational logs generated by Amazon API Gateway, AWS Lambda, and AWS Step Functions to evaluate processing performance. | Identified optimization opportunities across the processing workflow. |
+| **Day 3** *(09/07)* | Security Review | Reviewed IAM policies, evaluated Amazon Cognito authentication, and verified AWS WAF security configurations following the Principle of Least Privilege. | Completed comprehensive security validation of the platform. |
+| **Day 4** *(10/07)* | End-to-End Testing | Performed complete workflow testing covering authentication, video upload, asynchronous processing, metadata synchronization, and video playback. | Verified stable operation across all integrated AWS services. |
+| **Day 5** *(11/07)* | System Optimization | Optimized Amazon CloudFront caching policies, AWS Lambda configurations, and AWS Step Functions workflows based on monitoring results. | Improved overall system performance and operational efficiency. |
+| **Day 6** *(12/07)* | Documentation | Finalized technical documentation, updated architectural diagrams, and summarized implementation outcomes. | Completed the project's technical documentation package. |
+| **Day 7** *(13/07)* | Final Review | Reviewed the complete platform, prepared the system demonstration, and validated the MVP before project evaluation. | Successfully completed all internship objectives. |
+
+# IV. Technical Implementation & In-depth Analysis
+
+During the final week of the internship, the team concentrated on evaluating the complete platform after all functional components had been successfully implemented. Unlike previous weeks, which primarily emphasized development and integration, this phase focused on validating system reliability, scalability, security, operational readiness, and overall architectural quality. Activities included centralized monitoring, log analysis, end-to-end testing, security auditing, and performance optimization in preparation for the final project demonstration.
+
+Amazon CloudWatch was configured as the centralized monitoring solution for the entire platform. Logs and operational metrics were collected from Amazon API Gateway, AWS Lambda, AWS Step Functions, AWS Elemental MediaConvert, and Amazon CloudFront. Centralizing operational information simplified system observation while allowing the team to detect abnormal behavior, identify potential bottlenecks, and evaluate service interactions across the serverless architecture.
+
+For AWS Lambda, several operational metrics were continuously monitored, including invocation count, execution duration, error rate, and concurrent executions. These metrics were analyzed during multiple upload scenarios to evaluate whether the serverless backend could consistently process incoming requests without performance degradation. The collected monitoring data confirmed that Lambda execution remained stable throughout all testing scenarios performed during the project.
+
+The execution history of AWS Step Functions was also closely monitored to evaluate the complete Video Processing Pipeline. Each workflow execution was inspected to verify execution status, processing duration, and error handling behavior whenever a workflow encountered failures. Observing each workflow state significantly improved troubleshooting capabilities while demonstrating the advantages of workflow orchestration in complex serverless applications.
+
+AWS Elemental MediaConvert performance was evaluated by processing video files with different resolutions and file sizes. Testing results indicated that transcoding duration depended primarily on video characteristics rather than infrastructure limitations. Throughout all scenarios, AWS Step Functions successfully coordinated MediaConvert jobs, and processed HLS assets were stored in the Amazon S3 Processed Media Bucket before being distributed globally through Amazon CloudFront.
+
+Alongside operational monitoring, the team reviewed IAM configurations according to the Principle of Least Privilege. IAM Roles assigned to AWS Lambda, AWS Step Functions, and AWS Elemental MediaConvert were carefully evaluated to ensure that every service possessed only the permissions required for its intended responsibilities. Removing unnecessary permissions reduced security risks while improving compliance with AWS security best practices.
+
+The effectiveness of AWS WAF was also evaluated after its integration with Amazon CloudFront. Multiple request scenarios were executed to verify that legitimate user traffic continued reaching the application without interruption while abnormal or suspicious traffic patterns were appropriately inspected according to the configured security policies. Amazon Cognito authentication was also revalidated to ensure that only authenticated users could access protected APIs exposed through Amazon API Gateway.
+
+Comprehensive End-to-End testing represented one of the most important activities during the final week. The complete business workflow was repeatedly executed, beginning with user authentication, continuing through video upload using Presigned URLs, asynchronous processing initiated by the Event-Driven Pipeline, metadata synchronization through Amazon DynamoDB, and finally video playback delivered by Amazon CloudFront. Every stage of the workflow performed consistently throughout repeated testing sessions, confirming successful integration across all AWS services.
+
+Following system validation, several optimization activities were performed. Amazon CloudFront cache behavior was adjusted to increase cache efficiency for frequently accessed media content. Configuration reviews were also conducted for AWS Lambda and AWS Step Functions to eliminate unnecessary settings while maintaining application performance and minimizing operational costs.
+
+By the conclusion of the final week, the team had successfully completed monitoring, validation, optimization, and documentation for the Serverless Video-on-Demand Platform. The MVP satisfied all initial project objectives, including secure user authentication, direct video uploads, asynchronous processing, metadata management, and global media delivery using AWS managed services.
+
+# V. Infrastructure Challenges, Troubleshooting Log & Professional Insights
+
+During centralized monitoring with Amazon CloudWatch, the team discovered that troubleshooting serverless applications requires understanding relationships among multiple independent AWS services rather than analyzing a single application log. Since each managed service generates its own operational logs, the team established a structured troubleshooting process by correlating logs collected from Amazon API Gateway, AWS Lambda, and AWS Step Functions. This approach significantly reduced the time required to identify processing failures.
+
+Another important task involved reviewing IAM permissions. Some IAM policies originally granted broader permissions than necessary to simplify development during earlier project phases. Before completing the internship, these permissions were reviewed and refined according to the Principle of Least Privilege. This optimization improved overall security while aligning the platform more closely with recommendations from the AWS Well-Architected Framework.
+
+Performance evaluation also demonstrated the effectiveness of Amazon CloudFront. Frequently accessed media content was successfully served from Edge Locations instead of repeatedly retrieving objects from Amazon S3. This caching mechanism significantly improved video playback responsiveness while reducing storage access frequency and overall operational workload.
+
+Throughout the entire implementation process, the team concluded that AWS Managed Services substantially reduce infrastructure administration responsibilities. Instead of managing servers, operating systems, or scalability concerns manually, development efforts remained focused on business functionality, architectural quality, and application optimization.
+
+# VI. Evaluation and Professional Reflection
+
+The final week marked the successful completion of the Serverless Video-on-Demand Platform according to the project's original objectives. Through comprehensive monitoring, testing, optimization, and documentation, the team gained valuable experience in evaluating a production-oriented cloud-native architecture deployed entirely on AWS.
+
+Working with Amazon CloudWatch highlighted the importance of observability in modern cloud systems. Developing application functionality alone is insufficient for production environments; continuous monitoring is equally essential for maintaining reliability, identifying performance issues, and responding proactively to operational incidents.
+
+The security review involving IAM, AWS WAF, and Amazon Cognito further strengthened the team's understanding of balancing security, scalability, and operational efficiency when designing serverless architectures. These experiences provided practical insight into AWS architectural best practices beyond simple service implementation.
+
+Overall, every internship objective was successfully achieved. The completed MVP demonstrates the feasibility of implementing a scalable, secure, and highly available Serverless Video-on-Demand Platform using AWS managed services while providing a solid foundation for future enhancements and production deployment.
+
+# VII. Internship Summary
+
+Throughout the internship, the team successfully designed and implemented a **Serverless Video-on-Demand Platform on AWS** featuring secure user authentication with Amazon Cognito, direct video uploads to Amazon S3 through Presigned URLs, an Event-Driven Processing Pipeline utilizing Amazon EventBridge, Amazon SQS, EventBridge Pipes, AWS Step Functions, and AWS Elemental MediaConvert, metadata management using Amazon DynamoDB, and global content delivery through Amazon CloudFront.
+
+Beyond completing the technical implementation, the project provided valuable hands-on experience in designing, deploying, monitoring, securing, and optimizing cloud-native applications based entirely on AWS Managed Services. The knowledge gained throughout the internship established a strong foundation for future research and professional development in cloud computing, serverless architecture, and large-scale distributed systems.

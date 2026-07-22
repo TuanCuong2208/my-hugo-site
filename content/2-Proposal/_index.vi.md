@@ -6,8 +6,6 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# Giới thiệu
-
 Trong bối cảnh chuyển đổi số diễn ra mạnh mẽ trên nhiều lĩnh vực như giáo dục, giải trí, đào tạo doanh nghiệp và truyền thông số, nhu cầu xây dựng các nền tảng phát video theo yêu cầu (Video-on-Demand – VoD) ngày càng gia tăng. Người dùng mong muốn có thể tải lên, quản lý và xem nội dung video mọi lúc, mọi nơi với chất lượng ổn định, thời gian phản hồi nhanh và khả năng truy cập đồng thời từ nhiều thiết bị khác nhau.
 
 Tuy nhiên, việc xây dựng một hệ thống Video-on-Demand theo mô hình truyền thống thường gặp nhiều khó khăn. Máy chủ ứng dụng phải đảm nhận đồng thời nhiều nhiệm vụ như tiếp nhận video, lưu trữ dữ liệu, chuyển đổi định dạng, phân phối nội dung và quản lý người dùng. Khi số lượng video hoặc số lượng người truy cập tăng lên, hệ thống dễ gặp tình trạng quá tải, yêu cầu mở rộng hạ tầng liên tục và phát sinh chi phí vận hành lớn.
@@ -19,10 +17,6 @@ Bên cạnh đó, quá trình chuyển mã (Transcoding) video đòi hỏi nhi�
 Thông qua việc sử dụng Amazon Cognito, Amazon API Gateway, AWS Lambda, Amazon S3, Amazon DynamoDB, Amazon EventBridge, Amazon SQS, EventBridge Pipes, AWS Step Functions, AWS Elemental MediaConvert, Amazon CloudFront và Amazon CloudWatch, hệ thống hướng tới mục tiêu xây dựng một nền tảng có khả năng mở rộng linh hoạt, hoạt động ổn định, tối ưu chi phí và dễ dàng bảo trì trong quá trình vận hành.
 
 Đề xuất này đóng vai trò là nền tảng để nhóm triển khai các giai đoạn phân tích, thiết kế, xây dựng, kiểm thử và hoàn thiện sản phẩm trong suốt quá trình thực hiện đồ án.
-
----
-
-# Vấn đề và giải pháp
 
 ## Bài toán đặt ra
 

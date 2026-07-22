@@ -19,29 +19,30 @@ Dưới đây là danh sách các Worklog được sắp xếp theo từng tuầ
 
 ## Danh sách Worklog
 
-**Tuần 1:** [Làm quen với AWS và các dịch vụ Cloud cơ bản](1.1-week1/)
+**Tuần 1:** [Làm quen với AWS và các dịch vụ điện toán đám mây cơ bản](1.1-week1/)
 
-**Tuần 2:** [Làm việc với Amazon EC2, VPC và Networking](1.2-week2/)
+**Tuần 2:** [Làm việc với Amazon EC2, Amazon VPC và hạ tầng mạng](1.2-week2/)
 
-**Tuần 3:** [Quản lý Storage, Database và Serverless trên AWS](1.3-week3/)
+**Tuần 3:** [Quản lý lưu trữ, cơ sở dữ liệu và kiến trúc Serverless trên AWS](1.3-week3/)
 
-**Tuần 4:** [Bảo mật hệ thống với IAM, KMS và CloudTrail](1.4-week4/)
+**Tuần 4:** [Bảo mật hệ thống với AWS IAM, AWS KMS và AWS CloudTrail](1.4-week4/)
 
 **Tuần 5:** [Quản trị tài nguyên và tối ưu bảo mật trên AWS](1.5-week5/)
 
 **Tuần 6:** [Hoàn thành chương trình AWS Academy và tổng hợp kiến thức](1.6-week6/)
 
-**Tuần 7:** [Nghiên cứu và thiết kế kiến trúc Mini Video-on-Demand Platform using AWS Serverless](1.7-week7/)
+**Tuần 7:** [Nghiên cứu và thiết kế kiến trúc Serverless Video-on-Demand Platform trên AWS](1.7-week7/)
 
-**Tuần 8:** [Hoàn thiện thiết kế kỹ thuật và chuẩn bị triển khai hệ thống](1.8-week8/)
+**Tuần 8:** [Hoàn thiện thiết kế kỹ thuật và chuẩn bị triển khai hạ tầng AWS](1.8-week8/)
 
 **Tuần 9:** [Thiết lập hạ tầng AWS và xây dựng nền tảng Backend](1.9-week9/)
 
-**Tuần 10:** [Phát triển các chức năng cốt lõi của hệ thống](1.10-week10/)
+**Tuần 10:** [Xây dựng Video Processing Pipeline theo kiến trúc hướng sự kiện](1.10-week10/)
 
-**Tuần 11:** [Xây dựng Video Processing Pipeline và tích hợp các dịch vụ AWS](1.11-week11/)
+**Tuần 11:** [Phát triển Web Application và tích hợp hệ thống](1.11-week11/)
 
 **Tuần 12:** [Kiểm thử, tối ưu hệ thống và hoàn thiện đồ án](1.12-week12/)
+
 
 > 💡 **Lưu ý:**  
 > Worklog này phản ánh toàn bộ quá trình học tập, nghiên cứu và phát triển dự án theo đúng tiến độ thực tế trong thời gian thực tập. Các thiết kế kiến trúc, giải pháp kỹ thuật và quyết định triển khai ở những tuần đầu được xây dựng dựa trên quá trình tự nghiên cứu, tham khảo tài liệu AWS và các dự án liên quan. Do đó, một số nội dung có thể tiếp tục được điều chỉnh và hoàn thiện trong các giai đoạn phát triển tiếp theo của dự án.

@@ -17,31 +17,32 @@ In addition to recording weekly progress, each worklog includes project objectiv
 
 The following sections provide an overview of the weekly worklogs completed throughout the internship.
 
-## Worklog Timeline
+## Worklog List
 
 **Week 1:** [Introduction to AWS and Fundamental Cloud Services](1.1-week1/)
 
-**Week 2:** [Working with Amazon EC2, VPC, and Networking](1.2-week2/)
+**Week 2:** [Working with Amazon EC2, Amazon VPC, and Networking](1.2-week2/)
 
 **Week 3:** [Managing Storage, Databases, and Serverless Services on AWS](1.3-week3/)
 
-**Week 4:** [Securing Cloud Resources with IAM, KMS, and CloudTrail](1.4-week4/)
+**Week 4:** [Securing AWS Infrastructure with AWS IAM, AWS KMS, and AWS CloudTrail](1.4-week4/)
 
-**Week 5:** [AWS Resource Management and Security Best Practices](1.5-week5/)
+**Week 5:** [AWS Resource Management and Security Optimization](1.5-week5/)
 
-**Week 6:** [Completing the AWS Academy Program and Consolidating Cloud Knowledge](1.6-week6/)
+**Week 6:** [Completing the AWS Academy Program and Knowledge Consolidation](1.6-week6/)
 
-**Week 7:** [Research and Initial Architecture Design for the Mini Video-on-Demand Platform using AWS Serverless](1.7-week7/)
+**Week 7:** [Research and Architecture Design for the Serverless Video-on-Demand Platform on AWS](1.7-week7/)
 
-**Week 8:** [Technical Design Refinement and Project Preparation](1.8-week8/)
+**Week 8:** [Finalizing the Technical Design and Preparing the AWS Infrastructure Deployment](1.8-week8/)
 
-**Week 9:** [AWS Infrastructure Setup and Backend Foundation](1.9-week9/)
+**Week 9:** [Deploying the AWS Infrastructure and Building the Backend Platform](1.9-week9/)
 
-**Week 10:** [Development of Core System Features](1.10-week10/)
+**Week 10:** [Building the Event-Driven Video Processing Pipeline](1.10-week10/)
 
-**Week 11:** [Building the Video Processing Pipeline and Integrating AWS Services](1.11-week11/)
+**Week 11:** [Developing the Web Application and System Integration](1.11-week11/)
 
 **Week 12:** [System Testing, Optimization, and Project Completion](1.12-week12/)
+
 
 > 💡 **Note:**  
 > This worklog reflects the actual learning, research, and project development process throughout the internship. The architectural designs, technical decisions, and implementation approaches presented in the early weeks were developed through self-study, AWS documentation, and references to similar projects. Therefore, some design decisions may be refined and improved as the project evolves during subsequent development phases.

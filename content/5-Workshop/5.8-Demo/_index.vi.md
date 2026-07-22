@@ -25,11 +25,15 @@ Video trình bày đầy đủ quy trình hoạt động của hệ thống theo
 
 ## Video Demo
 
-👉 **Xem video demo tại đây:**
+👉 **Tài liệu đính kèm (Video Demo & Source Code):**
 
-**https://drive.google.com/file/d/1s9Y2AWsQQOhL2RLT8i8CPeO8E06Zf7a8/view?usp=drive_link**
+**https://drive.google.com/drive/folders/1xOeoWnbue5yN53ZRrLSrN_00S22ct_Rw**
 
-> **Video 5.1.** Minh họa toàn bộ quy trình hoạt động của Serverless Video-on-Demand Platform on AWS.
+Thư mục Google Drive bao gồm:
+
+- 📄 Source code của Website Workshop.
+- 📄 Source code của đồ án **Serverless Video-on-Demand Platform on AWS**.
+- 🎥 Video minh họa toàn bộ quá trình triển khai và vận hành của hệ thống.
 
 ## Kết quả
 

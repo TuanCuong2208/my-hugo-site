@@ -23,13 +23,17 @@ The demonstration covers the complete system workflow, including:
 - Confirming that the video metadata has been updated in Amazon DynamoDB.
 - Playing the processed video through the Web Application.
 
-## Demonstration Video
+## Demonstration Resources
 
-👉 **Watch the demonstration video here:**
+👉 **Supporting Materials (Demo Video & Source Code):**
 
-**https://drive.google.com/file/d/1s9Y2AWsQQOhL2RLT8i8CPeO8E06Zf7a8/view?usp=drive_link**
+**https://drive.google.com/drive/folders/1xOeoWnbue5yN53ZRrLSrN_00S22ct_Rw**
 
-> **Video 5.1.** Demonstration of the complete workflow of the Serverless Video-on-Demand Platform on AWS.
+The Google Drive folder contains:
+
+- 📄 Source code of the Workshop website.
+- 📄 Source code of the **Serverless Video-on-Demand Platform on AWS** project.
+- 🎥 A demonstration video showing the complete implementation and end-to-end workflow of the system.
 
 ## Result
 

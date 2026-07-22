@@ -36,24 +36,6 @@ The internship program was well organized with a clear learning roadmap that gra
 
 ---
 
-## Additional Questions
-
-### What was the most satisfying part of your internship?
-
-The most rewarding experience was having the opportunity to design and implement a complete **Serverless Video-on-Demand Platform on AWS**. Throughout the project, I participated in every development stage, including architecture design, AWS infrastructure deployment, backend development, implementation of the video processing pipeline, web application integration, system testing, and performance optimization.
-
-Working on a real-world cloud application significantly enhanced my understanding of modern serverless architecture and provided practical experience that extends beyond classroom learning.
-
-### What aspects of the program could be improved?
-
-One possible improvement would be to organize additional technical sharing sessions covering real-world cloud architectures, enterprise deployment strategies, and industry best practices. These sessions would provide interns with broader perspectives on how cloud-native applications are designed and operated in production environments.
-
-### Would you recommend this internship program to others?
-
-Yes. I would highly recommend this internship program to students who are interested in Cloud Computing and AWS technologies. The program offers a structured learning path, extensive hands-on experience, meaningful project work, and continuous guidance from experienced mentors, making it an excellent opportunity for both technical and professional development.
-
----
-
 ## Suggestions and Future Expectations
 
 For future internship programs, I hope additional project topics could be introduced in areas such as DevOps, Machine Learning, Data Engineering, Artificial Intelligence, and Cloud Security. This would allow interns to explore different technology domains based on their individual interests and career goals.

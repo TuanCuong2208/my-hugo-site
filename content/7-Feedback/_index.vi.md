@@ -34,22 +34,6 @@ Chương trình thực tập được tổ chức bài bản với lộ trình h
 
 ---
 
-## Một số câu hỏi khác
-
-### Điều em hài lòng nhất trong thời gian thực tập
-
-Điều em hài lòng nhất là có cơ hội trực tiếp xây dựng một dự án hoàn chỉnh theo kiến trúc Serverless trên nền tảng AWS. Quá trình triển khai từ thiết kế kiến trúc, xây dựng Backend, phát triển Video Processing Pipeline đến hoàn thiện Web Application giúp em hiểu rõ hơn về quy trình phát triển một hệ thống thực tế cũng như cách các dịch vụ AWS phối hợp với nhau trong môi trường Cloud.
-
-### Điều em nghĩ chương trình có thể cải thiện
-
-Chương trình có thể bổ sung thêm một số buổi chia sẻ chuyên sâu về kiến trúc Cloud thực tế hoặc các tình huống triển khai trong doanh nghiệp. Điều này sẽ giúp thực tập sinh có thêm góc nhìn thực tiễn bên cạnh quá trình tự nghiên cứu và thực hành.
-
-### Em có sẵn sàng giới thiệu chương trình cho bạn bè không?
-
-Có. Em sẵn sàng giới thiệu chương trình thực tập này cho các bạn quan tâm đến lĩnh vực Cloud Computing và AWS vì chương trình cung cấp lộ trình học tập rõ ràng, nhiều cơ hội thực hành và môi trường hỗ trợ tích cực, giúp người học phát triển cả kiến thức chuyên môn lẫn kỹ năng thực tế.
-
----
-
 ## Đề xuất và mong muốn
 
 Trong tương lai, em mong chương trình có thể mở rộng thêm các dự án theo nhiều chủ đề khác nhau như Machine Learning, Data Engineering, DevOps hoặc AI trên AWS để thực tập sinh có nhiều lựa chọn phù hợp với định hướng nghề nghiệp.

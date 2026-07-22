@@ -6,7 +6,6 @@ chapter: false
 pre: "<b>5.3. </b>"
 ---
 
-# Build Backend
 
 ## Introduction
 

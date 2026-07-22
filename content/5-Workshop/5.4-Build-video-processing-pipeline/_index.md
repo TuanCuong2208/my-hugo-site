@@ -6,8 +6,6 @@ chapter: false
 pre: "<b>5.4. </b>"
 ---
 
-# Build Video Processing Pipeline
-
 ## Introduction
 
 After completing the Backend, the next step is to build the **Video Processing Pipeline**, which automatically processes uploaded videos. The pipeline follows an event-driven architecture, allowing AWS services to work together to perform video transcoding without manual intervention.

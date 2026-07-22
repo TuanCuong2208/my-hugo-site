@@ -6,7 +6,6 @@ chapter: false
 pre: "<b>5.5. </b>"
 ---
 
-# System Testing
 
 ## Introduction
 

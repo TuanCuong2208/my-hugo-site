@@ -6,7 +6,6 @@ chapter: false
 pre: "<b>5.2. </b>"
 ---
 
-# Điều kiện tiên quyết
 
 ## Giới thiệu
 

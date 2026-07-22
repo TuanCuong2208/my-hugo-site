@@ -6,7 +6,6 @@ chapter: false
 pre: "<b>5.7. </b>"
 ---
 
-# Conclusion
 
 Trong chương Workshop, nhóm đã trình bày toàn bộ quá trình triển khai hệ thống **Serverless Video-on-Demand Platform on AWS** từ việc chuẩn bị môi trường, xây dựng Backend, thiết lập Video Processing Pipeline, kiểm thử hệ thống cho đến phát triển ứng dụng web.
 

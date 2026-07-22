@@ -6,7 +6,6 @@ chapter: false
 pre: "<b>5.4. </b>"
 ---
 
-# Build Video Processing Pipeline
 
 ## Introduction
 

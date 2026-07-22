@@ -6,7 +6,6 @@ chapter: false
 pre: "<b>5.7. </b>"
 ---
 
-# Conclusion
 
 In this workshop, the complete implementation process of the **Serverless Video-on-Demand Platform on AWS** has been presented, including environment preparation, backend development, video processing pipeline deployment, system testing, and web application implementation.
 

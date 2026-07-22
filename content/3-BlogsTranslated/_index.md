@@ -53,7 +53,6 @@ pre: "<b>3. </b>"
 
 <div class="publication-page">
 
-<h1 class="publication-title">Research Articles</h1>
 
 During my internship, I regularly studied technical articles published by AWS and other engineering teams. In addition to completing the AWS Academy laboratories, I summarized several technical papers to deepen my understanding of cloud-native architecture, distributed systems, and modern software engineering best practices.
 

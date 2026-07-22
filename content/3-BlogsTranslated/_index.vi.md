@@ -53,8 +53,6 @@ pre: "<b>3. </b>"
 
 <div class="publication-page">
 
-<h1 class="publication-title">Các Bài Nghiên Cứu Của Nhóm</h1>
-
 Trong thời gian thực tập, tôi thường xuyên nghiên cứu các bài viết kỹ thuật được xuất bản bởi AWS và các nhóm kỹ thuật khác. Bên cạnh việc hoàn thành các bài thực hành trong chương trình AWS Academy, tôi đã tìm hiểu và tóm tắt nhiều bài viết nhằm mở rộng kiến thức về kiến trúc cloud-native, hệ thống phân tán và các phương pháp triển khai kỹ thuật hiệu quả.
 
 Trang này tổng hợp các ghi chú nghiên cứu và nội dung tóm tắt của những bài viết chuyên sâu mà tôi đã hoàn thành trong suốt kỳ thực tập.

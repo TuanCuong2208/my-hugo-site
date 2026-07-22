@@ -6,34 +6,31 @@ chapter: false
 pre: "<b>5.8. </b>"
 ---
 
-# System Demo
 
 ## Overview
 
-After completing the implementation and testing phases, the **Serverless Video-on-Demand Platform on AWS** successfully fulfills all core MVP requirements. The following video demonstrates the complete workflow of the system, from uploading a video through the web application to automatic processing on AWS and final playback on the platform.
+After completing the implementation and testing phases, the **Serverless Video-on-Demand Platform on AWS** successfully fulfills all core MVP requirements. The following demonstration video presents the complete workflow of the system, from uploading a video through the web application, processing it on AWS, and making it available for playback on the website.
 
 ## Demonstration Workflow
 
-The demonstration includes the following features:
+The demonstration covers the complete system workflow, including:
 
 - User authentication.
-- Uploading a video through the web application.
-- Storing the original video in the Amazon S3 Raw Upload Bucket.
-- Video processing using AWS Elemental MediaConvert.
-- Storing the processed video in the Amazon S3 Processed Media Bucket.
-- Updating video metadata in Amazon DynamoDB.
-- Playing the processed video through the web application.
+- Uploading a video through the Web Application.
+- Verifying the uploaded video in the Amazon S3 Raw Upload Bucket.
+- Monitoring the video processing job using AWS Elemental MediaConvert.
+- Verifying the processed video in the Amazon S3 Processed Media Bucket.
+- Confirming that the video metadata has been updated in Amazon DynamoDB.
+- Playing the processed video through the Web Application.
 
 ## Demonstration Video
 
-<video width="100%" controls preload="metadata">
-    <source src="/images/5-Workshop/Demo.mp4" type="video/mp4">
-</video>
+👉 **Watch the demonstration video here:**
 
-<p align="center">
-<i><b>Video 5.1.</b> Demonstration of the Serverless Video-on-Demand Platform on AWS.</i>
-</p>
+**https://drive.google.com/file/d/1s9Y2AWsQQOhL2RLT8i8CPeO8E06Zf7a8/view?usp=drive_link**
+
+> **Video 5.1.** Demonstration of the complete workflow of the Serverless Video-on-Demand Platform on AWS.
 
 ## Result
 
-The demonstration confirms that the complete serverless workflow operates successfully. After a user uploads a video, the system automatically performs media processing, stores the processed output, updates the video metadata, and makes the video available for playback through the web application without requiring any manual intervention.
+The demonstration confirms that the system operates successfully according to the designed serverless architecture. After a user uploads a video, the platform automatically processes the media, stores the processed output, updates the corresponding metadata, and makes the video available for playback through the web application. This demonstrates the successful integration and end-to-end operation of all core AWS services within the proposed architecture.

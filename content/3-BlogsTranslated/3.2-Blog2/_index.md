@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# From Monolith to Multi-Account: Pinterest's Total AWS Organization Transformation Journey at Scale
 
 When system architectures expand alongside rapid business growth, maintaining a monolith cloud account (Monolith Account Architecture) quickly mutates into an operational, managerial, and security nightmare. Recently, our cloud technology core research team dedicated several weeks to dissecting and deep-diving into Pinterest's classic infrastructure evolution journey showcased on the AWS Blog. This post synthesizes the most profound technical insights regarding how they broke free from their monolithic constraints to shift towards a massive-scale Multi-Account strategy.
 

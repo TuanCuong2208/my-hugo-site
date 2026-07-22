@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Từ Monolith đến Multi-Account: Hành Trình Tái Cấu Trúc Toàn Diện AWS Organizations Ở Quy Mô Khủng Của Pinterest
 
 Khi quy mô hệ thống phình to theo tốc độ phát triển của doanh nghiệp, việc duy trì một kiến trúc tài khoản đơn khối (Monolith Account Architecture) sẽ nhanh chóng biến thành một "cơn ác mộng" kinh hoàng về quản trị, vận hành và bảo mật. Thời gian qua, core-team của tụi mình đã dành nhiều tuần để "mổ xẻ" và phân tích sâu (deep-dive) hành trình lột xác hạ tầng cực kỳ kinh điển của Pinterest trên AWS Blog. Bài viết này là những đúc kết chuyên sâu nhất về cách họ phá vỡ chiếc áo Monolith chật chội để chuyển dịch sang chiến lược Multi-Account quy mô lớn.
 

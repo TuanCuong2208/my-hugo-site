@@ -6,9 +6,6 @@ chapter: false
 pre: "<b>5. </b>"
 ---
 
-
-# Workshop triển khai hệ thống Serverless Video-on-Demand Platform on AWS
-
 ## Tổng quan
 
 Chương Workshop trình bày toàn bộ quá trình xây dựng hệ thống **Serverless Video-on-Demand Platform on AWS** theo từng bước thực hiện. Nội dung được sắp xếp theo đúng trình tự triển khai thực tế, từ chuẩn bị hạ tầng AWS, xây dựng Backend, triển khai Video Processing Pipeline theo kiến trúc hướng sự kiện, phát triển Web Application, kiểm thử hệ thống đến đánh giá kết quả cuối cùng.

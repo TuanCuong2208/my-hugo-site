@@ -3,208 +3,114 @@ title: "Worklog Tuần 7"
 date: 2026-06-02
 weight: 7
 chapter: false
-pre: "<b> 1.7. </b> "
+pre: "<b>1.7. </b>"
 ---
 
-### I. Tóm tắt tổng quan (Executive Summary)
+### I. Tóm tắt tổng quan
 
-Tuần thứ 7 đánh dấu bước chuyển quan trọng trong quá trình thực tập khi nhóm hoàn thành giai đoạn học tập và thực hành các dịch vụ nền tảng của AWS Academy, đồng thời bắt đầu nghiên cứu và xây dựng định hướng triển khai đồ án thực tế. Thay vì tiếp tục thực hiện các bài Lab độc lập như các tuần trước, nhóm tập trung hệ thống hóa toàn bộ kiến thức đã tích lũy nhằm lựa chọn giải pháp phù hợp cho bài toán phát triển một hệ thống **Mini Video-on-Demand Platform using AWS Serverless**.
+Tuần thứ 7 đánh dấu giai đoạn chuyển tiếp quan trọng trong quá trình thực tập khi nhóm hoàn thành chương trình AWS Academy và bắt đầu nghiên cứu, thiết kế giải pháp cho đồ án thực tế. Thay vì tiếp tục thực hiện các bài thực hành riêng lẻ như những tuần trước, nhóm tập trung hệ thống hóa kiến thức đã học và phân tích yêu cầu của một hệ thống hoàn chỉnh trên nền tảng AWS.
 
-Trong tuần làm việc này, nhóm tiến hành phân tích yêu cầu nghiệp vụ của hệ thống, khảo sát các mô hình kiến trúc đang được áp dụng trên nền tảng AWS và đánh giá khả năng đáp ứng của từng dịch vụ đối với các thành phần trong hệ thống. Dựa trên kết quả nghiên cứu, nhóm thống nhất lựa chọn kiến trúc **Serverless** kết hợp mô hình **Event-Driven Architecture** nhằm tận dụng khả năng mở rộng linh hoạt, giảm chi phí vận hành và hạn chế việc quản trị hạ tầng.
+Sau quá trình trao đổi và đánh giá nhiều hướng triển khai, nhóm thống nhất lựa chọn đề tài **Serverless Video-on-Demand Platform on AWS**. Mục tiêu của dự án là xây dựng một nền tảng cho phép người dùng đăng nhập, tải video lên, theo dõi trạng thái xử lý và phát video sau khi hệ thống hoàn tất quá trình chuyển mã.
 
-Song song với quá trình nghiên cứu, nhóm cũng tiến hành xây dựng phiên bản đầu tiên của kiến trúc tổng thể, xác định vai trò của các dịch vụ như Amazon S3, Amazon API Gateway, AWS Lambda, Amazon Cognito, Amazon DynamoDB, Amazon CloudFront, Amazon SQS và AWS Elemental MediaConvert trong từng giai đoạn xử lý của hệ thống. Đây là cơ sở ban đầu để nhóm tiếp tục hiện thực hóa từng module chức năng trong các tuần tiếp theo.
+Trong tuần làm việc này, nhóm tập trung khảo sát các mô hình kiến trúc Cloud, đánh giá khả năng áp dụng kiến trúc Serverless và Event-Driven Architecture đối với bài toán xử lý video. Đây là loại tác vụ có dung lượng dữ liệu lớn và thời gian xử lý dài, vì vậy hệ thống cần được thiết kế theo hướng bất đồng bộ để tránh làm gián đoạn trải nghiệm của người dùng.
 
-Kết thúc tuần làm việc, nhóm đã hoàn thiện bản thiết kế kiến trúc sơ bộ, xác định được lộ trình triển khai cho từng giai đoạn phát triển và chuẩn bị các tài liệu cần thiết phục vụ quá trình xây dựng hệ thống trong thời gian tới.
+Nhóm cũng phân tích vai trò của các dịch vụ AWS dự kiến sử dụng trong dự án, bao gồm Amazon S3, Amazon CloudFront, Amazon Cognito, Amazon API Gateway, AWS Lambda, Amazon DynamoDB, Amazon EventBridge, Amazon SQS, EventBridge Pipes, AWS Step Functions, AWS Elemental MediaConvert và Amazon CloudWatch.
 
-### II. Mục tiêu chiến lược trong tuần (Strategic Objectives)
+Bên cạnh việc xác định các thành phần kỹ thuật, nhóm tiến hành phân chia hệ thống thành các lớp chính gồm Web Application, Backend API, Metadata Storage và Video Processing Pipeline. Việc phân chia này giúp giảm sự phụ thuộc giữa các thành phần, đồng thời tạo điều kiện thuận lợi cho quá trình triển khai và kiểm thử trong các tuần tiếp theo.
 
-Sau khi hoàn thành chương trình AWS Academy, mục tiêu trọng tâm của tuần thứ 7 là chuyển đổi từ giai đoạn học tập sang giai đoạn nghiên cứu và thiết kế giải pháp cho đồ án thực tập. Nhóm tập trung xây dựng nền tảng kỹ thuật vững chắc trước khi bắt đầu quá trình hiện thực hóa hệ thống.
+Kết thúc tuần làm việc, nhóm đã hoàn thiện tài liệu phân tích yêu cầu, xác định phạm vi MVP, thống nhất kiến trúc serverless làm định hướng phát triển và xây dựng lộ trình triển khai theo từng giai đoạn của dự án.
 
-Các mục tiêu chính được đặt ra trong tuần bao gồm:
+---
 
-- Tổng hợp và hệ thống hóa toàn bộ kiến thức đã học từ chương trình AWS Academy để phục vụ việc thiết kế hệ thống.
-- Phân tích yêu cầu nghiệp vụ của nền tảng Video-on-Demand và xác định các chức năng cốt lõi cần triển khai.
-- Khảo sát các mô hình kiến trúc trên AWS, đánh giá ưu và nhược điểm của từng phương án trước khi lựa chọn mô hình Serverless.
-- Xác định các dịch vụ AWS phù hợp cho từng thành phần của hệ thống như xác thực người dùng, xử lý nghiệp vụ, lưu trữ dữ liệu, xử lý video và phân phối nội dung.
-- Xây dựng bản thiết kế kiến trúc tổng thể phiên bản đầu tiên (Architecture Draft V1) làm cơ sở cho việc triển khai trong các tuần tiếp theo.
-- Lập kế hoạch phát triển dự án theo từng giai đoạn nhằm đảm bảo tiến độ và khả năng mở rộng của hệ thống.
+### II. Mục tiêu chiến lược trong tuần
 
-Thông qua các mục tiêu trên, nhóm hướng đến việc hình thành một kiến trúc ban đầu có tính khả thi, đồng thời tạo tiền đề để từng bước triển khai các module chức năng trong giai đoạn phát triển của đồ án.
+Mục tiêu trọng tâm của tuần thứ 7 là chuyển từ giai đoạn học tập các dịch vụ AWS riêng lẻ sang giai đoạn nghiên cứu và thiết kế một hệ thống thực tế. Nhóm ưu tiên xây dựng nền tảng kỹ thuật rõ ràng trước khi bắt đầu triển khai hạ tầng và phát triển các chức năng.
 
-### III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết (Từ 02/06/2026 đến 08/06/2026)
+Các mục tiêu chính trong tuần bao gồm:
 
-| Thời gian | Danh mục hoạt động | Chi tiết các tác vụ thực hiện chuyên sâu | Kết quả/Minh chứng đạt được |
+- Tổng hợp và hệ thống hóa kiến thức đã học trong chương trình AWS Academy.
+- Phân tích yêu cầu nghiệp vụ của nền tảng Video-on-Demand.
+- Xác định phạm vi chức năng của phiên bản MVP.
+- Khảo sát các mô hình kiến trúc phù hợp trên AWS.
+- Đánh giá khả năng áp dụng Serverless Architecture và Event-Driven Architecture.
+- Xác định vai trò của từng dịch vụ AWS trong hệ thống.
+- Thiết kế luồng tải lên và xử lý video theo cơ chế bất đồng bộ.
+- Phân chia dự án thành các module Backend, Video Processing Pipeline và Web Application.
+- Xây dựng lộ trình triển khai cho các tuần tiếp theo.
+- Chuẩn bị tài liệu kỹ thuật và môi trường phục vụ quá trình phát triển.
+
+Thông qua các mục tiêu trên, nhóm hướng đến việc xây dựng một định hướng kiến trúc có tính khả thi, phù hợp với thời gian thực tập và có thể mở rộng khi cần thiết.
+
+---
+
+### III. Nhật ký hoạt động & Lộ trình phân bổ chi tiết
+
+| Thời gian | Danh mục hoạt động | Nội dung thực hiện | Kết quả |
 | :--- | :--- | :--- | :--- |
-| **Ngày 1** *(02/06)* | Tổng hợp kiến thức AWS | Rà soát và hệ thống hóa toàn bộ kiến thức đã học về Compute, Storage, Database, Networking, Security và Serverless trong chương trình AWS Academy nhằm chuẩn bị áp dụng vào đồ án thực tập. | Hoàn thiện tài liệu tổng hợp các dịch vụ AWS và định hướng lựa chọn công nghệ cho hệ thống. |
-| **Ngày 2** *(03/06)* | Phân tích yêu cầu nghiệp vụ | Thảo luận yêu cầu của hệ thống Video-on-Demand, xác định các chức năng chính như quản lý người dùng, tải video, xử lý video và phát video trực tuyến. | Xây dựng tài liệu mô tả phạm vi chức năng và luồng nghiệp vụ của hệ thống. |
-| **Ngày 3** *(04/06)* | Khảo sát giải pháp triển khai | Nghiên cứu các mô hình kiến trúc trên AWS, đánh giá khả năng áp dụng Serverless Architecture và Event-Driven Architecture đối với bài toán xử lý video. | Lựa chọn hướng triển khai Serverless làm nền tảng cho đồ án. |
-| **Ngày 4** *(05/06)* | Thiết kế kiến trúc tổng thể | Xác định các thành phần chính của hệ thống, mối liên kết giữa Frontend, Backend, Data Layer và Video Processing Pipeline; xây dựng bản thiết kế kiến trúc đầu tiên. | Hoàn thành bản thiết kế kiến trúc tổng thể phiên bản đầu tiên của hệ thống. |
-| **Ngày 5** *(06/06)* | Lựa chọn dịch vụ AWS | Đánh giá và lựa chọn các dịch vụ AWS như Amazon S3, API Gateway, Lambda, Cognito, DynamoDB, CloudFront, SQS và MediaConvert phù hợp với từng thành phần của hệ thống. | Hoàn thiện danh sách dịch vụ AWS dự kiến sử dụng trong đồ án. |
-| **Ngày 6** *(07/06)* | Xây dựng lộ trình triển khai | Phân chia hệ thống thành các module chức năng và xây dựng kế hoạch phát triển theo từng giai đoạn để thuận tiện cho việc triển khai trong các tuần tiếp theo. | Hoàn thiện roadmap triển khai dự án theo từng giai đoạn phát triển. |
-| **Ngày 7** *(08/06)* | Tổng kết và chuẩn bị triển khai | Rà soát toàn bộ kiến trúc, tổng hợp các tài liệu nghiên cứu và chuẩn bị môi trường cho giai đoạn hiện thực hóa hệ thống. | Hoàn thiện tài liệu nghiên cứu và sẵn sàng bước sang giai đoạn phát triển đồ án. |
-
+| **Ngày 1** *(02/06)* | Tổng hợp kiến thức AWS | Rà soát các nội dung đã học về Compute, Storage, Database, Networking, Security và Serverless trong chương trình AWS Academy. | Hoàn thiện tài liệu tổng hợp kiến thức và định hướng áp dụng vào đồ án. |
+| **Ngày 2** *(03/06)* | Phân tích yêu cầu nghiệp vụ | Xác định đối tượng sử dụng, mục tiêu hệ thống và các chức năng chính như đăng nhập, tải video, quản lý metadata, theo dõi trạng thái và phát video. | Hoàn thiện phạm vi chức năng của phiên bản MVP. |
+| **Ngày 3** *(04/06)* | Khảo sát mô hình kiến trúc | Nghiên cứu kiến trúc truyền thống, Serverless Architecture và Event-Driven Architecture để đánh giá mức độ phù hợp với bài toán xử lý video. | Thống nhất lựa chọn kiến trúc Serverless kết hợp mô hình hướng sự kiện. |
+| **Ngày 4** *(05/06)* | Lựa chọn dịch vụ AWS | Phân tích vai trò của Amazon S3, CloudFront, Cognito, API Gateway, Lambda, DynamoDB, EventBridge, SQS, EventBridge Pipes, Step Functions và MediaConvert. | Hoàn thiện danh sách các dịch vụ AWS dự kiến sử dụng. |
+| **Ngày 5** *(06/06)* | Thiết kế luồng xử lý | Xây dựng luồng từ khi người dùng yêu cầu tải video, nhận Presigned URL, tải lên S3 Raw Bucket, kích hoạt pipeline và lưu kết quả vào S3 Processed Bucket. | Hoàn thiện luồng nghiệp vụ tổng thể của hệ thống. |
+| **Ngày 6** *(07/06)* | Phân chia module dự án | Chia hệ thống thành Web Application, Backend API, Metadata Storage và Video Processing Pipeline để thuận tiện cho triển khai. | Hoàn thiện kế hoạch phát triển theo từng module chức năng. |
+| **Ngày 7** *(08/06)* | Tổng kết và chuẩn bị | Rà soát tài liệu nghiên cứu, thống nhất định hướng kỹ thuật và chuẩn bị nội dung cho giai đoạn thiết kế chi tiết. | Sẵn sàng chuyển sang tuần hoàn thiện thiết kế và chuẩn bị hạ tầng AWS. |
 
 ### IV. Thực thi kỹ thuật chuyên sâu & Phân tích chi tiết
 
-Sau khi hoàn thành chương trình AWS Academy, nhóm bước sang giai đoạn chuyển tiếp từ việc học tập các dịch vụ riêng lẻ sang xây dựng một hệ thống hoàn chỉnh phục vụ cho đồ án thực tập. Thay vì tiếp tục triển khai các bài Lab độc lập như trước, nhóm tập trung phân tích bài toán, nghiên cứu các mô hình kiến trúc và lựa chọn giải pháp phù hợp với yêu cầu của đề tài.
+Sau khi hoàn thành chương trình AWS Academy, nhóm bước sang giai đoạn nghiên cứu và xây dựng định hướng kỹ thuật cho đồ án. Thay vì triển khai ngay các dịch vụ trên AWS, nhóm ưu tiên phân tích yêu cầu nghiệp vụ, khảo sát các mô hình kiến trúc và lựa chọn giải pháp phù hợp với bài toán Video-on-Demand.
 
-Qua quá trình thảo luận và đánh giá nhiều phương án khác nhau, nhóm quyết định lựa chọn đề tài **Mini Video-on-Demand Platform using AWS Serverless**. Mục tiêu của hệ thống là xây dựng một nền tảng cho phép quản trị viên tải video lên, hệ thống tự động xử lý, chuyển đổi nhiều chất lượng video khác nhau và phân phối đến người dùng thông qua mạng CDN. Đây là một bài toán phù hợp để vận dụng hầu hết các dịch vụ AWS đã học, đồng thời thể hiện được ưu điểm của mô hình Serverless trong việc tối ưu chi phí và khả năng mở rộng.
+Qua quá trình nghiên cứu, nhóm thống nhất lựa chọn kiến trúc **Serverless** kết hợp với **Event-Driven Architecture** nhằm tận dụng khả năng mở rộng tự động của AWS, giảm chi phí vận hành và hạn chế việc quản lý hạ tầng. Đây cũng là mô hình phù hợp với hệ thống xử lý video do quá trình chuyển đổi định dạng thường mất nhiều thời gian và cần được thực hiện theo cơ chế bất đồng bộ.
 
-Trong tuần này, nhóm chưa tập trung vào việc hiện thực hóa từng chức năng mà ưu tiên xây dựng **bản thiết kế kiến trúc tổng thể phiên bản đầu tiên (Architecture Draft V1)**. Kiến trúc này đóng vai trò định hướng cho toàn bộ quá trình phát triển hệ thống trong các tuần tiếp theo.
+Đối với tầng giao diện, nhóm dự kiến triển khai Website dưới dạng Static Web Hosting trên Amazon S3 kết hợp với Amazon CloudFront để tăng tốc độ truy cập và phân phối nội dung đến người dùng. Mô hình này giúp tách biệt Frontend với Backend, đồng thời đơn giản hóa quá trình triển khai và mở rộng hệ thống.
 
-<img src="/images/week7/1.png" alt="Initial Serverless Video-on-Demand Architecture" style="max-width:100%; height:auto;" />
+Đối với lớp xử lý nghiệp vụ, Amazon API Gateway được lựa chọn làm cổng tiếp nhận các yêu cầu từ phía người dùng. Các API sẽ được triển khai bằng AWS Lambda nhằm xử lý các chức năng như đăng nhập, tạo Presigned URL, quản lý metadata và truy vấn danh sách video. Cách tiếp cận này giúp hệ thống chỉ sử dụng tài nguyên khi có yêu cầu phát sinh, phù hợp với mô hình Serverless.
 
-Quan sát kiến trúc trên, nhóm chia hệ thống thành nhiều lớp chức năng nhằm giảm sự phụ thuộc giữa các thành phần, đồng thời tận dụng tối đa các dịch vụ managed của AWS.
+Đối với dữ liệu nghiệp vụ, nhóm lựa chọn Amazon DynamoDB để lưu trữ metadata của video. Các thông tin dự kiến bao gồm Video ID, tiêu đề, trạng thái xử lý, đường dẫn lưu trữ, thời gian tạo và thông tin người tải lên. Việc sử dụng DynamoDB giúp tăng khả năng mở rộng và đáp ứng tốt các yêu cầu truy vấn của hệ thống.
 
-#### 1. Frontend Layer
+Thành phần quan trọng nhất của dự án là Video Processing Pipeline. Sau khi nghiên cứu nhiều phương án triển khai, nhóm quyết định xây dựng quy trình xử lý theo kiến trúc hướng sự kiện. Theo đó, sau khi người dùng tải video lên Amazon S3 Raw Upload Bucket thông qua Presigned URL, hệ thống sẽ phát sinh sự kiện để kích hoạt Pipeline xử lý.
 
-Đối với tầng giao diện người dùng, nhóm lựa chọn **React/Next.js** để xây dựng ứng dụng Web do framework này hỗ trợ tốt cho việc phát triển giao diện hiện đại và có khả năng mở rộng trong tương lai.
+Pipeline dự kiến sử dụng Amazon EventBridge, Amazon SQS, EventBridge Pipes và AWS Step Functions để điều phối các bước xử lý trước khi khởi tạo MediaConvert Job. Sau khi AWS Elemental MediaConvert hoàn tất quá trình chuyển mã, video sẽ được lưu tại Amazon S3 Processed Media Bucket và trạng thái xử lý sẽ được cập nhật vào Amazon DynamoDB.
 
-Frontend dự kiến được triển khai dưới dạng **Static Website** trên **Amazon S3**, kết hợp với **Amazon CloudFront** để phân phối nội dung đến người dùng. Việc sử dụng CloudFront không chỉ giúp giảm độ trễ truy cập mà còn tăng khả năng chịu tải khi số lượng người dùng đồng thời tăng lên.
-
-Đây cũng là mô hình triển khai phổ biến đối với các ứng dụng Serverless khi phần giao diện hoàn toàn tách biệt với Backend.
+Bên cạnh các thành phần chính, nhóm cũng xác định Amazon Cognito sẽ được sử dụng cho chức năng xác thực người dùng, trong khi Amazon CloudWatch hỗ trợ theo dõi log và giám sát hoạt động của toàn bộ hệ thống. Đây đều là các dịch vụ cần thiết để xây dựng một nền tảng Video-on-Demand có khả năng mở rộng và dễ dàng vận hành trong thực tế.
 
 ---
 
-#### 2. API và Authentication Layer
+### V. Thách thức hạ tầng, Nhật ký xử lý & Góc nhìn chuyên môn
 
-Đối với lớp cung cấp dịch vụ API, nhóm lựa chọn **Amazon API Gateway** làm cổng giao tiếp giữa Frontend và Backend.
+Mặc dù tuần thứ 7 chưa triển khai hạ tầng thực tế, nhóm đã xác định một số thách thức quan trọng cần giải quyết trước khi bắt đầu phát triển hệ thống.
 
-Các API dự kiến sẽ được xây dựng theo kiến trúc RESTful, chịu trách nhiệm tiếp nhận yêu cầu từ người dùng và chuyển tiếp đến các hàm xử lý nghiệp vụ trên AWS Lambda.
+Thách thức đầu tiên là lựa chọn kiến trúc phù hợp cho quá trình xử lý video. Nếu toàn bộ quá trình upload và chuyển mã được thực hiện theo cơ chế đồng bộ, thời gian phản hồi sẽ tăng lên đáng kể và dễ vượt quá giới hạn của các dịch vụ Serverless. Vì vậy, nhóm quyết định áp dụng mô hình xử lý bất đồng bộ nhằm tách biệt quá trình tải video và xử lý video.
 
-Song song đó, **Amazon Cognito** được lựa chọn để giải quyết bài toán xác thực và quản lý người dùng. Thay vì tự xây dựng hệ thống đăng nhập, Cognito cung cấp sẵn cơ chế quản lý User Pool, JWT Token và phân quyền, giúp giảm đáng kể thời gian phát triển đồng thời đảm bảo tính bảo mật.
+Một vấn đề khác là việc tải các tệp video có dung lượng lớn. Nhóm thống nhất sử dụng Presigned URL để người dùng tải trực tiếp video lên Amazon S3 thay vì truyền dữ liệu qua Backend. Cách tiếp cận này giúp giảm tải cho API Gateway và Lambda, đồng thời tối ưu chi phí truyền dữ liệu.
 
-Ở giai đoạn này, nhóm mới dừng lại ở việc xác định vai trò của Cognito trong kiến trúc tổng thể, chưa tiến hành cấu hình chi tiết các User Pool hay Authorization Flow.
+Bên cạnh đó, việc đồng bộ dữ liệu giữa Amazon S3 và Amazon DynamoDB cũng được xem là một nội dung cần được thiết kế cẩn thận. Nhóm dự kiến sử dụng một Video ID duy nhất để liên kết metadata trong DynamoDB với các đối tượng lưu trữ trên S3, giúp quá trình quản lý và truy vấn dữ liệu trở nên đơn giản hơn.
 
----
-
-#### 3. Business Logic Layer
-
-Toàn bộ nghiệp vụ của hệ thống được định hướng triển khai bằng **AWS Lambda**.
-
-Việc sử dụng Lambda giúp loại bỏ hoàn toàn việc quản lý máy chủ, đồng thời chỉ phát sinh chi phí khi có yêu cầu xử lý. Đây là lựa chọn phù hợp đối với hệ thống Video-on-Demand khi lưu lượng truy cập có thể thay đổi theo từng thời điểm.
-
-Trong bản thiết kế ban đầu, nhóm xác định một số nhóm Lambda chính như:
-
-- Xử lý API nghiệp vụ.
-- Sinh Presigned URL phục vụ Upload.
-- Cập nhật trạng thái xử lý video.
-- Xử lý các sự kiện phát sinh từ Pipeline.
-
-Các Lambda sẽ hoạt động độc lập, giao tiếp thông qua API Gateway hoặc EventBridge nhằm giảm sự phụ thuộc giữa các thành phần.
+Ngoài ra, nhóm cũng nhận thấy việc phân quyền truy cập giữa các dịch vụ AWS cần được thực hiện theo nguyên tắc Least Privilege nhằm hạn chế các rủi ro về bảo mật khi hệ thống bắt đầu được triển khai.
 
 ---
 
-#### 4. Data Layer
+### VI. Đánh giá và Chiêm nghiệm chuyên môn
 
-Đối với tầng lưu trữ dữ liệu, nhóm lựa chọn **Amazon DynamoDB** để lưu metadata của video.
+Tuần thứ 7 không tập trung vào việc lập trình mà chủ yếu dành cho quá trình nghiên cứu, phân tích và thiết kế hệ thống. Đây là bước chuẩn bị quan trọng trước khi triển khai các thành phần kỹ thuật trong những tuần tiếp theo.
 
-Các thông tin dự kiến lưu trữ bao gồm:
+Thông qua việc khảo sát các dịch vụ AWS và phân tích yêu cầu của bài toán Video-on-Demand, nhóm hiểu rõ hơn cách phối hợp giữa Amazon S3, API Gateway, Lambda, DynamoDB, EventBridge, SQS, Step Functions và MediaConvert để xây dựng một hệ thống Serverless hoàn chỉnh.
 
-- Video ID.
-- Tên video.
-- Trạng thái xử lý.
-- Đường dẫn lưu trữ.
-- Thời gian tạo.
-- Danh mục.
-- Thông tin người tải lên.
-
-Việc lựa chọn DynamoDB thay vì cơ sở dữ liệu quan hệ xuất phát từ khả năng mở rộng linh hoạt, hiệu năng cao và phù hợp với mô hình Serverless.
-
-Trong giai đoạn nghiên cứu, nhóm cũng đề xuất xây dựng các Global Secondary Index (GSI) nhằm phục vụ việc truy vấn theo trạng thái và danh mục video, tuy nhiên cấu trúc chi tiết sẽ tiếp tục được hoàn thiện trong tuần kế tiếp.
+Bên cạnh kiến thức kỹ thuật, nhóm cũng rèn luyện kỹ năng phân tích yêu cầu, đánh giá giải pháp và xây dựng lộ trình triển khai phù hợp với phạm vi của đồ án. Những kết quả đạt được trong tuần này sẽ là nền tảng quan trọng cho giai đoạn hiện thực hóa hệ thống ở các tuần tiếp theo.
 
 ---
 
-#### 5. Video Processing Pipeline
+### VII. Kế hoạch cho tuần tiếp theo
 
-Đây được xem là thành phần quan trọng nhất của toàn bộ hệ thống.
+Sau khi hoàn thành giai đoạn nghiên cứu và thiết kế tổng thể, nhóm sẽ chuyển sang giai đoạn chuẩn bị triển khai hệ thống trên AWS.
 
-Nhóm định hướng xây dựng Pipeline xử lý video theo mô hình **Event-Driven Architecture** nhằm tách biệt hoàn toàn quá trình Upload và xử lý video.
+Các công việc dự kiến bao gồm:
 
-Luồng xử lý dự kiến như sau:
+- Hoàn thiện thiết kế kỹ thuật của hệ thống.
+- Chuẩn bị môi trường phát triển trên AWS.
+- Thiết lập cấu trúc dự án và kho mã nguồn.
+- Xây dựng Amazon S3 Bucket và Amazon DynamoDB.
+- Thiết kế các API đầu tiên bằng Amazon API Gateway và AWS Lambda.
+- Chuẩn bị nền tảng cho Video Processing Pipeline.
+- Xây dựng Website phục vụ quá trình kiểm thử hệ thống.
 
-- Quản trị viên yêu cầu tải video.
-- Backend tạo Presigned URL.
-- Video được tải trực tiếp lên Amazon S3 Raw Bucket.
-- Sau khi Upload hoàn tất, hệ thống phát sinh sự kiện.
-- Amazon SQS tiếp nhận yêu cầu xử lý.
-- AWS Lambda khởi tạo Job trên AWS Elemental MediaConvert.
-- MediaConvert chuyển đổi video sang nhiều độ phân giải khác nhau.
-- Kết quả được lưu tại Processed Bucket.
-- EventBridge gửi sự kiện hoàn thành.
-- Lambda cập nhật trạng thái video trong DynamoDB.
-
-Mô hình bất đồng bộ này giúp Backend không phải chờ quá trình chuyển đổi video hoàn tất, từ đó tăng khả năng mở rộng và cải thiện trải nghiệm người dùng.
-
----
-
-#### 6. Content Delivery
-
-Sau khi xử lý hoàn tất, video sẽ được phân phối thông qua **Amazon CloudFront**.
-
-CloudFront đóng vai trò CDN giúp:
-
-- Giảm độ trễ truy cập.
-- Tăng tốc độ phát video.
-- Giảm tải cho S3.
-- Tận dụng cơ chế Cache của Edge Location.
-
-Kiến trúc cũng dự kiến hỗ trợ phát video theo chuẩn **HLS Streaming**, cho phép người dùng xem video với nhiều mức chất lượng khác nhau tùy theo tốc độ mạng.
-
----
-
-#### 7. Định hướng về bảo mật và giám sát
-
-Bên cạnh các thành phần chức năng chính, nhóm cũng bước đầu xác định các dịch vụ hỗ trợ cần thiết nhằm đáp ứng yêu cầu vận hành hệ thống.
-
-Một số dịch vụ được dự kiến sử dụng gồm:
-
-- **AWS IAM** để quản lý quyền truy cập theo nguyên tắc Least Privilege.
-- **AWS KMS** để mã hóa dữ liệu lưu trữ.
-- **Amazon CloudWatch** phục vụ theo dõi log và giám sát hoạt động của hệ thống.
-- **AWS CloudTrail** phục vụ ghi nhận lịch sử thao tác.
-- **AWS WAF** nhằm tăng cường khả năng bảo vệ các API công khai.
-
-Do đây mới là giai đoạn nghiên cứu ban đầu, nhóm chưa triển khai cấu hình chi tiết cho các dịch vụ trên mà mới xác định vai trò của từng thành phần trong kiến trúc tổng thể.
-
-### V. Thách thức hạ tầng, Nhật ký xử lý lỗi & Góc nhìn chuyên gia (Infrastructure Challenges, Error Resolution Logs & Expert Perspectives)
-
-Do tuần thứ 7 chủ yếu tập trung vào nghiên cứu và xây dựng kiến trúc ban đầu, nhóm chưa gặp nhiều lỗi triển khai thực tế như ở các tuần thực hành trước. Tuy nhiên, trong quá trình phân tích và thiết kế hệ thống, nhóm đã nhận thấy một số thách thức quan trọng cần được xem xét trước khi bước sang giai đoạn hiện thực hóa.
-
-Thách thức đầu tiên liên quan đến việc lựa chọn kiến trúc phù hợp cho quy trình xử lý video. Video là loại dữ liệu có dung lượng lớn và thời gian xử lý dài, vì vậy nếu sử dụng mô hình xử lý đồng bộ thông qua API Gateway và Lambda thì rất dễ phát sinh tình trạng Timeout, tăng thời gian chờ và ảnh hưởng trực tiếp đến trải nghiệm người dùng. Để giải quyết vấn đề này, nhóm định hướng sử dụng cơ chế xử lý bất đồng bộ thông qua Amazon S3, Amazon SQS, AWS Lambda và AWS Elemental MediaConvert. Phương án này giúp tách biệt quá trình tải video và quá trình chuyển đổi video, đồng thời tăng khả năng chịu lỗi và mở rộng của hệ thống.
-
-Thách thức tiếp theo là vấn đề tải video có dung lượng lớn từ Frontend lên hệ thống. Nếu toàn bộ dữ liệu video phải đi qua Backend hoặc API Gateway thì sẽ làm tăng tải xử lý, chi phí truyền dữ liệu và nguy cơ vượt quá giới hạn kích thước request. Vì vậy, nhóm đề xuất sử dụng Presigned URL để cho phép Frontend tải video trực tiếp lên Amazon S3 Raw Bucket. Backend chỉ chịu trách nhiệm xác thực người dùng, tạo URL tạm thời và lưu metadata cần thiết.
-
-Ngoài ra, việc tổ chức dữ liệu giữa Amazon S3 và Amazon DynamoDB cũng cần được thiết kế cẩn thận. Amazon S3 chịu trách nhiệm lưu trữ file video gốc và video đã xử lý, trong khi DynamoDB lưu metadata, trạng thái xử lý và thông tin phục vụ truy vấn. Nếu không thống nhất cách đặt Video ID, đường dẫn Object Key và trạng thái xử lý ngay từ đầu thì có thể dẫn đến dữ liệu không đồng bộ giữa hai dịch vụ. Nhóm dự kiến sử dụng một Video ID duy nhất làm khóa liên kết giữa DynamoDB, thư mục lưu trữ trên S3 và các Job xử lý trên MediaConvert.
-
-Một vấn đề khác được thảo luận là khả năng xử lý sự kiện lặp lại. Trong kiến trúc hướng sự kiện, một thông điệp từ Amazon SQS hoặc EventBridge có thể được gửi lại khi quá trình xử lý gặp lỗi. Nếu Lambda không được thiết kế theo hướng Idempotent, cùng một video có thể bị tạo nhiều Job MediaConvert hoặc cập nhật trạng thái nhiều lần. Vì vậy, nhóm xác định cần kiểm tra trạng thái hiện tại trong DynamoDB trước khi thực hiện các thao tác quan trọng, đồng thời bổ sung cơ chế Dead-Letter Queue trong giai đoạn triển khai sau.
-
-Về mặt bảo mật, nhóm nhận thấy kiến trúc ban đầu có nhiều thành phần giao tiếp với nhau và mỗi thành phần cần được cấp quyền phù hợp. Việc gán quyền quá rộng có thể tạo ra rủi ro truy cập trái phép, trong khi quyền quá hạn chế lại có thể khiến hệ thống không hoạt động. Giải pháp được định hướng là xây dựng IAM Role riêng cho từng Lambda, áp dụng nguyên tắc Least Privilege và giới hạn quyền truy cập theo Bucket, Table, Queue hoặc MediaConvert Job cụ thể.
-
-Bên cạnh đó, việc phân phối video thông qua CloudFront cũng cần đảm bảo rằng S3 Processed Bucket không bị công khai trực tiếp. Nhóm dự kiến giữ toàn bộ Bucket ở trạng thái Private và chỉ cho phép CloudFront truy cập nội dung thông qua cơ chế Origin Access Control. Điều này giúp hạn chế người dùng truy cập trực tiếp vào Object URL của S3 và tăng khả năng kiểm soát luồng phân phối video.
-
-Từ góc nhìn chuyên môn, nhóm nhận thấy rằng một kiến trúc Cloud tốt không chỉ cần đáp ứng chức năng mà còn phải cân bằng giữa hiệu năng, khả năng mở rộng, bảo mật, độ tin cậy và chi phí. Bản kiến trúc hiện tại mới là phiên bản đầu tiên nên một số thành phần như AWS WAF, KMS, SNS, SES, X-Ray và AWS Config vẫn đang được xem xét về mức độ cần thiết. Trong các tuần tiếp theo, nhóm sẽ ưu tiên triển khai các thành phần cốt lõi trước, sau đó mới bổ sung các dịch vụ hỗ trợ dựa trên nhu cầu thực tế và giới hạn ngân sách của đồ án.
-
-### VI. Đánh giá và Chiêm nghiệm chuyên môn (Professional Reflections)
-
-Tuần thứ 7 không tập trung vào việc triển khai kỹ thuật cụ thể mà đóng vai trò là giai đoạn chuyển tiếp từ quá trình học tập sang quá trình xây dựng một hệ thống thực tế. Mặc dù khối lượng lập trình chưa nhiều, đây lại là một trong những tuần quan trọng nhất vì các quyết định về kiến trúc sẽ ảnh hưởng trực tiếp đến toàn bộ quá trình phát triển của đồ án trong các tuần tiếp theo.
-
-Thông qua quá trình tổng hợp kiến thức và phân tích yêu cầu nghiệp vụ, nhóm nhận thấy rằng việc lựa chọn kiến trúc phù hợp quan trọng không kém việc triển khai chức năng. Một kiến trúc được thiết kế rõ ràng sẽ giúp các thành viên có chung định hướng phát triển, hạn chế việc phải thay đổi quá nhiều khi dự án bước vào giai đoạn hiện thực hóa.
-
-Bên cạnh đó, nhóm cũng có cơ hội nhìn nhận lại mối liên hệ giữa các dịch vụ AWS đã học trong suốt chương trình AWS Academy. Trước đây, mỗi dịch vụ được tiếp cận thông qua các bài Lab riêng biệt; tuy nhiên, khi xây dựng một hệ thống hoàn chỉnh, nhóm hiểu rõ hơn cách các dịch vụ như Amazon API Gateway, AWS Lambda, Amazon Cognito, Amazon S3, Amazon DynamoDB, Amazon SQS, Amazon CloudFront và AWS Elemental MediaConvert phối hợp với nhau để tạo thành một quy trình xử lý thống nhất.
-
-Ngoài yếu tố kỹ thuật, tuần làm việc này cũng giúp nhóm nâng cao kỹ năng phân tích yêu cầu, trao đổi ý tưởng và đưa ra quyết định thiết kế dựa trên các tiêu chí về khả năng mở rộng, hiệu năng, tính bảo mật và chi phí vận hành. Đây là những kỹ năng quan trọng đối với quá trình phát triển các hệ thống Cloud trong thực tế.
-
-Qua tuần làm việc, nhóm nhận thấy rằng việc đầu tư thời gian cho giai đoạn nghiên cứu và thiết kế kiến trúc sẽ tạo nền tảng vững chắc cho quá trình triển khai sau này, đồng thời giúp giảm thiểu các rủi ro phát sinh khi hệ thống ngày càng mở rộng.
-
----
-
-### VII. Kế hoạch chiến lược & Lộ trình tối ưu cho tuần tới (Strategic Planning & Optimization Roadmap for Next Week)
-
-Sau khi hoàn thành bản thiết kế kiến trúc tổng thể phiên bản đầu tiên, nhóm sẽ bước sang giai đoạn hoàn thiện thiết kế kỹ thuật và chuẩn bị triển khai các thành phần đầu tiên của hệ thống.
-
-Trong tuần tiếp theo, nhóm dự kiến sẽ rà soát và hiệu chỉnh kiến trúc dựa trên các góp ý từ giảng viên hướng dẫn cũng như kết quả thảo luận nội bộ nhằm đảm bảo tính khả thi trước khi bắt đầu phát triển. Đồng thời, nhóm sẽ tiến hành thiết kế chi tiết hơn đối với các thành phần quan trọng như mô hình dữ liệu trên Amazon DynamoDB, cấu trúc Amazon S3 Bucket, quy trình xác thực người dùng bằng Amazon Cognito và các API nghiệp vụ được triển khai thông qua Amazon API Gateway và AWS Lambda.
-
-Bên cạnh đó, nhóm cũng sẽ chuẩn bị môi trường phát triển, xây dựng cấu trúc dự án, thiết lập kho mã nguồn (Repository), phân chia nhiệm vụ giữa các thành viên và xây dựng lộ trình triển khai theo từng module chức năng. Đây sẽ là bước chuẩn bị quan trọng trước khi bắt đầu hiện thực hóa hệ thống trong các tuần kế tiếp.
-
-Mục tiêu của tuần tiếp theo không chỉ là hoàn thiện bản thiết kế kỹ thuật mà còn tạo ra nền tảng phát triển thống nhất, giúp quá trình triển khai các chức năng như Authentication, Video Upload, Video Processing Pipeline và Video Streaming được thực hiện một cách hiệu quả, hạn chế thay đổi lớn trong suốt vòng đời của dự án.
+Mục tiêu của tuần tiếp theo là hoàn thiện hạ tầng ban đầu và triển khai các thành phần cốt lõi để tạo nền tảng cho việc phát triển đầy đủ hệ thống **Serverless Video-on-Demand Platform on AWS** trong các giai đoạn sau.

@@ -1,159 +1,116 @@
 ---
-title: "Week 7 Worklog"
+title: "Worklog Week 7"
 date: 2026-06-02
 weight: 7
 chapter: false
-pre: "<b> 1.7. </b> "
+pre: "<b>1.7. </b>"
 ---
 
 ### I. Executive Summary
 
-Week 7 marked an important transition in the internship journey as the team completed the AWS Academy learning phase and began preparing for the implementation of the internship project. Instead of continuing with individual AWS laboratory exercises, the team shifted its focus toward consolidating the knowledge acquired throughout the training program and applying it to a real-world cloud solution.
+Week 7 marked an important transition during the internship as the team completed the AWS Academy training program and officially entered the research and solution design phase of the internship project. Instead of continuing with individual laboratory exercises, the team focused on consolidating the knowledge acquired throughout the training program and applying it to a practical cloud-based system.
 
-During this week, the team analyzed the business requirements of the proposed system, evaluated different architectural approaches available on AWS, and assessed how each AWS service could contribute to the overall solution. After several discussions and technical evaluations, the team decided to adopt a **Serverless Architecture** combined with an **Event-Driven Architecture** to maximize scalability, minimize operational overhead, and optimize infrastructure costs.
+After several discussions and technical evaluations, the team selected **Serverless Video-on-Demand Platform on AWS** as the internship project. The objective of the platform is to allow users to authenticate, upload videos, monitor processing status, and stream processed videos through a fully managed serverless architecture on AWS.
 
-In parallel with the research process, the team produced the first draft of the overall system architecture. The proposed design identified the responsibilities of core AWS services, including Amazon S3, Amazon API Gateway, AWS Lambda, Amazon Cognito, Amazon DynamoDB, Amazon CloudFront, Amazon SQS, and AWS Elemental MediaConvert throughout the video processing workflow. This initial architecture serves as the technical foundation for implementing individual modules in the upcoming development phases.
+During this week, the team analyzed the business requirements of the platform and evaluated several architectural approaches suitable for cloud-native applications. Considering the characteristics of video processing workloads, a combination of **Serverless Architecture** and **Event-Driven Architecture** was identified as the most appropriate solution because of its scalability, cost efficiency, and reduced operational overhead.
 
-By the end of the week, the team completed the first version of the system architecture, established an implementation roadmap for future milestones, and prepared the technical documentation required for the development stage.
+The team also identified the AWS services required for the project, including Amazon S3, Amazon CloudFront, Amazon Cognito, Amazon API Gateway, AWS Lambda, Amazon DynamoDB, Amazon EventBridge, Amazon SQS, EventBridge Pipes, AWS Step Functions, AWS Elemental MediaConvert, and Amazon CloudWatch. Each service was analyzed according to its responsibility within the overall system architecture.
+
+In addition, the project was divided into several logical components, including the Web Application, Backend API, Metadata Storage, and Video Processing Pipeline. This modular design simplifies future implementation and improves maintainability as the project evolves.
+
+By the end of the week, the team completed the requirement analysis, finalized the MVP scope, established the overall architectural direction, and prepared the development roadmap for the implementation phase.
+
+---
 
 ### II. Strategic Objectives
 
-Following the completion of the AWS Academy curriculum, the primary objective of Week 7 was to transition from the learning phase to the solution design phase for the internship project. The team focused on building a solid technical foundation before starting the implementation of the application.
+Following the completion of the AWS Academy program, the primary objective of Week 7 was to transition from theoretical learning to the architectural planning stage of the internship project. Rather than implementing cloud resources immediately, the team focused on establishing a solid technical foundation for future development.
 
-The strategic objectives for this week included:
+The main objectives of the week were:
 
-- Consolidate and organize the AWS knowledge acquired throughout the AWS Academy program to support system architecture design.
-- Analyze the business requirements of the Video-on-Demand platform and identify its core functional modules.
-- Evaluate multiple cloud architecture patterns and determine the suitability of a Serverless architecture for the project.
-- Select the most appropriate AWS services for authentication, business logic, data storage, video processing, and content delivery.
-- Develop the first draft of the overall system architecture (Architecture Draft V1) as the baseline for future implementation.
-- Define a development roadmap and organize implementation phases to ensure project scalability and maintainability.
+- Consolidate the knowledge acquired from AWS Academy.
+- Analyze the business requirements of the Video-on-Demand platform.
+- Define the functional scope of the MVP.
+- Evaluate suitable cloud architecture patterns on AWS.
+- Compare traditional and serverless deployment models.
+- Identify appropriate AWS services for each system component.
+- Design the overall asynchronous video processing workflow.
+- Divide the project into independent functional modules.
+- Prepare the implementation roadmap for subsequent development phases.
+- Organize technical documents required for the implementation stage.
 
-Through these objectives, the team aimed to establish a feasible architectural foundation while preparing for the implementation of individual system components in the following weeks.
+These objectives provide a clear architectural direction and reduce potential design changes during future development.
 
-### III. Activity Log & Detailed Work Allocation (From 02/06/2026 to 08/06/2026)
+---
 
-| Time | Activity Category | Detailed Technical Tasks | Achievements / Evidence |
+### III. Activity Log & Weekly Schedule
+
+| Date | Activity | Description | Outcome |
 | :--- | :--- | :--- | :--- |
-| **Day 1** *(02/06)* | AWS Knowledge Consolidation | Reviewed and organized the knowledge acquired throughout the AWS Academy program, covering Compute, Storage, Database, Networking, Security, and Serverless services in preparation for the internship project. | Completed a consolidated reference document of AWS core services and architectural best practices. |
-| **Day 2** *(03/06)* | Business Requirement Analysis | Discussed the functional requirements of the Video-on-Demand platform, including user management, video upload, video processing, and online video streaming. | Defined the project scope and established the overall business workflow of the system. |
-| **Day 3** *(04/06)* | Solution Research | Evaluated multiple AWS architecture patterns and assessed the applicability of Serverless and Event-Driven Architecture for large-scale video processing. | Selected a Serverless-based architecture as the primary implementation approach. |
-| **Day 4** *(05/06)* | Overall Architecture Design | Designed the initial system architecture by identifying the relationships between the Frontend, Backend, Data Layer, and Video Processing Pipeline. | Completed the first draft of the system architecture. |
-| **Day 5** *(06/06)* | AWS Service Selection | Evaluated and selected appropriate AWS services, including Amazon S3, Amazon API Gateway, AWS Lambda, Amazon Cognito, Amazon DynamoDB, Amazon CloudFront, Amazon SQS, and AWS Elemental MediaConvert for different system components. | Finalized the initial AWS service stack for the project. |
-| **Day 6** *(07/06)* | Development Roadmap Planning | Divided the project into functional modules and established an implementation roadmap for subsequent development phases. | Completed the initial project development roadmap. |
-| **Day 7** *(08/06)* | Project Preparation | Reviewed the proposed architecture, consolidated research materials, and prepared the technical environment for the upcoming implementation stage. | Completed the preliminary technical documentation and prepared for system development. |
+| **Day 1** *(02/06)* | AWS Knowledge Review | Reviewed AWS Academy topics covering Compute, Storage, Database, Networking, Security, and Serverless services. | Completed a consolidated technical reference for the project. |
+| **Day 2** *(03/06)* | Business Requirement Analysis | Identified the system objectives and major features, including authentication, video upload, metadata management, processing status, and video streaming. | Defined the functional scope of the MVP. |
+| **Day 3** *(04/06)* | Architecture Research | Studied multiple AWS deployment models and evaluated Serverless and Event-Driven Architecture for the project. | Selected Serverless Architecture as the primary solution. |
+| **Day 4** *(05/06)* | AWS Service Selection | Evaluated Amazon S3, CloudFront, Cognito, API Gateway, Lambda, DynamoDB, EventBridge, SQS, EventBridge Pipes, Step Functions, and MediaConvert. | Finalized the AWS services required for the project. |
+| **Day 5** *(06/06)* | Workflow Design | Designed the overall workflow from video upload, processing, metadata update, and video delivery. | Completed the initial business workflow of the platform. |
+| **Day 6** *(07/06)* | Project Planning | Divided the project into Web Application, Backend API, Metadata Storage, and Video Processing Pipeline modules. | Completed the implementation roadmap for future development. |
+| **Day 7** *(08/06)* | Weekly Review | Reviewed all technical documents, finalized the architectural direction, and prepared for the implementation phase. | Completed the planning stage and prepared for AWS infrastructure deployment. |
 
-### IV. In-depth Technical Execution & Analysis
+### IV. Technical Implementation & Detailed Analysis
 
-After completing the AWS Academy training program, the team entered a new phase that shifted the primary focus from learning individual AWS services to designing an integrated cloud solution for the internship project. Rather than implementing standalone laboratory exercises, this week was dedicated to understanding the business problem, evaluating architectural approaches, and proposing a practical cloud architecture capable of supporting future development.
+After completing the AWS Academy training program, the team entered the research and solution design phase of the internship project. Instead of immediately deploying AWS services, the primary focus during this week was to analyze business requirements, evaluate architectural approaches, and define a suitable technical direction for the proposed Video-on-Demand platform.
 
-Following several technical discussions, the team agreed to develop a **Mini Video-on-Demand Platform using AWS Serverless**. The proposed system is designed to allow administrators to upload video content, automatically process and transcode media into multiple resolutions, and distribute the final content efficiently through a Content Delivery Network (CDN). This project was selected because it leverages a wide range of AWS managed services while demonstrating the advantages of a modern Serverless and Event-Driven architecture.
+Following several discussions and technical evaluations, the team selected a **Serverless Architecture** combined with an **Event-Driven Architecture** as the foundation of the system. This approach provides automatic scalability, reduces infrastructure management effort, and is particularly suitable for video processing workloads, which usually require long execution times and asynchronous operations.
 
-At this stage, the objective was not to implement individual components but to establish an architectural blueprint that defines the responsibilities of each service and the interaction between different layers of the system.
+For the presentation layer, the team planned to deploy the web application as a static website hosted on **Amazon S3** and distributed through **Amazon CloudFront**. This architecture separates the frontend from the backend while improving content delivery performance and simplifying deployment.
 
-<img src="/images/week7/1.png" alt="Initial Serverless Video-on-Demand Architecture" style="max-width:100%; height:auto;" />
+The backend services were designed around **Amazon API Gateway** and **AWS Lambda**. API Gateway serves as the entry point for client requests, while Lambda functions handle application logic such as generating upload URLs, managing video metadata, and responding to user requests. This design eliminates the need for server management and allows the application to scale automatically according to demand.
 
-The proposed architecture is divided into several logical layers to improve modularity, scalability, and maintainability.
+For data storage, the team selected **Amazon DynamoDB** to manage video metadata, including video identifiers, titles, processing status, storage locations, upload timestamps, and uploader information. DynamoDB was chosen because of its high scalability and seamless integration with serverless applications.
 
-#### 1. Frontend Layer
+The most important component of the platform is the **Video Processing Pipeline**. After evaluating different processing models, the team decided to adopt an event-driven workflow. Once a video is uploaded to the **Amazon S3 Raw Upload Bucket** through a Presigned URL, an event will trigger the processing pipeline automatically.
 
-The frontend application is planned to be developed using **React/Next.js**, providing a responsive and modern user interface for both administrators and viewers.
+The proposed pipeline consists of **Amazon EventBridge**, **Amazon SQS**, **EventBridge Pipes**, **AWS Step Functions**, and **AWS Elemental MediaConvert**. After the transcoding process is completed, the processed video will be stored in the **Amazon S3 Processed Media Bucket**, while the corresponding metadata in **Amazon DynamoDB** will be updated to reflect the latest processing status.
 
-Instead of deploying a traditional web server, the frontend will be hosted as a **Static Website** on **Amazon S3**, with **Amazon CloudFront** serving as the global Content Delivery Network. This deployment model reduces infrastructure management while improving page loading performance through edge caching.
+In addition to these core services, the team also planned to integrate **Amazon Cognito** for user authentication and **Amazon CloudWatch** for monitoring application logs and system performance. Although these services were not deployed during this week, their responsibilities within the overall architecture were clearly identified.
 
-Separating the frontend from backend services also aligns well with the overall Serverless architecture and simplifies future maintenance.
+---
 
-#### 2. API & Authentication Layer
+### V. Infrastructure Challenges, Problem Analysis & Technical Observations
 
-The communication between clients and backend services will be handled by **Amazon API Gateway**, which acts as the centralized entry point for all RESTful APIs.
+Although no production infrastructure was deployed during Week 7, the team identified several technical challenges that needed to be addressed before the implementation phase.
 
-For authentication and user management, the team selected **Amazon Cognito**. By utilizing Cognito User Pools and JWT-based authentication, the system can securely manage user identities without implementing a custom authentication solution.
+The first challenge involved selecting an appropriate architecture for handling video processing tasks. Since video transcoding is computationally intensive and time-consuming, a synchronous processing model would increase response latency and potentially exceed the execution limits of serverless services. Therefore, the team adopted an asynchronous processing approach based on event-driven communication.
 
-During this stage, the team focused on defining Cognito's role within the architecture. Detailed configuration of User Pools, Authorization Flows, and Identity Providers will be performed during the implementation phase.
+Another important consideration was uploading large video files. Instead of transferring video data through the backend, the team decided to generate **Presigned URLs**, allowing clients to upload videos directly to Amazon S3. This approach significantly reduces backend workload while improving upload performance.
 
-#### 3. Business Logic Layer
+The synchronization between **Amazon S3** and **Amazon DynamoDB** was also recognized as an important design consideration. To maintain consistency across services, the team planned to use a unique **Video ID** as the primary identifier linking metadata records with the corresponding objects stored in Amazon S3.
 
-Business logic will be implemented entirely using **AWS Lambda**.
+In addition, security and access management were considered early in the design process. The team agreed that each AWS service should receive only the permissions required for its specific responsibilities by following the **Principle of Least Privilege**.
 
-Lambda provides automatic scaling, eliminates server management, and follows a pay-per-use pricing model, making it well suited for workloads with unpredictable traffic patterns such as video streaming platforms.
+---
 
-Several Lambda functions have been identified in the initial design, including:
+### VI. Professional Reflection
 
-- API request processing
-- Presigned URL generation
-- Video status management
-- Event-driven processing tasks
+Week 7 served as the transition from technical training to practical system design. Although no application modules were implemented, this stage played a critical role in establishing a solid technical foundation for the project.
 
-Each function is designed to remain independent and communicate through API Gateway or AWS event services, minimizing coupling between system components.
+Throughout the research process, the team gained a deeper understanding of how AWS services such as Amazon S3, Amazon API Gateway, AWS Lambda, Amazon DynamoDB, Amazon EventBridge, Amazon SQS, AWS Step Functions, and AWS Elemental MediaConvert can work together within a serverless environment to support a complete Video-on-Demand platform.
 
-#### 4. Data Layer
+Besides improving technical knowledge, the team also strengthened essential software engineering skills, including requirement analysis, architectural evaluation, solution planning, and project organization. These experiences will contribute significantly to the successful implementation of the system in the following weeks.
 
-The system will utilize **Amazon DynamoDB** to store video metadata and processing information.
+---
 
-The initial data model is expected to include:
+### VII. Strategic Plan for the Following Week
 
-- Video ID
-- Video title
-- Processing status
-- Storage location
-- Upload timestamp
-- Category
-- Uploader information
+After completing the research and architectural design phase, the team will begin preparing the implementation environment for the project.
 
-DynamoDB was selected because of its scalability, high performance, and seamless integration with serverless workloads.
+The main objectives for the following week include:
 
-The team also plans to introduce Global Secondary Indexes (GSIs) to support efficient querying based on processing status and video categories. The detailed schema design will be finalized in the following development phase.
+- Finalize the detailed technical design.
+- Prepare the AWS development environment.
+- Initialize the project repository and directory structure.
+- Configure Amazon S3 buckets and Amazon DynamoDB.
+- Develop the first backend APIs using Amazon API Gateway and AWS Lambda.
+- Prepare the foundation of the Video Processing Pipeline.
+- Begin developing the web application for system testing.
 
-#### 5. Video Processing Pipeline
-
-The Video Processing Pipeline represents the core component of the proposed architecture.
-
-To improve scalability and user experience, the team intends to implement the entire workflow using an **Event-Driven Architecture**.
-
-The proposed processing flow consists of the following steps:
-
-1. An administrator requests to upload a video.
-2. The backend generates a Presigned URL.
-3. The video is uploaded directly to the Amazon S3 Raw Bucket.
-4. An upload event is generated automatically.
-5. Amazon SQS receives the processing request.
-6. AWS Lambda submits a transcoding job to AWS Elemental MediaConvert.
-7. MediaConvert generates multiple streaming resolutions.
-8. Processed outputs are stored in the Processed Bucket.
-9. Amazon EventBridge detects job completion.
-10. AWS Lambda updates the processing status in DynamoDB.
-
-This asynchronous architecture prevents long-running API requests, improves fault tolerance, and enables each component to scale independently according to workload demands.
-
-#### 6. Content Delivery
-
-Once transcoding is completed, processed videos will be delivered through **Amazon CloudFront**.
-
-CloudFront is expected to provide several important benefits:
-
-- Lower content delivery latency
-- Global edge caching
-- Reduced workload on Amazon S3
-- Improved streaming performance
-
-The architecture is also designed to support **HTTP Live Streaming (HLS)**, allowing clients to automatically switch video quality based on network conditions.
-
-#### 7. Security and Observability Considerations
-
-Besides the primary functional components, the proposed architecture also incorporates several AWS services responsible for security, monitoring, and operational governance.
-
-The initial design includes:
-
-- **AWS IAM** for role-based access control following the Principle of Least Privilege.
-- **AWS KMS** for data encryption.
-- **Amazon CloudWatch** for monitoring metrics and application logs.
-- **AWS CloudTrail** for auditing API activities.
-- **AWS WAF** for protecting publicly exposed endpoints.
-
-At this stage, these services have only been identified as architectural components. Their detailed configuration and optimization will be carried out during future implementation phases.
-
-### Technical Evaluation
-
-The primary outcome of this week was the completion of the first architectural proposal rather than functional implementation. Although no application modules have been developed yet, defining the interaction between AWS services and establishing a clear architectural direction provides a strong technical foundation for subsequent development.
-
-The current architecture should be considered an initial design draft. As implementation progresses and feedback is received from the project supervisor, the team expects to refine the architecture, improve service integration, and optimize both operational cost and system performance before reaching the final production-ready design.
+The primary goal of the following week is to establish the initial cloud infrastructure and implement the core components required for the **Serverless Video-on-Demand Platform on AWS**, providing a solid foundation for subsequent development stages.

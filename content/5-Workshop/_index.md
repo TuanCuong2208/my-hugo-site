@@ -7,8 +7,6 @@ pre: "<b>5. </b>"
 ---
 
 
-# Workshop: Building the Serverless Video-on-Demand Platform on AWS
-
 ## Overview
 
 This workshop provides a step-by-step walkthrough of building the **Serverless Video-on-Demand Platform on AWS**. The implementation follows the actual development workflow, beginning with AWS infrastructure preparation, backend development, implementation of the event-driven video processing pipeline, web application development, system testing, and final project evaluation.
